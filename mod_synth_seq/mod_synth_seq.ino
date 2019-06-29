@@ -7,6 +7,8 @@ int CLOCK_IN = 12;
 int CLOCK_OUT = LED_BUILTIN;
 int RESET_IN = 11;
 int RESET_OUT = 10;
+int GATE_OUT = A0;
+int GATE_IN = A1;
 int STEP_0 = 2;
 int STEP_1 = 3;
 int STEP_2 = 4;
@@ -29,16 +31,25 @@ int steps[] = {
   STEP_7
 };
 
+int ANALOG_MIN = 0;
+int ANALOG_MAX = 1023;
+int GATE_MIN = 250;
+int GATE_MAX = 4000;
+
 int clock_state = LOW;
 bool clock_required = false;
 int reset_state = LOW;
 bool reset_required = false;
+unsigned long gate_millis = 0;
+int gate_duration = 0;
 
 void setup() {
   pinMode(CLOCK_IN, INPUT);
   pinMode(CLOCK_OUT, OUTPUT);
   pinMode(RESET_IN, INPUT);
   pinMode(RESET_OUT, OUTPUT);
+  pinMode(GATE_IN, INPUT);
+  pinMode(GATE_OUT, OUTPUT);
   for (int i = 0; i < MAX_STEPS; i++) {
     pinMode(steps[i], OUTPUT);
   }
@@ -46,21 +57,42 @@ void setup() {
 
 void loop() {
   if (clock_required) {
+
+    // step and check boundary
     current_step++;
     if (current_step >= MAX_STEPS) {
       current_step = 0;
     }
+
+    // setup gate output
+    gate_millis = millis();
+    digitalWrite(GATE_OUT, HIGH);
+
+    // clock event has been dealt with
     clock_required = false;
 
+    // check if we need to reset to zero
     if (reset_required) {
       current_step = 0;
       reset_required = false;
     }
   }
 
+  // check if it is time to stop the gate
+  int gate_elapsed = millis() - gate_millis;
+  if (gate_elapsed >= gate_duration) {
+    digitalWrite(GATE_OUT, LOW);
+  }
+
+  processGate();
   processClock();
   processReset();
   updateOutput();
+}
+
+void processGate() {
+  int gate_in = analogRead(GATE_IN);
+  gate_duration = map(gate_in, ANALOG_MIN, ANALOG_MAX, GATE_MIN, GATE_MAX);
 }
 
 void processClock() {
@@ -78,7 +110,17 @@ void processClock() {
 }
 
 void processReset() {
-  // TODO
+  int reset_in = digitalRead(RESET_IN);
+  if (reset_in == HIGH && reset_state == LOW) {
+    digitalWrite(RESET_OUT, HIGH);
+    reset_state = HIGH;
+    reset_required = true;
+  }
+
+  if (reset_in == LOW && reset_state == HIGH) {
+    digitalWrite(RESET_OUT, LOW);
+    reset_state = LOW;
+  }
 }
 
 void updateOutput() {
