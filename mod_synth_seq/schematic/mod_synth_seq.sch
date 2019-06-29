@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:mod_synth_seq-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -44,17 +45,6 @@ F 1 "AudioJack2" H 1382 2884 50  0000 C CNN
 F 2 "" H 1350 2650 50  0001 C CNN
 F 3 "~" H 1350 2650 50  0001 C CNN
 	1    1350 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5D17F510
-P 2000 1500
-F 0 "R?" H 2070 1546 50  0000 L CNN
-F 1 "R" H 2070 1455 50  0000 L CNN
-F 2 "" V 1930 1500 50  0001 C CNN
-F 3 "~" H 2000 1500 50  0001 C CNN
-	1    2000 1500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -165,14 +155,14 @@ Wire Wire Line
 Wire Wire Line
 	3200 900  3200 700 
 Wire Wire Line
-	3200 700  2700 700 
+	3200 700  3000 700 
 Wire Wire Line
-	8000 4850 9800 4850
+	8000 4850 8800 4850
 Wire Wire Line
-	9800 4850 9800 700 
+	9800 4850 9800 3500
 Connection ~ 9800 700 
 Wire Wire Line
-	9800 700  6200 700 
+	9800 700  9350 700 
 Wire Wire Line
 	4700 900  4700 700 
 Wire Wire Line
@@ -227,19 +217,19 @@ F 3 "~" H 4200 1050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4700 700  4200 700 
+	4700 700  4500 700 
 Connection ~ 4700 700 
 Connection ~ 3200 700 
 Wire Wire Line
 	3700 900  3700 700 
 Connection ~ 3700 700 
 Wire Wire Line
-	3700 700  3200 700 
+	3700 700  3500 700 
 Wire Wire Line
 	4200 900  4200 700 
 Connection ~ 4200 700 
 Wire Wire Line
-	4200 700  3700 700 
+	4200 700  4000 700 
 $Comp
 L Device:R R?
 U 1 1 5D1940E0
@@ -488,8 +478,6 @@ Wire Wire Line
 Wire Wire Line
 	7250 2800 7250 3350
 Wire Wire Line
-	7250 3350 2700 3350
-Wire Wire Line
 	2700 3350 2700 3050
 Connection ~ 2700 3050
 Wire Wire Line
@@ -497,7 +485,7 @@ Wire Wire Line
 Wire Wire Line
 	7200 2900 7200 3400
 Wire Wire Line
-	7200 3400 3200 3400
+	7200 3400 3250 3400
 Wire Wire Line
 	3200 3400 3200 3050
 Wire Wire Line
@@ -514,7 +502,7 @@ Connection ~ 3700 2100
 Wire Wire Line
 	3700 3050 3700 3450
 Wire Wire Line
-	3700 3450 7150 3450
+	3700 3450 3775 3450
 Wire Wire Line
 	7150 3450 7150 3000
 Wire Wire Line
@@ -528,7 +516,7 @@ Connection ~ 4200 2100
 Wire Wire Line
 	4200 3050 4200 3500
 Wire Wire Line
-	4200 3500 7100 3500
+	4200 3500 4275 3500
 Wire Wire Line
 	7100 3500 7100 3100
 Wire Wire Line
@@ -542,7 +530,7 @@ Connection ~ 4700 2100
 Wire Wire Line
 	4700 3050 4700 3550
 Wire Wire Line
-	4700 3550 7050 3550
+	4700 3550 4775 3550
 Wire Wire Line
 	7050 3550 7050 3200
 Wire Wire Line
@@ -556,7 +544,7 @@ Connection ~ 5200 2100
 Wire Wire Line
 	5200 3050 5200 3600
 Wire Wire Line
-	5200 3600 7000 3600
+	5200 3600 5275 3600
 Wire Wire Line
 	7000 3600 7000 3300
 Wire Wire Line
@@ -570,7 +558,7 @@ Connection ~ 5700 2100
 Wire Wire Line
 	5700 3050 5700 3650
 Wire Wire Line
-	5700 3650 7350 3650
+	5700 3650 5775 3650
 Wire Wire Line
 	7350 3650 7350 3400
 Wire Wire Line
@@ -584,7 +572,7 @@ Connection ~ 6200 2100
 Wire Wire Line
 	6200 3050 6200 3700
 Wire Wire Line
-	6200 3700 7300 3700
+	6200 3700 6250 3700
 Wire Wire Line
 	7300 3700 7300 3500
 Wire Wire Line
@@ -592,12 +580,12 @@ Wire Wire Line
 Connection ~ 6200 3050
 Connection ~ 5700 700 
 Wire Wire Line
-	5700 700  6200 700 
+	5700 700  6000 700 
 Connection ~ 5200 700 
 Wire Wire Line
-	5200 700  4700 700 
+	5200 700  5000 700 
 Wire Wire Line
-	5200 700  5700 700 
+	5200 700  5500 700 
 $Comp
 L power:+5V #PWR?
 U 1 1 5D1D516A
@@ -610,7 +598,7 @@ F 3 "" H 10250 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10250 2400 8600 2400
+	10250 2400 8825 2400
 Wire Wire Line
 	8600 2400 8600 2100
 Wire Wire Line
@@ -818,133 +806,122 @@ $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D1F4195
-P 7500 1300
-F 0 "J?" H 7532 1625 50  0000 C CNN
-F 1 "AudioJack2" H 7532 1534 50  0000 C CNN
-F 2 "" H 7500 1300 50  0001 C CNN
-F 3 "~" H 7500 1300 50  0001 C CNN
-	1    7500 1300
+P 6950 1450
+F 0 "J?" H 6982 1775 50  0000 C CNN
+F 1 "AudioJack2" H 6982 1684 50  0000 C CNN
+F 2 "" H 6950 1450 50  0001 C CNN
+F 3 "~" H 6950 1450 50  0001 C CNN
+	1    6950 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D1F4DDD
-P 8150 1300
-F 0 "J?" H 8182 1625 50  0000 C CNN
-F 1 "AudioJack2" H 8182 1534 50  0000 C CNN
-F 2 "" H 8150 1300 50  0001 C CNN
-F 3 "~" H 8150 1300 50  0001 C CNN
-	1    8150 1300
+P 7525 1450
+F 0 "J?" H 7557 1775 50  0000 C CNN
+F 1 "AudioJack2" H 7557 1684 50  0000 C CNN
+F 2 "" H 7525 1450 50  0001 C CNN
+F 3 "~" H 7525 1450 50  0001 C CNN
+	1    7525 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D1F520B
-P 8750 1300
-F 0 "J?" H 8782 1625 50  0000 C CNN
-F 1 "AudioJack2" H 8782 1534 50  0000 C CNN
-F 2 "" H 8750 1300 50  0001 C CNN
-F 3 "~" H 8750 1300 50  0001 C CNN
-	1    8750 1300
+P 9150 1425
+F 0 "J?" H 9182 1750 50  0000 C CNN
+F 1 "AudioJack2" H 9182 1659 50  0000 C CNN
+F 2 "" H 9150 1425 50  0001 C CNN
+F 3 "~" H 9150 1425 50  0001 C CNN
+	1    9150 1425
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_POT RV?
 U 1 1 5D1F55B3
-P 9400 1250
-F 0 "RV?" V 9193 1250 50  0000 C CNN
-F 1 "100k Lin" V 9284 1250 50  0000 C CNN
-F 2 "" H 9400 1250 50  0001 C CNN
-F 3 "~" H 9400 1250 50  0001 C CNN
-	1    9400 1250
+P 8975 3175
+F 0 "RV?" V 8768 3175 50  0000 C CNN
+F 1 "100k Lin" V 8859 3175 50  0000 C CNN
+F 2 "" H 8975 3175 50  0001 C CNN
+F 3 "~" H 8975 3175 50  0001 C CNN
+	1    8975 3175
 	0    1    1    0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D1F5CD9
-P 2848 5508
-F 0 "J?" V 2926 5378 50  0000 R CNN
-F 1 "AudioJack2" V 2835 5378 50  0000 R CNN
-F 2 "" H 2848 5508 50  0001 C CNN
-F 3 "~" H 2848 5508 50  0001 C CNN
-	1    2848 5508
+P 2850 5975
+F 0 "J?" V 2928 5845 50  0000 R CNN
+F 1 "AudioJack2" V 2837 5845 50  0000 R CNN
+F 2 "" H 2850 5975 50  0001 C CNN
+F 3 "~" H 2850 5975 50  0001 C CNN
+	1    2850 5975
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D1F7EE6
-P 3336 5508
-F 0 "J?" V 3414 5378 50  0000 R CNN
-F 1 "AudioJack2" V 3323 5378 50  0000 R CNN
-F 2 "" H 3336 5508 50  0001 C CNN
-F 3 "~" H 3336 5508 50  0001 C CNN
-	1    3336 5508
+P 3350 5975
+F 0 "J?" V 3428 5845 50  0000 R CNN
+F 1 "AudioJack2" V 3337 5845 50  0000 R CNN
+F 2 "" H 3350 5975 50  0001 C CNN
+F 3 "~" H 3350 5975 50  0001 C CNN
+	1    3350 5975
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D208E99
-P 3842 5508
-F 0 "J?" V 3920 5378 50  0000 R CNN
-F 1 "AudioJack2" V 3829 5378 50  0000 R CNN
-F 2 "" H 3842 5508 50  0001 C CNN
-F 3 "~" H 3842 5508 50  0001 C CNN
-	1    3842 5508
+P 3850 5975
+F 0 "J?" V 3928 5845 50  0000 R CNN
+F 1 "AudioJack2" V 3837 5845 50  0000 R CNN
+F 2 "" H 3850 5975 50  0001 C CNN
+F 3 "~" H 3850 5975 50  0001 C CNN
+	1    3850 5975
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D20ECD8
-P 4338 5508
-F 0 "J?" V 4416 5378 50  0000 R CNN
-F 1 "AudioJack2" V 4325 5378 50  0000 R CNN
-F 2 "" H 4338 5508 50  0001 C CNN
-F 3 "~" H 4338 5508 50  0001 C CNN
-	1    4338 5508
+P 4350 5975
+F 0 "J?" V 4428 5845 50  0000 R CNN
+F 1 "AudioJack2" V 4337 5845 50  0000 R CNN
+F 2 "" H 4350 5975 50  0001 C CNN
+F 3 "~" H 4350 5975 50  0001 C CNN
+	1    4350 5975
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D20F21C
-P 4890 5516
-F 0 "J?" V 4968 5386 50  0000 R CNN
-F 1 "AudioJack2" V 4877 5386 50  0000 R CNN
-F 2 "" H 4890 5516 50  0001 C CNN
-F 3 "~" H 4890 5516 50  0001 C CNN
-	1    4890 5516
+P 4900 5975
+F 0 "J?" V 4978 5845 50  0000 R CNN
+F 1 "AudioJack2" V 4887 5845 50  0000 R CNN
+F 2 "" H 4900 5975 50  0001 C CNN
+F 3 "~" H 4900 5975 50  0001 C CNN
+	1    4900 5975
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D20F7FD
-P 5346 5508
-F 0 "J?" V 5424 5378 50  0000 R CNN
-F 1 "AudioJack2" V 5333 5378 50  0000 R CNN
-F 2 "" H 5346 5508 50  0001 C CNN
-F 3 "~" H 5346 5508 50  0001 C CNN
-	1    5346 5508
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:AudioJack2 J?
-U 1 1 5D20FBF0
-P 5898 5508
-F 0 "J?" V 5976 5378 50  0000 R CNN
-F 1 "AudioJack2" V 5885 5378 50  0000 R CNN
-F 2 "" H 5898 5508 50  0001 C CNN
-F 3 "~" H 5898 5508 50  0001 C CNN
-	1    5898 5508
+P 5350 5975
+F 0 "J?" V 5428 5845 50  0000 R CNN
+F 1 "AudioJack2" V 5337 5845 50  0000 R CNN
+F 2 "" H 5350 5975 50  0001 C CNN
+F 3 "~" H 5350 5975 50  0001 C CNN
+	1    5350 5975
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5D210032
-P 6354 5508
-F 0 "J?" V 6432 5378 50  0000 R CNN
-F 1 "AudioJack2" V 6341 5378 50  0000 R CNN
-F 2 "" H 6354 5508 50  0001 C CNN
-F 3 "~" H 6354 5508 50  0001 C CNN
-	1    6354 5508
+P 6350 5975
+F 0 "J?" V 6428 5845 50  0000 R CNN
+F 1 "AudioJack2" V 6337 5845 50  0000 R CNN
+F 2 "" H 6350 5975 50  0001 C CNN
+F 3 "~" H 6350 5975 50  0001 C CNN
+	1    6350 5975
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -1017,4 +994,641 @@ Wire Wire Line
 	3350 2650 2850 2650
 Connection ~ 3350 2650
 Connection ~ 2850 2650
+$Comp
+L Device:R R?
+U 1 1 5D181F80
+P 7275 1025
+F 0 "R?" H 7345 1071 50  0000 L CNN
+F 1 "10k" H 7345 980 50  0000 L CNN
+F 2 "" V 7205 1025 50  0001 C CNN
+F 3 "~" H 7275 1025 50  0001 C CNN
+	1    7275 1025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D183136
+P 7850 1025
+F 0 "R?" H 7920 1071 50  0000 L CNN
+F 1 "10k" H 7920 980 50  0000 L CNN
+F 2 "" V 7780 1025 50  0001 C CNN
+F 3 "~" H 7850 1025 50  0001 C CNN
+	1    7850 1025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1835EC
+P 9350 1725
+F 0 "R?" H 9420 1771 50  0000 L CNN
+F 1 "1k" H 9420 1680 50  0000 L CNN
+F 2 "" V 9280 1725 50  0001 C CNN
+F 3 "~" H 9350 1725 50  0001 C CNN
+	1    9350 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D183849
+P 3350 4800
+F 0 "R?" H 3420 4846 50  0000 L CNN
+F 1 "1k" H 3420 4755 50  0000 L CNN
+F 2 "" V 3280 4800 50  0001 C CNN
+F 3 "~" H 3350 4800 50  0001 C CNN
+	1    3350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D183C38
+P 3850 4800
+F 0 "R?" H 3920 4846 50  0000 L CNN
+F 1 "1k" H 3920 4755 50  0000 L CNN
+F 2 "" V 3780 4800 50  0001 C CNN
+F 3 "~" H 3850 4800 50  0001 C CNN
+	1    3850 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D184029
+P 4350 4800
+F 0 "R?" H 4420 4846 50  0000 L CNN
+F 1 "1k" H 4420 4755 50  0000 L CNN
+F 2 "" V 4280 4800 50  0001 C CNN
+F 3 "~" H 4350 4800 50  0001 C CNN
+	1    4350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D184339
+P 4900 4800
+F 0 "R?" H 4970 4846 50  0000 L CNN
+F 1 "1k" H 4970 4755 50  0000 L CNN
+F 2 "" V 4830 4800 50  0001 C CNN
+F 3 "~" H 4900 4800 50  0001 C CNN
+	1    4900 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D18462A
+P 5350 4800
+F 0 "R?" H 5420 4846 50  0000 L CNN
+F 1 "1k" H 5420 4755 50  0000 L CNN
+F 2 "" V 5280 4800 50  0001 C CNN
+F 3 "~" H 5350 4800 50  0001 C CNN
+	1    5350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D184916
+P 5900 4800
+F 0 "R?" H 5970 4846 50  0000 L CNN
+F 1 "1k" H 5970 4755 50  0000 L CNN
+F 2 "" V 5830 4800 50  0001 C CNN
+F 3 "~" H 5900 4800 50  0001 C CNN
+	1    5900 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D184C80
+P 6350 4800
+F 0 "R?" H 6420 4846 50  0000 L CNN
+F 1 "1k" H 6420 4755 50  0000 L CNN
+F 2 "" V 6280 4800 50  0001 C CNN
+F 3 "~" H 6350 4800 50  0001 C CNN
+	1    6350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D18E8E1
+P 2850 5375
+F 0 "D?" V 2896 5296 50  0000 R CNN
+F 1 "1N4148" V 2805 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2850 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2850 5375 50  0001 C CNN
+	1    2850 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D19A37D
+P 3350 5375
+F 0 "D?" V 3396 5296 50  0000 R CNN
+F 1 "1N4148" V 3305 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3350 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3350 5375 50  0001 C CNN
+	1    3350 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D19A9B3
+P 3850 5375
+F 0 "D?" V 3896 5296 50  0000 R CNN
+F 1 "1N4148" V 3805 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3850 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3850 5375 50  0001 C CNN
+	1    3850 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D19B0A8
+P 4350 5375
+F 0 "D?" V 4396 5296 50  0000 R CNN
+F 1 "1N4148" V 4305 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4350 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4350 5375 50  0001 C CNN
+	1    4350 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D19B93B
+P 4900 5375
+F 0 "D?" V 4946 5296 50  0000 R CNN
+F 1 "1N4148" V 4855 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4900 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4900 5375 50  0001 C CNN
+	1    4900 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D19BEEE
+P 5350 5375
+F 0 "D?" V 5396 5296 50  0000 R CNN
+F 1 "1N4148" V 5305 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5350 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5350 5375 50  0001 C CNN
+	1    5350 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D19C65A
+P 5900 5375
+F 0 "D?" V 5946 5296 50  0000 R CNN
+F 1 "1N4148" V 5855 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5900 5375 50  0001 C CNN
+	1    5900 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D19D0A1
+P 6350 5375
+F 0 "D?" V 6396 5296 50  0000 R CNN
+F 1 "1N4148" V 6305 5296 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6350 5375 50  0001 C CNN
+	1    6350 5375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 3350 2750 4650
+Wire Wire Line
+	2750 4650 2850 4650
+Connection ~ 2750 3350
+Wire Wire Line
+	2750 3350 2700 3350
+Wire Wire Line
+	3250 4650 3350 4650
+Wire Wire Line
+	3775 4650 3850 4650
+Wire Wire Line
+	2750 3350 7250 3350
+Wire Wire Line
+	3250 4650 3250 3400
+Connection ~ 3250 3400
+Wire Wire Line
+	3250 3400 3200 3400
+Wire Wire Line
+	3775 4650 3775 3450
+Connection ~ 3775 3450
+Wire Wire Line
+	3775 3450 7150 3450
+Wire Wire Line
+	4275 3500 4275 4650
+Wire Wire Line
+	4275 4650 4350 4650
+Connection ~ 4275 3500
+Wire Wire Line
+	4275 3500 7100 3500
+Wire Wire Line
+	4775 3550 4775 4650
+Wire Wire Line
+	4775 4650 4900 4650
+Connection ~ 4775 3550
+Wire Wire Line
+	4775 3550 7050 3550
+Wire Wire Line
+	5275 3600 5275 4650
+Wire Wire Line
+	5275 4650 5350 4650
+Connection ~ 5275 3600
+Wire Wire Line
+	5275 3600 7000 3600
+Wire Wire Line
+	5775 3650 5775 4650
+Wire Wire Line
+	5775 4650 5900 4650
+Connection ~ 5775 3650
+Wire Wire Line
+	5775 3650 7350 3650
+Wire Wire Line
+	6250 3700 6250 4650
+Wire Wire Line
+	6250 4650 6350 4650
+Connection ~ 6250 3700
+Wire Wire Line
+	6250 3700 7300 3700
+Wire Wire Line
+	3350 4950 3350 5225
+Wire Wire Line
+	3850 4950 3850 5225
+Wire Wire Line
+	4350 4950 4350 5225
+Wire Wire Line
+	4900 4950 4900 5225
+Wire Wire Line
+	5350 4950 5350 5225
+Wire Wire Line
+	5900 4950 5900 5225
+Wire Wire Line
+	6350 4950 6350 5225
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D20FBF0
+P 5900 5975
+F 0 "J?" V 5978 5845 50  0000 R CNN
+F 1 "AudioJack2" V 5887 5845 50  0000 R CNN
+F 2 "" H 5900 5975 50  0001 C CNN
+F 3 "~" H 5900 5975 50  0001 C CNN
+	1    5900 5975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D17F510
+P 2850 4800
+F 0 "R?" H 2920 4846 50  0000 L CNN
+F 1 "1k" H 2920 4755 50  0000 L CNN
+F 2 "" V 2780 4800 50  0001 C CNN
+F 3 "~" H 2850 4800 50  0001 C CNN
+	1    2850 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4950 2850 5225
+Wire Wire Line
+	2850 5525 2850 5775
+Wire Wire Line
+	3350 5525 3350 5775
+Wire Wire Line
+	3850 5525 3850 5775
+Wire Wire Line
+	4350 5525 4350 5775
+Wire Wire Line
+	4900 5525 4900 5775
+Wire Wire Line
+	5350 5525 5350 5775
+Wire Wire Line
+	5900 5525 5900 5775
+Wire Wire Line
+	6350 5525 6350 5775
+Wire Wire Line
+	2850 2250 2850 2350
+Wire Wire Line
+	3350 2250 3350 2350
+Wire Wire Line
+	3850 2250 3850 2350
+Wire Wire Line
+	4350 2250 4350 2350
+Wire Wire Line
+	4850 2250 4850 2350
+Wire Wire Line
+	5350 2250 5350 2350
+Wire Wire Line
+	5850 2250 5850 2350
+Wire Wire Line
+	6350 2250 6350 2350
+Wire Wire Line
+	7150 1450 7150 1575
+Wire Wire Line
+	7150 1800 6825 1800
+Wire Wire Line
+	6825 1800 6825 1950
+Wire Wire Line
+	6825 3850 7325 3850
+Wire Wire Line
+	7325 3850 7325 3700
+Wire Wire Line
+	7325 3700 7400 3700
+Wire Wire Line
+	7725 1450 7725 1575
+Wire Wire Line
+	6925 1850 6925 2300
+Wire Wire Line
+	9350 2900 8600 2900
+Wire Wire Line
+	8600 2900 8600 3200
+Wire Wire Line
+	8600 3200 8400 3200
+Wire Wire Line
+	9350 1425 9350 1575
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D291621
+P 9350 2750
+F 0 "D?" V 9304 2829 50  0000 L CNN
+F 1 "1N4148" V 9395 2829 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 9350 2575 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 9350 2750 50  0001 C CNN
+	1    9350 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 1875 9350 2600
+$Comp
+L Device:R R?
+U 1 1 5D29C94C
+P 9350 3200
+F 0 "R?" H 9420 3246 50  0000 L CNN
+F 1 "10k" H 9420 3155 50  0000 L CNN
+F 2 "" V 9280 3200 50  0001 C CNN
+F 3 "~" H 9350 3200 50  0001 C CNN
+	1    9350 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 2900 9350 3050
+Connection ~ 9350 2900
+Wire Wire Line
+	9350 3350 9800 3350
+Connection ~ 9800 3350
+Wire Wire Line
+	9800 3350 9800 700 
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D2AE689
+P 6825 2100
+F 0 "D?" V 6871 2021 50  0000 R CNN
+F 1 "1N4148" V 6780 2021 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6825 1925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6825 2100 50  0001 C CNN
+	1    6825 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D2AF0B1
+P 6925 2450
+F 0 "D?" V 6971 2371 50  0000 R CNN
+F 1 "1N4148" V 6880 2371 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6925 2275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6925 2450 50  0001 C CNN
+	1    6925 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6825 2250 6825 3850
+Wire Wire Line
+	6925 3800 7400 3800
+Wire Wire Line
+	6925 2600 6925 3800
+Wire Wire Line
+	6925 1850 7725 1850
+Wire Wire Line
+	9350 1325 9350 700 
+Connection ~ 9350 700 
+Wire Wire Line
+	9350 700  7850 700 
+Wire Wire Line
+	7725 1350 7725 700 
+Connection ~ 7725 700 
+Wire Wire Line
+	7725 700  7275 700 
+Wire Wire Line
+	7150 1350 7150 700 
+Connection ~ 7150 700 
+Wire Wire Line
+	7150 700  6500 700 
+Wire Wire Line
+	7275 875  7275 700 
+Connection ~ 7275 700 
+Wire Wire Line
+	7275 700  7150 700 
+Wire Wire Line
+	7850 875  7850 700 
+Connection ~ 7850 700 
+Wire Wire Line
+	7850 700  7725 700 
+Wire Wire Line
+	7275 1175 7275 1575
+Wire Wire Line
+	7275 1575 7150 1575
+Connection ~ 7150 1575
+Wire Wire Line
+	7150 1575 7150 1800
+Wire Wire Line
+	7850 1175 7850 1575
+Wire Wire Line
+	7850 1575 7725 1575
+Connection ~ 7725 1575
+Wire Wire Line
+	7725 1575 7725 1850
+Wire Wire Line
+	8975 3325 8600 3325
+Wire Wire Line
+	8600 3325 8600 3300
+Wire Wire Line
+	8600 3300 8400 3300
+Wire Wire Line
+	8825 3175 8825 2400
+Connection ~ 8825 2400
+Wire Wire Line
+	8825 2400 8600 2400
+Wire Wire Line
+	9125 3175 9125 3500
+Wire Wire Line
+	9125 3500 9800 3500
+Connection ~ 9800 3500
+Wire Wire Line
+	9800 3500 9800 3350
+Wire Wire Line
+	1550 2550 1800 2550
+Wire Wire Line
+	1800 2550 1800 4250
+Wire Wire Line
+	1800 5625 2750 5625
+Wire Wire Line
+	8800 5625 8800 4850
+Connection ~ 8800 4850
+Wire Wire Line
+	8800 4850 9800 4850
+Wire Wire Line
+	1550 4250 1800 4250
+Connection ~ 1800 4250
+Wire Wire Line
+	1800 4250 1800 5625
+Wire Wire Line
+	2750 5775 2750 5625
+Connection ~ 2750 5625
+Wire Wire Line
+	2750 5625 3250 5625
+Wire Wire Line
+	3250 5775 3250 5625
+Connection ~ 3250 5625
+Wire Wire Line
+	3250 5625 3750 5625
+Wire Wire Line
+	3000 2100 3000 1900
+Connection ~ 3000 700 
+Wire Wire Line
+	3000 700  2700 700 
+Wire Wire Line
+	3500 2100 3500 1900
+Connection ~ 3500 700 
+Wire Wire Line
+	3500 700  3200 700 
+Wire Wire Line
+	4000 2100 4000 1900
+Connection ~ 4000 700 
+Wire Wire Line
+	4000 700  3700 700 
+Wire Wire Line
+	4500 2100 4500 1900
+Connection ~ 4500 700 
+Wire Wire Line
+	4500 700  4200 700 
+Wire Wire Line
+	5000 2100 5000 1900
+Connection ~ 5000 700 
+Wire Wire Line
+	5000 700  4700 700 
+Wire Wire Line
+	5500 2100 5500 1900
+Connection ~ 5500 700 
+Wire Wire Line
+	5500 700  5700 700 
+Wire Wire Line
+	6000 2100 6000 1900
+Connection ~ 6000 700 
+Wire Wire Line
+	6000 700  6200 700 
+Wire Wire Line
+	6500 2100 6500 1900
+Connection ~ 6500 700 
+Wire Wire Line
+	6500 700  6200 700 
+Wire Wire Line
+	3750 5775 3750 5625
+Connection ~ 3750 5625
+Wire Wire Line
+	3750 5625 4250 5625
+Wire Wire Line
+	4250 5775 4250 5625
+Connection ~ 4250 5625
+Wire Wire Line
+	4800 5775 4800 5625
+Wire Wire Line
+	4250 5625 4800 5625
+Connection ~ 4800 5625
+Wire Wire Line
+	4800 5625 5250 5625
+Wire Wire Line
+	5250 5775 5250 5625
+Connection ~ 5250 5625
+Wire Wire Line
+	5250 5625 5800 5625
+Wire Wire Line
+	5800 5775 5800 5625
+Connection ~ 5800 5625
+Wire Wire Line
+	5800 5625 6250 5625
+Wire Wire Line
+	6250 5775 6250 5625
+Connection ~ 6250 5625
+Wire Wire Line
+	6250 5625 8800 5625
+Wire Wire Line
+	3000 3050 3075 3050
+Wire Wire Line
+	3075 3050 3075 1900
+Wire Wire Line
+	3075 1900 3000 1900
+Connection ~ 3000 1900
+Wire Wire Line
+	3000 1900 3000 700 
+Wire Wire Line
+	3500 3050 3575 3050
+Wire Wire Line
+	3575 3050 3575 1900
+Wire Wire Line
+	3575 1900 3500 1900
+Connection ~ 3500 1900
+Wire Wire Line
+	3500 1900 3500 700 
+Wire Wire Line
+	4000 3050 4075 3050
+Wire Wire Line
+	4075 3050 4075 1900
+Wire Wire Line
+	4075 1900 4000 1900
+Connection ~ 4000 1900
+Wire Wire Line
+	4000 1900 4000 700 
+Wire Wire Line
+	5000 3050 5075 3050
+Wire Wire Line
+	5075 3050 5075 1900
+Wire Wire Line
+	5075 1900 5000 1900
+Connection ~ 5000 1900
+Wire Wire Line
+	5000 1900 5000 700 
+Wire Wire Line
+	4500 3050 4575 3050
+Wire Wire Line
+	4575 3050 4575 1900
+Wire Wire Line
+	4575 1900 4500 1900
+Connection ~ 4500 1900
+Wire Wire Line
+	4500 1900 4500 700 
+Wire Wire Line
+	5500 3050 5575 3050
+Wire Wire Line
+	5575 3050 5575 1900
+Wire Wire Line
+	5575 1900 5500 1900
+Connection ~ 5500 1900
+Wire Wire Line
+	5500 1900 5500 700 
+Wire Wire Line
+	6000 3050 6075 3050
+Wire Wire Line
+	6075 3050 6075 1900
+Wire Wire Line
+	6075 1900 6000 1900
+Connection ~ 6000 1900
+Wire Wire Line
+	6000 1900 6000 700 
+Wire Wire Line
+	6500 3050 6575 3050
+Wire Wire Line
+	6575 3050 6575 1900
+Wire Wire Line
+	6575 1900 6500 1900
+Connection ~ 6500 1900
+Wire Wire Line
+	6500 1900 6500 700 
 $EndSCHEMATC
