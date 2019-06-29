@@ -39,14 +39,9 @@ void setup() {
   pinMode(CLOCK_OUT, OUTPUT);
   pinMode(RESET_IN, INPUT);
   pinMode(RESET_OUT, OUTPUT);
-  pinMode(STEP_0, OUTPUT);
-  pinMode(STEP_1, OUTPUT);
-  pinMode(STEP_2, OUTPUT);
-  pinMode(STEP_3, OUTPUT);
-  pinMode(STEP_4, OUTPUT);
-  pinMode(STEP_5, OUTPUT);
-  pinMode(STEP_6, OUTPUT);
-  pinMode(STEP_7, OUTPUT);
+  for (int i = 0; i < MAX_STEPS; i++) {
+    pinMode(steps[i], OUTPUT);
+  }
 }
 
 void loop() {
