@@ -48,16 +48,10 @@ void readPots() {
   int rate_in = analogRead(RATE_IN);
   float bpm = map(rate_in, ANALOG_MIN, ANALOG_MAX, BPM_MIN, BPM_MAX);
   period_millis = 60000 / bpm;
-
-  // debug - 120 bpm
-  period_millis = 60000 / 120;
   
   int duty_in = analogRead(DUTY_IN);
   float duty = map(duty_in, ANALOG_MIN, ANALOG_MAX, DUTY_MIN, DUTY_MAX);
   duty_millis = period_millis * (duty / 100);
-
-  // debug - 20 %
-  duty_millis = period_millis * (20.0 / 100);
 }
 
 void setHigh() {
