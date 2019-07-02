@@ -1,4 +1,482 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:mod_synth_vco-cache
+EELAYER 29 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 5D1AF037
+P 2225 3025
+F 0 "#PWR?" H 2225 2875 50  0001 C CNN
+F 1 "+12V" V 2240 3153 50  0000 L CNN
+F 2 "" H 2225 3025 50  0001 C CNN
+F 3 "" H 2225 3025 50  0001 C CNN
+	1    2225 3025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5D1AF350
+P 7150 3075
+F 0 "#PWR?" H 7150 3175 50  0001 C CNN
+F 1 "-12V" V 7165 3203 50  0000 L CNN
+F 2 "" H 7150 3075 50  0001 C CNN
+F 3 "" H 7150 3075 50  0001 C CNN
+	1    7150 3075
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D1AFADD
+P 5000 5650
+F 0 "#PWR?" H 5000 5400 50  0001 C CNN
+F 1 "GND" H 5005 5477 50  0000 C CNN
+F 2 "" H 5000 5650 50  0001 C CNN
+F 3 "" H 5000 5650 50  0001 C CNN
+	1    5000 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Audio:AS3340 U?
+U 1 1 5D1B00FF
+P 4900 3150
+F 0 "U?" H 4900 4031 50  0000 C CNN
+F 1 "AS3340" H 4900 3940 50  0000 C CNN
+F 2 "" H 5400 2850 50  0001 C CNN
+F 3 "http://www.alfarzpp.lv/eng/sc/AS3340.pdf" H 5500 2700 50  0001 C CNN
+	1    4900 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2450 4900 1900
+Wire Wire Line
+	4900 1850 2225 1850
+Wire Wire Line
+	2225 1850 2225 2925
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5D1B1770
+P 3525 4275
+F 0 "U?" H 3525 4642 50  0000 C CNN
+F 1 "TL072" H 3525 4551 50  0000 C CNN
+F 2 "" H 3525 4275 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3525 4275 50  0001 C CNN
+	1    3525 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 2 1 5D1B3E7C
+P 3525 4900
+F 0 "U?" H 3525 5267 50  0000 C CNN
+F 1 "TL072" H 3525 5176 50  0000 C CNN
+F 2 "" H 3525 4900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3525 4900 50  0001 C CNN
+	2    3525 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 3 1 5D1B6544
+P 2275 4025
+F 0 "U?" H 2233 4071 50  0000 L CNN
+F 1 "TL072" H 2233 3980 50  0000 L CNN
+F 2 "" H 2275 4025 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2275 4025 50  0001 C CNN
+	3    2275 4025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3075 7150 6000
+Wire Wire Line
+	7150 6275 2175 6275
+Wire Wire Line
+	2175 6275 2175 4325
+Wire Wire Line
+	2175 3725 2175 3650
+Wire Wire Line
+	2175 3650 2400 3650
+Wire Wire Line
+	2400 3650 2400 3050
+Wire Wire Line
+	2400 2925 2225 2925
+Connection ~ 2225 2925
+Wire Wire Line
+	2225 2925 2225 3025
+Wire Wire Line
+	5400 3150 5900 3150
+Wire Wire Line
+	5900 3150 5900 3925
+Wire Wire Line
+	5900 3925 3050 3925
+Wire Wire Line
+	3050 3925 3050 4175
+Wire Wire Line
+	3050 4175 3225 4175
+Wire Wire Line
+	3225 4375 3050 4375
+Wire Wire Line
+	3050 4375 3050 4575
+Wire Wire Line
+	3050 4575 4025 4575
+Wire Wire Line
+	4025 4575 4025 4425
+Wire Wire Line
+	4025 4275 3825 4275
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D1BC2E5
+P 5275 4425
+F 0 "J?" H 5095 4408 50  0000 R CNN
+F 1 "AudioJack2" H 5095 4499 50  0000 R CNN
+F 2 "" H 5275 4425 50  0001 C CNN
+F 3 "~" H 5275 4425 50  0001 C CNN
+	1    5275 4425
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5075 4425 4025 4425
+Connection ~ 4025 4425
+Wire Wire Line
+	4025 4425 4025 4275
+Wire Wire Line
+	5400 3350 6225 3350
+Wire Wire Line
+	6225 3350 6225 5275
+Wire Wire Line
+	6225 5275 3050 5275
+Wire Wire Line
+	3050 5275 3050 4800
+Wire Wire Line
+	3050 4800 3225 4800
+Wire Wire Line
+	3225 5000 3225 5150
+Wire Wire Line
+	3225 5150 4025 5150
+Wire Wire Line
+	4025 5150 4025 4900
+Wire Wire Line
+	4025 4900 3825 4900
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D1BE3D7
+P 5275 4900
+F 0 "J?" H 5095 4883 50  0000 R CNN
+F 1 "AudioJack2" H 5095 4974 50  0000 R CNN
+F 2 "" H 5275 4900 50  0001 C CNN
+F 3 "~" H 5275 4900 50  0001 C CNN
+	1    5275 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5075 4900 4025 4900
+Connection ~ 4025 4900
+$Comp
+L Device:R R?
+U 1 1 5D1BFB22
+P 3850 2350
+F 0 "R?" H 3920 2396 50  0000 L CNN
+F 1 "24k" H 3920 2305 50  0000 L CNN
+F 2 "" V 3780 2350 50  0001 C CNN
+F 3 "~" H 3850 2350 50  0001 C CNN
+	1    3850 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C011B
+P 3100 3050
+F 0 "R?" H 3170 3096 50  0000 L CNN
+F 1 "1m5" H 3170 3005 50  0000 L CNN
+F 2 "" V 3030 3050 50  0001 C CNN
+F 3 "~" H 3100 3050 50  0001 C CNN
+	1    3100 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C0344
+P 3850 2750
+F 0 "R?" H 3920 2796 50  0000 L CNN
+F 1 "5k6" H 3920 2705 50  0000 L CNN
+F 2 "" V 3780 2750 50  0001 C CNN
+F 3 "~" H 3850 2750 50  0001 C CNN
+	1    3850 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C0629
+P 7650 4050
+F 0 "R?" H 7720 4096 50  0000 L CNN
+F 1 "100k" H 7720 4005 50  0000 L CNN
+F 2 "" V 7580 4050 50  0001 C CNN
+F 3 "~" H 7650 4050 50  0001 C CNN
+	1    7650 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C07E5
+P 3250 3550
+F 0 "R?" H 3320 3596 50  0000 L CNN
+F 1 "620" H 3320 3505 50  0000 L CNN
+F 2 "" V 3180 3550 50  0001 C CNN
+F 3 "~" H 3250 3550 50  0001 C CNN
+	1    3250 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C0AC8
+P 4500 4650
+F 0 "R?" H 4570 4696 50  0000 L CNN
+F 1 "1k8" H 4570 4605 50  0000 L CNN
+F 2 "" V 4430 4650 50  0001 C CNN
+F 3 "~" H 4500 4650 50  0001 C CNN
+	1    4500 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C0C8E
+P 6550 4000
+F 0 "R?" H 6620 4046 50  0000 L CNN
+F 1 "470" H 6620 3955 50  0000 L CNN
+F 2 "" V 6480 4000 50  0001 C CNN
+F 3 "~" H 6550 4000 50  0001 C CNN
+	1    6550 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C0FF5
+P 4000 3450
+F 0 "R?" H 4070 3496 50  0000 L CNN
+F 1 "470" H 4070 3405 50  0000 L CNN
+F 2 "" V 3930 3450 50  0001 C CNN
+F 3 "~" H 4000 3450 50  0001 C CNN
+	1    4000 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1C12BB
+P 7650 4700
+F 0 "R?" H 7720 4746 50  0000 L CNN
+F 1 "100k" H 7720 4655 50  0000 L CNN
+F 2 "" V 7580 4700 50  0001 C CNN
+F 3 "~" H 7650 4700 50  0001 C CNN
+	1    7650 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D1B099E
+P 8400 4050
+F 0 "J?" H 8220 4033 50  0000 R CNN
+F 1 "AudioJack2" H 8220 4124 50  0000 R CNN
+F 2 "" H 8400 4050 50  0001 C CNN
+F 3 "~" H 8400 4050 50  0001 C CNN
+	1    8400 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5D1B1CE0
+P 8400 4550
+F 0 "RV?" V 8193 4550 50  0000 C CNN
+F 1 "R_POT" V 8284 4550 50  0000 C CNN
+F 2 "" H 8400 4550 50  0001 C CNN
+F 3 "~" H 8400 4550 50  0001 C CNN
+	1    8400 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D1B34B0
+P 6550 4450
+F 0 "C?" H 6665 4496 50  0000 L CNN
+F 1 "10nf" H 6665 4405 50  0000 L CNN
+F 2 "" H 6588 4300 50  0001 C CNN
+F 3 "~" H 6550 4450 50  0001 C CNN
+	1    6550 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D1B4299
+P 4300 5550
+F 0 "C?" H 4415 5596 50  0000 L CNN
+F 1 "1nf" H 4415 5505 50  0000 L CNN
+F 2 "" H 4338 5400 50  0001 C CNN
+F 3 "~" H 4300 5550 50  0001 C CNN
+	1    4300 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV?
+U 1 1 5D1B8AB8
+P 3250 2350
+F 0 "RV?" V 3043 2350 50  0000 C CNN
+F 1 "R_POT_TRIM" V 3134 2350 50  0000 C CNN
+F 2 "" H 3250 2350 50  0001 C CNN
+F 3 "~" H 3250 2350 50  0001 C CNN
+	1    3250 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 3850 3700 3850
+Wire Wire Line
+	3700 3850 3700 3550
+Wire Wire Line
+	3700 3550 3550 3550
+Wire Wire Line
+	3100 3550 2750 3550
+Wire Wire Line
+	2750 3550 2750 6000
+Wire Wire Line
+	2750 6000 7150 6000
+Connection ~ 7150 6000
+Wire Wire Line
+	7150 6000 7150 6275
+Wire Wire Line
+	4400 2750 4000 2750
+Wire Wire Line
+	3700 2750 3550 2750
+Wire Wire Line
+	3550 2750 3550 3550
+Connection ~ 3550 3550
+Wire Wire Line
+	3550 3550 3400 3550
+Wire Wire Line
+	3550 2750 3550 2500
+Wire Wire Line
+	3550 2500 3250 2500
+Connection ~ 3550 2750
+Wire Wire Line
+	2900 2500 2900 2350
+Wire Wire Line
+	2900 2350 3100 2350
+Wire Wire Line
+	2900 2500 3250 2500
+Connection ~ 3250 2500
+Wire Wire Line
+	3400 2350 3700 2350
+Wire Wire Line
+	4000 2350 4200 2350
+Wire Wire Line
+	4200 2350 4200 2650
+Wire Wire Line
+	4200 2650 4400 2650
+Wire Wire Line
+	4300 5400 4300 3550
+Wire Wire Line
+	4300 3550 4400 3550
+Wire Wire Line
+	4300 5700 4800 5700
+Wire Wire Line
+	4800 5700 4800 5600
+Wire Wire Line
+	4800 5600 5000 5600
+Wire Wire Line
+	5000 5600 5000 5650
+Wire Wire Line
+	5000 3850 5000 4100
+Wire Wire Line
+	5000 4150 4800 4150
+Wire Wire Line
+	4800 4150 4800 5050
+Connection ~ 4800 5600
+Wire Wire Line
+	4400 4300 4500 4300
+Wire Wire Line
+	4500 4300 4500 4500
+Wire Wire Line
+	4500 4800 4500 5050
+Wire Wire Line
+	4500 5050 4800 5050
+Connection ~ 4800 5050
+Wire Wire Line
+	4800 5050 4800 5450
+Wire Wire Line
+	4400 3650 4400 4300
+Wire Wire Line
+	2400 3050 2950 3050
+Connection ~ 2400 3050
+Wire Wire Line
+	2400 3050 2400 2925
+Wire Wire Line
+	3250 3050 4000 3050
+Wire Wire Line
+	4250 3050 4250 3250
+Wire Wire Line
+	4250 3250 4400 3250
+Wire Wire Line
+	4000 3050 4000 3300
+Connection ~ 4000 3050
+Wire Wire Line
+	4000 3050 4250 3050
+Wire Wire Line
+	4000 3600 4000 4100
+Wire Wire Line
+	4000 4100 5000 4100
+Connection ~ 5000 4100
+Wire Wire Line
+	5000 4100 5000 4150
+Wire Wire Line
+	4400 3350 4200 3350
+Wire Wire Line
+	4200 3350 4200 5900
+Wire Wire Line
+	4200 5900 6950 5900
+Wire Wire Line
+	6950 5900 6950 4700
+Wire Wire Line
+	6950 3600 6550 3600
+Wire Wire Line
+	6550 3600 6550 3850
+Wire Wire Line
+	6550 4150 6550 4300
+Wire Wire Line
+	6550 4600 6550 5450
+Wire Wire Line
+	6550 5450 4800 5450
+Connection ~ 4800 5450
+Wire Wire Line
+	4800 5450 4800 5600
+Wire Wire Line
+	8200 4050 7800 4050
+Wire Wire Line
+	7500 4050 6950 4050
+Connection ~ 6950 4050
+Wire Wire Line
+	6950 4050 6950 3600
+Wire Wire Line
+	7500 4700 6950 4700
+Connection ~ 6950 4700
+Wire Wire Line
+	6950 4700 6950 4050
+Wire Wire Line
+	7800 4700 8400 4700
+Wire Wire Line
+	8250 4550 8050 4550
+Wire Wire Line
+	8050 4550 8050 1900
+Wire Wire Line
+	8050 1900 4900 1900
+Connection ~ 4900 1900
+Wire Wire Line
+	4900 1900 4900 1850
 $EndSCHEMATC
