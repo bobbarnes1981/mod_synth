@@ -1,4 +1,3 @@
-
 /*
  * Arduino 8 step sequencer for modular synth
  */
@@ -42,6 +41,7 @@ int reset_state = LOW;
 bool reset_required = false;
 unsigned long gate_millis = 0;
 int gate_duration = 0;
+int gate_state = LOW;
 
 void setup() {
   pinMode(CLOCK_IN, INPUT);
@@ -56,38 +56,42 @@ void setup() {
 }
 
 void loop() {
+  // check if we need to step
   if (clock_required) {
-
-    // step and check boundary
-    current_step++;
-    if (current_step >= MAX_STEPS) {
-      current_step = 0;
-    }
-
-    // setup gate output
-    gate_millis = millis();
-    digitalWrite(GATE_OUT, HIGH);
-
+    setStep(current_step + 1);
     // clock event has been dealt with
     clock_required = false;
+  }
 
-    // check if we need to reset to zero
-    if (reset_required) {
-      current_step = 0;
-      reset_required = false;
-    }
+  // check if we need to reset to zero
+  if (reset_required) {
+    setStep(0);
+    // reset event has been dealt with
+    reset_required = false;
   }
 
   // check if it is time to stop the gate
   int gate_elapsed = millis() - gate_millis;
   if (gate_elapsed >= gate_duration) {
-    digitalWrite(GATE_OUT, LOW);
+    gate_state = LOW;
   }
 
   processGate();
   processClock();
   processReset();
   updateOutput();
+}
+
+void setStep(int s) {
+  // step and check boundary
+  current_step = s;
+  if (current_step >= MAX_STEPS) {
+    current_step = 0;
+  }
+
+  // setup gate output
+  gate_millis = millis();
+  gate_state = HIGH;  
 }
 
 void processGate() {
@@ -124,6 +128,7 @@ void processReset() {
 }
 
 void updateOutput() {
+  digitalWrite(GATE_OUT, gate_state);
   for (int i = 0; i < MAX_STEPS; i++) {
     digitalWrite(steps[i], i == current_step ? HIGH : LOW);
   }
