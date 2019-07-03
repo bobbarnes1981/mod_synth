@@ -1358,25 +1358,6 @@ $EndComp
 Wire Wire Line
 	9350 1875 9350 2600
 $Comp
-L Device:R R?
-U 1 1 5D29C94C
-P 9350 3200
-F 0 "R?" H 9420 3246 50  0000 L CNN
-F 1 "10k" H 9420 3155 50  0000 L CNN
-F 2 "" V 9280 3200 50  0001 C CNN
-F 3 "~" H 9350 3200 50  0001 C CNN
-	1    9350 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 2900 9350 3050
-Connection ~ 9350 2900
-Wire Wire Line
-	9350 3350 9800 3350
-Connection ~ 9800 3350
-Wire Wire Line
-	9800 3350 9800 700 
-$Comp
 L Diode:1N4148 D?
 U 1 1 5D2AE689
 P 6825 2100
@@ -1461,8 +1442,6 @@ Wire Wire Line
 Wire Wire Line
 	9125 3500 9800 3500
 Connection ~ 9800 3500
-Wire Wire Line
-	9800 3500 9800 3350
 Wire Wire Line
 	1550 2550 1800 2550
 Wire Wire Line
@@ -1631,4 +1610,6 @@ Wire Wire Line
 Connection ~ 6500 1900
 Wire Wire Line
 	6500 1900 6500 700 
+Wire Wire Line
+	9800 700  9800 3500
 $EndSCHEMATC
