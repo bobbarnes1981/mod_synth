@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 8)
+    (drawings 9)
     (tracks 340)
     (zones 0)
     (modules 88)
@@ -4506,6 +4506,9 @@
     )
   )
 
+  (gr_text "DO NOT USE; WRONG SIZE" (at 204.47 46.99) (layer F.Cu)
+    (effects (font (size 20 8) (thickness 0.3)))
+  )
   (dimension 10.16 (width 0.12) (layer F.SilkS)
     (gr_text "10.160 mm" (at 129.54 24.13 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
