@@ -53,7 +53,7 @@ U 1 1 5D1B00FF
 P 3700 2100
 F 0 "U2" H 3700 2981 50  0000 C CNN
 F 1 "AS3340" H 3700 2890 50  0000 C CNN
-F 2 "" H 4200 1800 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 4200 1800 50  0001 C CNN
 F 3 "http://www.alfarzpp.lv/eng/sc/AS3340.pdf" H 4300 1650 50  0001 C CNN
 	1    3700 2100
 	1    0    0    -1  
@@ -134,17 +134,6 @@ Wire Wire Line
 	2825 3525 2825 3375
 Wire Wire Line
 	2825 3225 2625 3225
-$Comp
-L Connector:AudioJack2 J1
-U 1 1 5D1BC2E5
-P 4075 3375
-F 0 "J1" H 3895 3358 50  0000 R CNN
-F 1 "Saw" H 3895 3449 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4075 3375 50  0001 C CNN
-F 3 "~" H 4075 3375 50  0001 C CNN
-	1    4075 3375
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3875 3375 2825 3375
 Connection ~ 2825 3375
@@ -308,7 +297,7 @@ U 1 1 5D1B34B0
 P 5350 3400
 F 0 "C2" H 5465 3446 50  0000 L CNN
 F 1 "10nf" H 5465 3355 50  0000 L CNN
-F 2 "" H 5388 3250 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 5388 3250 50  0001 C CNN
 F 3 "~" H 5350 3400 50  0001 C CNN
 	1    5350 3400
 	1    0    0    -1  
@@ -319,7 +308,7 @@ U 1 1 5D1B4299
 P 3100 4500
 F 0 "C1" H 3215 4546 50  0000 L CNN
 F 1 "1nf" H 3215 4455 50  0000 L CNN
-F 2 "" H 3138 4350 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 3138 4350 50  0001 C CNN
 F 3 "~" H 3100 4500 50  0001 C CNN
 	1    3100 4500
 	1    0    0    -1  
@@ -330,7 +319,7 @@ U 1 1 5D1B8AB8
 P 2050 1300
 F 0 "RV1" V 1843 1300 50  0000 C CNN
 F 1 "R_POT_TRIM" V 1934 1300 50  0000 C CNN
-F 2 "" H 2050 1300 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical" H 2050 1300 50  0001 C CNN
 F 3 "~" H 2050 1300 50  0001 C CNN
 	1    2050 1300
 	0    1    1    0   
@@ -762,8 +751,6 @@ Connection ~ 4000 4400
 Wire Wire Line
 	4000 4400 5350 4400
 Wire Wire Line
-	3850 3500 3850 4400
-Wire Wire Line
 	3600 4400 3850 4400
 Connection ~ 3850 4400
 Wire Wire Line
@@ -944,4 +931,17 @@ Wire Wire Line
 Connection ~ 5050 6600
 Wire Wire Line
 	5050 6600 5050 6250
+$Comp
+L Connector:AudioJack2 J1
+U 1 1 5D1BC2E5
+P 4075 3375
+F 0 "J1" H 3895 3358 50  0000 R CNN
+F 1 "Saw" H 3895 3449 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4075 3375 50  0001 C CNN
+F 3 "~" H 4075 3375 50  0001 C CNN
+	1    4075 3375
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 3500 3850 4400
 $EndSCHEMATC

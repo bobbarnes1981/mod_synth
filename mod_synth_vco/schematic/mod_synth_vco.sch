@@ -70,7 +70,7 @@ U 1 1 5D1B1770
 P 2325 3225
 F 0 "U1" H 2325 3592 50  0000 C CNN
 F 1 "TL072" H 2325 3501 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 2325 3225 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 2325 3225 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2325 3225 50  0001 C CNN
 	1    2325 3225
 	1    0    0    -1  
@@ -134,17 +134,6 @@ Wire Wire Line
 	2825 3525 2825 3375
 Wire Wire Line
 	2825 3225 2625 3225
-$Comp
-L Connector:AudioJack2 J1
-U 1 1 5D1BC2E5
-P 4075 3375
-F 0 "J1" H 3895 3358 50  0000 R CNN
-F 1 "Saw" H 3895 3449 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4075 3375 50  0001 C CNN
-F 3 "~" H 4075 3375 50  0001 C CNN
-	1    4075 3375
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3875 3375 2825 3375
 Connection ~ 2825 3375
@@ -535,7 +524,7 @@ U 2 1 5D211955
 P 10000 4000
 F 0 "U3" H 10000 4367 50  0000 C CNN
 F 1 "TL072" H 10000 4276 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 10000 4000 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 10000 4000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10000 4000 50  0001 C CNN
 	2    10000 4000
 	1    0    0    -1  
@@ -762,8 +751,6 @@ Connection ~ 4000 4400
 Wire Wire Line
 	4000 4400 5350 4400
 Wire Wire Line
-	3850 3500 3850 4400
-Wire Wire Line
 	3600 4400 3850 4400
 Connection ~ 3850 4400
 Wire Wire Line
@@ -944,4 +931,17 @@ Wire Wire Line
 Connection ~ 5050 6600
 Wire Wire Line
 	5050 6600 5050 6250
+$Comp
+L Connector:AudioJack2 J1
+U 1 1 5D1BC2E5
+P 4075 3375
+F 0 "J1" H 3895 3358 50  0000 R CNN
+F 1 "Saw" H 3895 3449 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4075 3375 50  0001 C CNN
+F 3 "~" H 4075 3375 50  0001 C CNN
+	1    4075 3375
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 3500 3850 4400
 $EndSCHEMATC
