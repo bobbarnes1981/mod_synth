@@ -101,9 +101,9 @@
     (uvia_drill 0.1)
   )
 
-  (gr_line (start 55.88 25.4) (end 38.1 25.4) (layer Edge.Cuts) (width 0.05) (tstamp 5D1EE8CD))
-  (gr_line (start 55.88 138.43) (end 55.88 25.4) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 38.1 138.43) (end 55.88 138.43) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 38.1 25.4) (end 38.1 138.43) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 55.88 25.4) (end 38.1 25.4) (layer F.SilkS) (width 0.12) (tstamp 5D1EE899))
+  (gr_line (start 55.88 138.43) (end 55.88 25.4) (layer F.SilkS) (width 0.12))
+  (gr_line (start 38.1 138.43) (end 55.88 138.43) (layer F.SilkS) (width 0.12))
+  (gr_line (start 38.1 25.4) (end 38.1 138.43) (layer F.SilkS) (width 0.12))
 
 )
