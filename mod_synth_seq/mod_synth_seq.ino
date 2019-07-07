@@ -33,8 +33,8 @@ int steps[] = {
 
 int ANALOG_MIN = 0;
 int ANALOG_MAX = 1023;
-int GATE_MIN = 250;
-int GATE_MAX = 4000;
+int GATE_MIN = 20;
+int GATE_MAX = 1000;
 
 int clock_state = LOW;
 bool clock_required = false;
