@@ -70,7 +70,7 @@ U 1 1 5D1B1770
 P 2325 3225
 F 0 "U1" H 2325 3592 50  0000 C CNN
 F 1 "TL072" H 2325 3501 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 2325 3225 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 2325 3225 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2325 3225 50  0001 C CNN
 	1    2325 3225
 	1    0    0    -1  
@@ -524,7 +524,7 @@ U 2 1 5D211955
 P 10000 4000
 F 0 "U3" H 10000 4367 50  0000 C CNN
 F 1 "TL072" H 10000 4276 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 10000 4000 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 10000 4000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10000 4000 50  0001 C CNN
 	2    10000 4000
 	1    0    0    -1  
