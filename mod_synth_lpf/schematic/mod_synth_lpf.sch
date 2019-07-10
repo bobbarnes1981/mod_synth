@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:mod_synth_lpf-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5D24CC71
 P 8875 5100
-F 0 "#PWR?" H 8875 4850 50  0001 C CNN
+F 0 "#PWR0101" H 8875 4850 50  0001 C CNN
 F 1 "GND" H 8880 4927 50  0000 C CNN
 F 2 "" H 8875 5100 50  0001 C CNN
 F 3 "" H 8875 5100 50  0001 C CNN
@@ -25,10 +26,10 @@ F 3 "" H 8875 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-12V #PWR?
+L power:-12V #PWR0102
 U 1 1 5D24CF8A
 P 8575 1875
-F 0 "#PWR?" H 8575 1975 50  0001 C CNN
+F 0 "#PWR0102" H 8575 1975 50  0001 C CNN
 F 1 "-12V" H 8590 2048 50  0000 C CNN
 F 2 "" H 8575 1875 50  0001 C CNN
 F 3 "" H 8575 1875 50  0001 C CNN
@@ -36,10 +37,10 @@ F 3 "" H 8575 1875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR0103
 U 1 1 5D24D55B
 P 4575 1925
-F 0 "#PWR?" H 4575 1775 50  0001 C CNN
+F 0 "#PWR0103" H 4575 1775 50  0001 C CNN
 F 1 "+12V" H 4590 2098 50  0000 C CNN
 F 2 "" H 4575 1925 50  0001 C CNN
 F 3 "" H 4575 1925 50  0001 C CNN
@@ -47,10 +48,10 @@ F 3 "" H 4575 1925 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U1
 U 1 1 5D24D895
 P 3000 3075
-F 0 "U?" H 3000 3442 50  0000 C CNN
+F 0 "U1" H 3000 3442 50  0000 C CNN
 F 1 "TL074" H 3000 3351 50  0000 C CNN
 F 2 "" H 2950 3175 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3050 3275 50  0001 C CNN
@@ -58,10 +59,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3050 3275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U1
 U 2 1 5D24E415
 P 4025 3625
-F 0 "U?" H 4025 3992 50  0000 C CNN
+F 0 "U1" H 4025 3992 50  0000 C CNN
 F 1 "TL074" H 4025 3901 50  0000 C CNN
 F 2 "" H 3975 3725 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4075 3825 50  0001 C CNN
@@ -69,10 +70,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4075 3825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U1
 U 3 1 5D24F7E2
 P 3775 4475
-F 0 "U?" H 3775 4842 50  0000 C CNN
+F 0 "U1" H 3775 4842 50  0000 C CNN
 F 1 "TL074" H 3775 4751 50  0000 C CNN
 F 2 "" H 3725 4575 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3825 4675 50  0001 C CNN
@@ -80,10 +81,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3825 4675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U1
 U 4 1 5D2506EB
 P 3750 5200
-F 0 "U?" H 3750 5567 50  0000 C CNN
+F 0 "U1" H 3750 5567 50  0000 C CNN
 F 1 "TL074" H 3750 5476 50  0000 C CNN
 F 2 "" H 3700 5300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3800 5400 50  0001 C CNN
@@ -91,10 +92,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3800 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U1
 U 5 1 5D250A78
 P 6525 1775
-F 0 "U?" H 6483 1821 50  0000 L CNN
+F 0 "U1" H 6483 1821 50  0000 L CNN
 F 1 "TL074" H 6483 1730 50  0000 L CNN
 F 2 "" H 6475 1875 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6575 1975 50  0001 C CNN
@@ -102,10 +103,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6575 1975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BC558 Q?
+L Transistor_BJT:BC558 Q1
 U 1 1 5D252D13
 P 7075 3275
-F 0 "Q?" H 7266 3321 50  0000 L CNN
+F 0 "Q1" H 7266 3321 50  0000 L CNN
 F 1 "BC558" H 7266 3230 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7275 3200 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 7075 3275 50  0001 L CNN
@@ -113,10 +114,10 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 7075 3275 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BC558 Q?
+L Transistor_BJT:BC558 Q2
 U 1 1 5D25342C
 P 7075 4000
-F 0 "Q?" H 7266 4046 50  0000 L CNN
+F 0 "Q2" H 7266 4046 50  0000 L CNN
 F 1 "BC558" H 7266 3955 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7275 3925 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 7075 4000 50  0001 L CNN
@@ -124,21 +125,21 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 7075 4000 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J?
+L Connector_Generic:Conn_02x08_Odd_Even J4
 U 1 1 5D253EA5
-P 8650 3125
-F 0 "J?" H 8700 3642 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 8700 3551 50  0000 C CNN
-F 2 "" H 8650 3125 50  0001 C CNN
-F 3 "~" H 8650 3125 50  0001 C CNN
-	1    8650 3125
+P 8550 3175
+F 0 "J4" H 8600 3692 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 8600 3601 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical" H 8550 3175 50  0001 C CNN
+F 3 "~" H 8550 3175 50  0001 C CNN
+	1    8550 3175
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM13700 U?
+L Amplifier_Operational:LM13700 U2
 U 1 1 5D254C73
 P 5650 3200
-F 0 "U?" H 5650 3567 50  0000 C CNN
+F 0 "U2" H 5650 3567 50  0000 C CNN
 F 1 "LM13700" H 5650 3476 50  0000 C CNN
 F 2 "" H 5350 3225 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 3225 50  0001 C CNN
@@ -146,10 +147,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 3225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM13700 U?
+L Amplifier_Operational:LM13700 U2
 U 2 1 5D256043
 P 5675 3800
-F 0 "U?" H 5575 4148 50  0000 C CNN
+F 0 "U2" H 5575 4148 50  0000 C CNN
 F 1 "LM13700" H 5575 4057 50  0000 C CNN
 F 2 "" H 5375 3825 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5375 3825 50  0001 C CNN
@@ -157,10 +158,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5375 3825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM13700 U?
+L Amplifier_Operational:LM13700 U2
 U 3 1 5D25776E
 P 5650 4500
-F 0 "U?" H 5650 4867 50  0000 C CNN
+F 0 "U2" H 5650 4867 50  0000 C CNN
 F 1 "LM13700" H 5650 4776 50  0000 C CNN
 F 2 "" H 5350 4525 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 4525 50  0001 C CNN
@@ -168,10 +169,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 4525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM13700 U?
+L Amplifier_Operational:LM13700 U2
 U 4 1 5D258C43
 P 5650 5150
-F 0 "U?" H 5550 5498 50  0000 C CNN
+F 0 "U2" H 5550 5498 50  0000 C CNN
 F 1 "LM13700" H 5550 5407 50  0000 C CNN
 F 2 "" H 5350 5175 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 5175 50  0001 C CNN
@@ -179,10 +180,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 5175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM13700 U?
+L Amplifier_Operational:LM13700 U2
 U 5 1 5D25A025
 P 7175 1775
-F 0 "U?" H 7133 1821 50  0000 L CNN
+F 0 "U2" H 7133 1821 50  0000 L CNN
 F 1 "LM13700" H 7133 1730 50  0000 L CNN
 F 2 "" H 6875 1800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 6875 1800 50  0001 C CNN
@@ -190,10 +191,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 6875 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D?
+L Device:LED D2
 U 1 1 5D25B7F8
 P 2625 4125
-F 0 "D?" H 2618 4341 50  0000 C CNN
+F 0 "D2" H 2618 4341 50  0000 C CNN
 F 1 "LED" H 2618 4250 50  0000 C CNN
 F 2 "" H 2625 4125 50  0001 C CNN
 F 3 "~" H 2625 4125 50  0001 C CNN
@@ -201,10 +202,10 @@ F 3 "~" H 2625 4125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D?
+L Device:LED D1
 U 1 1 5D25BF6E
 P 2575 4750
-F 0 "D?" H 2568 4495 50  0000 C CNN
+F 0 "D1" H 2568 4495 50  0000 C CNN
 F 1 "LED" H 2568 4586 50  0000 C CNN
 F 2 "" H 2575 4750 50  0001 C CNN
 F 3 "~" H 2575 4750 50  0001 C CNN
@@ -212,46 +213,46 @@ F 3 "~" H 2575 4750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV3
 U 1 1 5D25D4FF
 P 10075 4475
-F 0 "RV?" H 10005 4566 50  0000 R CNN
+F 0 "RV3" H 10005 4566 50  0000 R CNN
 F 1 "4.7k Linear" H 10005 4475 50  0000 R CNN
-F 2 "" H 10075 4475 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 10075 4475 50  0001 C CNN
 F 3 "~" H 10075 4475 50  0001 C CNN
 F 4 "Cut Off" H 10005 4384 50  0000 R CNN "Text"
 	1    10075 4475
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV2
 U 1 1 5D25DBFF
 P 10075 3925
-F 0 "RV?" H 10005 4016 50  0000 R CNN
+F 0 "RV2" H 10005 4016 50  0000 R CNN
 F 1 "100k Linear" H 10005 3925 50  0000 R CNN
-F 2 "" H 10075 3925 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 10075 3925 50  0001 C CNN
 F 3 "~" H 10075 3925 50  0001 C CNN
 F 4 "Resonance" H 10005 3834 50  0000 R CNN "Text"
 	1    10075 3925
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV1
 U 1 1 5D25E9AF
 P 10025 3325
-F 0 "RV?" H 9955 3416 50  0000 R CNN
+F 0 "RV1" H 9955 3416 50  0000 R CNN
 F 1 "100k Linear" H 9955 3325 50  0000 R CNN
-F 2 "" H 10025 3325 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 10025 3325 50  0001 C CNN
 F 3 "~" H 10025 3325 50  0001 C CNN
 F 4 "CV Level" H 9955 3234 50  0000 R CNN "Text"
 	1    10025 3325
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack2 J?
+L Connector:AudioJack2 J3
 U 1 1 5D25F34B
 P 1550 3525
-F 0 "J?" H 1582 3940 50  0000 C CNN
+F 0 "J3" H 1582 3940 50  0000 C CNN
 F 1 "AudioJack2" H 1582 3849 50  0000 C CNN
 F 2 "" H 1550 3525 50  0001 C CNN
 F 3 "~" H 1550 3525 50  0001 C CNN
@@ -260,10 +261,10 @@ F 4 "Input" H 1582 3758 50  0000 C CNN "Text"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack2 J?
+L Connector:AudioJack2 J2
 U 1 1 5D25FCDF
 P 1500 4150
-F 0 "J?" H 1532 4565 50  0000 C CNN
+F 0 "J2" H 1532 4565 50  0000 C CNN
 F 1 "AudioJack2" H 1532 4474 50  0000 C CNN
 F 2 "" H 1500 4150 50  0001 C CNN
 F 3 "~" H 1500 4150 50  0001 C CNN
@@ -272,10 +273,10 @@ F 4 "Output" H 1532 4383 50  0000 C CNN "Text"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack2 J?
+L Connector:AudioJack2 J1
 U 1 1 5D2602C8
 P 1450 4900
-F 0 "J?" H 1482 5315 50  0000 C CNN
+F 0 "J1" H 1482 5315 50  0000 C CNN
 F 1 "AudioJack2" H 1482 5224 50  0000 C CNN
 F 2 "" H 1450 4900 50  0001 C CNN
 F 3 "~" H 1450 4900 50  0001 C CNN
@@ -284,10 +285,10 @@ F 4 "CV" H 1482 5133 50  0000 C CNN "Text"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 5D260C73
 P 3550 3250
-F 0 "C?" H 3665 3296 50  0000 L CNN
+F 0 "C1" H 3665 3296 50  0000 L CNN
 F 1 "1nf" H 3665 3205 50  0000 L CNN
 F 2 "" H 3588 3100 50  0001 C CNN
 F 3 "~" H 3550 3250 50  0001 C CNN
@@ -295,10 +296,10 @@ F 3 "~" H 3550 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 5D26137D
 P 5975 2875
-F 0 "C?" H 6090 2921 50  0000 L CNN
+F 0 "C4" H 6090 2921 50  0000 L CNN
 F 1 "1nf" H 6090 2830 50  0000 L CNN
 F 2 "" H 6013 2725 50  0001 C CNN
 F 3 "~" H 5975 2875 50  0001 C CNN
@@ -306,10 +307,10 @@ F 3 "~" H 5975 2875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C7
 U 1 1 5D261558
 P 6950 2825
-F 0 "C?" H 7065 2871 50  0000 L CNN
+F 0 "C7" H 7065 2871 50  0000 L CNN
 F 1 "1nf" H 7065 2780 50  0000 L CNN
 F 2 "" H 6988 2675 50  0001 C CNN
 F 3 "~" H 6950 2825 50  0001 C CNN
@@ -317,10 +318,10 @@ F 3 "~" H 6950 2825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C5
 U 1 1 5D2617BD
 P 6300 1075
-F 0 "C?" H 6415 1121 50  0000 L CNN
+F 0 "C5" H 6415 1121 50  0000 L CNN
 F 1 "100nf" H 6415 1030 50  0000 L CNN
 F 2 "" H 6338 925 50  0001 C CNN
 F 3 "~" H 6300 1075 50  0001 C CNN
@@ -328,10 +329,10 @@ F 3 "~" H 6300 1075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C6
 U 1 1 5D261A85
 P 6850 1075
-F 0 "C?" H 6965 1121 50  0000 L CNN
+F 0 "C6" H 6965 1121 50  0000 L CNN
 F 1 "100nf" H 6965 1030 50  0000 L CNN
 F 2 "" H 6888 925 50  0001 C CNN
 F 3 "~" H 6850 1075 50  0001 C CNN
@@ -339,10 +340,10 @@ F 3 "~" H 6850 1075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C2
 U 1 1 5D261D20
 P 3650 5950
-F 0 "C?" H 3765 5996 50  0000 L CNN
+F 0 "C2" H 3765 5996 50  0000 L CNN
 F 1 "4.7nf" H 3765 5905 50  0000 L CNN
 F 2 "" H 3688 5800 50  0001 C CNN
 F 3 "~" H 3650 5950 50  0001 C CNN
@@ -350,10 +351,10 @@ F 3 "~" H 3650 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5D261F37
 P 4725 4600
-F 0 "C?" H 4840 4646 50  0000 L CNN
+F 0 "C3" H 4840 4646 50  0000 L CNN
 F 1 "470nf" H 4840 4555 50  0000 L CNN
 F 2 "" H 4763 4450 50  0001 C CNN
 F 3 "~" H 4725 4600 50  0001 C CNN
@@ -361,10 +362,10 @@ F 3 "~" H 4725 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5D26236B
 P 3050 3650
-F 0 "R?" V 2843 3650 50  0000 C CNN
+F 0 "R2" V 2843 3650 50  0000 C CNN
 F 1 "10k" V 2934 3650 50  0000 C CNN
 F 2 "" V 2980 3650 50  0001 C CNN
 F 3 "~" H 3050 3650 50  0001 C CNN
@@ -372,10 +373,10 @@ F 3 "~" H 3050 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 5D2631FF
 P 4700 3325
-F 0 "R?" V 4493 3325 50  0000 C CNN
+F 0 "R6" V 4493 3325 50  0000 C CNN
 F 1 "10k" V 4584 3325 50  0000 C CNN
 F 2 "" V 4630 3325 50  0001 C CNN
 F 3 "~" H 4700 3325 50  0001 C CNN
@@ -383,10 +384,10 @@ F 3 "~" H 4700 3325 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5D263363
 P 4650 850
-F 0 "R?" H 4720 896 50  0000 L CNN
+F 0 "R5" H 4720 896 50  0000 L CNN
 F 1 "10k" H 4720 805 50  0000 L CNN
 F 2 "" V 4580 850 50  0001 C CNN
 F 3 "~" H 4650 850 50  0001 C CNN
@@ -394,10 +395,10 @@ F 3 "~" H 4650 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 5D2634EC
 P 5100 3625
-F 0 "R?" H 5170 3671 50  0000 L CNN
+F 0 "R9" H 5170 3671 50  0000 L CNN
 F 1 "10k" H 5170 3580 50  0000 L CNN
 F 2 "" V 5030 3625 50  0001 C CNN
 F 3 "~" H 5100 3625 50  0001 C CNN
@@ -405,10 +406,10 @@ F 3 "~" H 5100 3625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R15
 U 1 1 5D263690
 P 6525 3500
-F 0 "R?" V 6318 3500 50  0000 C CNN
+F 0 "R15" V 6318 3500 50  0000 C CNN
 F 1 "10k" V 6409 3500 50  0000 C CNN
 F 2 "" V 6455 3500 50  0001 C CNN
 F 3 "~" H 6525 3500 50  0001 C CNN
@@ -416,10 +417,10 @@ F 3 "~" H 6525 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 5D263F85
 P 4750 3950
-F 0 "R?" V 4543 3950 50  0000 C CNN
+F 0 "R7" V 4543 3950 50  0000 C CNN
 F 1 "10k" V 4634 3950 50  0000 C CNN
 F 2 "" V 4680 3950 50  0001 C CNN
 F 3 "~" H 4750 3950 50  0001 C CNN
@@ -427,10 +428,10 @@ F 3 "~" H 4750 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R16
 U 1 1 5D2641A0
 P 6600 3075
-F 0 "R?" V 6393 3075 50  0000 C CNN
+F 0 "R16" V 6393 3075 50  0000 C CNN
 F 1 "10k" V 6484 3075 50  0000 C CNN
 F 2 "" V 6530 3075 50  0001 C CNN
 F 3 "~" H 6600 3075 50  0001 C CNN
@@ -438,10 +439,10 @@ F 3 "~" H 6600 3075 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5D2649BA
 P 3475 1725
-F 0 "R?" H 3545 1771 50  0000 L CNN
+F 0 "R3" H 3545 1771 50  0000 L CNN
 F 1 "220" H 3545 1680 50  0000 L CNN
 F 2 "" V 3405 1725 50  0001 C CNN
 F 3 "~" H 3475 1725 50  0001 C CNN
@@ -449,10 +450,10 @@ F 3 "~" H 3475 1725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 5D264B81
 P 3800 1725
-F 0 "R?" H 3870 1771 50  0000 L CNN
+F 0 "R4" H 3870 1771 50  0000 L CNN
 F 1 "220" H 3870 1680 50  0000 L CNN
 F 2 "" V 3730 1725 50  0001 C CNN
 F 3 "~" H 3800 1725 50  0001 C CNN
@@ -460,10 +461,10 @@ F 3 "~" H 3800 1725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R10
 U 1 1 5D264D73
 P 5175 6575
-F 0 "R?" H 5245 6621 50  0000 L CNN
+F 0 "R10" H 5245 6621 50  0000 L CNN
 F 1 "220" H 5245 6530 50  0000 L CNN
 F 2 "" V 5105 6575 50  0001 C CNN
 F 3 "~" H 5175 6575 50  0001 C CNN
@@ -471,10 +472,10 @@ F 3 "~" H 5175 6575 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R11
 U 1 1 5D264F9D
 P 5450 6575
-F 0 "R?" H 5520 6621 50  0000 L CNN
+F 0 "R11" H 5520 6621 50  0000 L CNN
 F 1 "220" H 5520 6530 50  0000 L CNN
 F 2 "" V 5380 6575 50  0001 C CNN
 F 3 "~" H 5450 6575 50  0001 C CNN
@@ -482,10 +483,10 @@ F 3 "~" H 5450 6575 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R8
 U 1 1 5D265131
 P 4975 3125
-F 0 "R?" H 5045 3171 50  0000 L CNN
+F 0 "R8" H 5045 3171 50  0000 L CNN
 F 1 "470k" H 5045 3080 50  0000 L CNN
 F 2 "" V 4905 3125 50  0001 C CNN
 F 3 "~" H 4975 3125 50  0001 C CNN
@@ -493,10 +494,10 @@ F 3 "~" H 4975 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R13
 U 1 1 5D26533E
 P 6500 3850
-F 0 "R?" H 6570 3896 50  0000 L CNN
+F 0 "R13" H 6570 3896 50  0000 L CNN
 F 1 "100k" H 6570 3805 50  0000 L CNN
 F 2 "" V 6430 3850 50  0001 C CNN
 F 3 "~" H 6500 3850 50  0001 C CNN
@@ -504,10 +505,10 @@ F 3 "~" H 6500 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R14
 U 1 1 5D26552B
 P 6500 4275
-F 0 "R?" H 6570 4321 50  0000 L CNN
+F 0 "R14" H 6570 4321 50  0000 L CNN
 F 1 "100k" H 6570 4230 50  0000 L CNN
 F 2 "" V 6430 4275 50  0001 C CNN
 F 3 "~" H 6500 4275 50  0001 C CNN
@@ -515,10 +516,10 @@ F 3 "~" H 6500 4275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5D2656E3
 P 2100 2600
-F 0 "R?" H 2170 2646 50  0000 L CNN
+F 0 "R1" H 2170 2646 50  0000 L CNN
 F 1 "1k8" H 2170 2555 50  0000 L CNN
 F 2 "" V 2030 2600 50  0001 C CNN
 F 3 "~" H 2100 2600 50  0001 C CNN
@@ -526,10 +527,10 @@ F 3 "~" H 2100 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R12
 U 1 1 5D2658B5
 P 6300 5150
-F 0 "R?" H 6370 5196 50  0000 L CNN
+F 0 "R12" H 6370 5196 50  0000 L CNN
 F 1 "1k8" H 6370 5105 50  0000 L CNN
 F 2 "" V 6230 5150 50  0001 C CNN
 F 3 "~" H 6300 5150 50  0001 C CNN
@@ -537,10 +538,10 @@ F 3 "~" H 6300 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R17
 U 1 1 5D265A78
 P 7175 5050
-F 0 "R?" H 7245 5096 50  0000 L CNN
+F 0 "R17" H 7245 5096 50  0000 L CNN
 F 1 "4k7" H 7245 5005 50  0000 L CNN
 F 2 "" V 7105 5050 50  0001 C CNN
 F 3 "~" H 7175 5050 50  0001 C CNN
@@ -548,25 +549,25 @@ F 3 "~" H 7175 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_DPDT_x2 SW?
-U 1 1 5D265D83
+L Switch:SW_DPDT_x2 SW1
+U 2 1 5D265D83
 P 9850 1500
-F 0 "SW?" H 9850 1785 50  0000 C CNN
+F 0 "SW1" H 9850 1785 50  0000 C CNN
 F 1 "SW_DPDT_x2" H 9850 1694 50  0000 C CNN
 F 2 "" H 9850 1500 50  0001 C CNN
 F 3 "~" H 9850 1500 50  0001 C CNN
-	1    9850 1500
+	2    9850 1500
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_DPDT_x2 SW?
-U 2 1 5D266B33
+L Switch:SW_DPDT_x2 SW1
+U 1 1 5D266B33
 P 9800 2250
-F 0 "SW?" H 9800 2535 50  0000 C CNN
+F 0 "SW1" H 9800 2535 50  0000 C CNN
 F 1 "SW_DPDT_x2" H 9800 2444 50  0000 C CNN
 F 2 "" H 9800 2250 50  0001 C CNN
 F 3 "~" H 9800 2250 50  0001 C CNN
-	2    9800 2250
+	1    9800 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -623,10 +624,10 @@ Wire Wire Line
 Wire Wire Line
 	2325 4125 2475 4125
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5D2770F0
 P 1375 2525
-F 0 "#PWR?" H 1375 2275 50  0001 C CNN
+F 0 "#PWR0104" H 1375 2275 50  0001 C CNN
 F 1 "GND" H 1380 2352 50  0000 C CNN
 F 2 "" H 1375 2525 50  0001 C CNN
 F 3 "" H 1375 2525 50  0001 C CNN
@@ -679,7 +680,7 @@ Wire Wire Line
 Wire Wire Line
 	10025 3625 10025 3475
 Wire Wire Line
-	8575 1875 7900 1875
+	8575 1875 8300 1875
 Wire Wire Line
 	7750 1875 7750 925 
 Wire Wire Line
@@ -687,7 +688,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 925  5200 925 
 Wire Wire Line
-	5200 925  5200 1925
+	5200 925  5200 1350
 Connection ~ 5200 1925
 Wire Wire Line
 	5200 1925 5925 1925
@@ -814,7 +815,7 @@ Wire Wire Line
 	7875 6200 7875 5300
 Connection ~ 7875 5300
 Wire Wire Line
-	7875 5300 8500 5300
+	7875 5300 8125 5300
 Wire Wire Line
 	6300 1225 3800 1225
 Wire Wire Line
@@ -937,7 +938,7 @@ Wire Wire Line
 Wire Wire Line
 	9600 2250 9600 5100
 Wire Wire Line
-	9600 5100 8875 5100
+	9600 5100 9075 5100
 Connection ~ 8875 5100
 Wire Wire Line
 	4475 3950 4600 3950
@@ -1081,4 +1082,78 @@ Wire Wire Line
 	10400 1600 10400 2675
 Wire Wire Line
 	10400 2675 6950 2675
+Wire Wire Line
+	8350 2875 8350 2775
+Wire Wire Line
+	8350 2775 8600 2775
+Wire Wire Line
+	8850 2775 8850 2875
+Wire Wire Line
+	8300 1875 8300 2175
+Wire Wire Line
+	8300 2175 8600 2175
+Wire Wire Line
+	8600 2175 8600 2775
+Connection ~ 8300 1875
+Wire Wire Line
+	8300 1875 7900 1875
+Connection ~ 8600 2775
+Wire Wire Line
+	8600 2775 8850 2775
+Wire Wire Line
+	8975 2975 8975 3075
+Wire Wire Line
+	8975 3175 8850 3175
+Wire Wire Line
+	8850 2975 8975 2975
+Wire Wire Line
+	8975 3075 8850 3075
+Connection ~ 8975 3075
+Wire Wire Line
+	8975 3075 8975 3175
+Wire Wire Line
+	8225 2975 8225 3075
+Wire Wire Line
+	8225 3175 8350 3175
+Wire Wire Line
+	8225 2975 8350 2975
+Wire Wire Line
+	8350 3075 8225 3075
+Connection ~ 8225 3075
+Wire Wire Line
+	8225 3075 8225 3175
+Wire Wire Line
+	8125 5300 8125 3075
+Wire Wire Line
+	8125 3075 8200 3075
+Connection ~ 8125 5300
+Wire Wire Line
+	8125 5300 8500 5300
+Wire Wire Line
+	8975 3075 9075 3075
+Wire Wire Line
+	9075 3075 9075 5100
+Connection ~ 9075 5100
+Wire Wire Line
+	9075 5100 8875 5100
+Wire Wire Line
+	8350 3275 8225 3275
+Wire Wire Line
+	8225 3275 8225 3925
+Wire Wire Line
+	8975 3925 8975 3275
+Wire Wire Line
+	8975 3275 8850 3275
+Wire Wire Line
+	8000 3925 8000 1350
+Wire Wire Line
+	8000 1350 5200 1350
+Wire Wire Line
+	8000 3925 8225 3925
+Connection ~ 8225 3925
+Wire Wire Line
+	8225 3925 8975 3925
+Connection ~ 5200 1350
+Wire Wire Line
+	5200 1350 5200 1925
 $EndSCHEMATC
