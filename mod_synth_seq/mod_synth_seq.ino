@@ -33,11 +33,13 @@ int steps[] = {
 
 int ANALOG_MIN = 0;
 int ANALOG_MAX = 1023;
-int GATE_MIN = 20;
-int GATE_MAX = 1000;
+int GATE_MIN = 0;
+int GATE_MAX = 100;
 
 int clock_state = LOW;
 bool clock_required = false;
+unsigned long last_clock = 0;
+unsigned long clock_period = 0;
 int reset_state = LOW;
 bool reset_required = false;
 unsigned long gate_millis = 0;
@@ -92,7 +94,8 @@ void loop() {
 
 void processGate() {
   int gate_in = analogRead(GATE_IN);
-  gate_duration = map(gate_in, ANALOG_MIN, ANALOG_MAX, GATE_MIN, GATE_MAX);
+  float duration = map(gate_in, ANALOG_MIN, ANALOG_MAX, GATE_MIN, GATE_MAX);
+  gate_duration = clock_period * (duration / 100);
 }
 
 void processClock() {
@@ -101,6 +104,10 @@ void processClock() {
     digitalWrite(CLOCK_OUT, HIGH);
     clock_state = HIGH;
     clock_required = true;
+
+    unsigned long current_millis = millis();
+    clock_period = current_millis - last_clock;
+    last_clock = current_millis;
   }
 
   if (clock_in == LOW && clock_state == HIGH) {
