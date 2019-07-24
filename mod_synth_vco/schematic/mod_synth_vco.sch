@@ -913,8 +913,6 @@ F 3 "~" H 4075 3375 50  0001 C CNN
 	1    4075 3375
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	3850 3500 3850 4400
 $Comp
 L Device:R_POT RV3
 U 1 1 5D20E6A1
@@ -948,4 +946,8 @@ Wire Wire Line
 	9800 900  10250 900 
 Wire Wire Line
 	10250 900  10250 1750
+Wire Wire Line
+	3875 3475 3850 3475
+Wire Wire Line
+	3850 3475 3850 4400
 $EndSCHEMATC

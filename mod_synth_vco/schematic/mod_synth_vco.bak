@@ -474,18 +474,6 @@ F 4 "PWM CV Gain" V 9950 1200 50  0000 C CNN "Text"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_POT RV3
-U 1 1 5D20E6A1
-P 9250 1200
-F 0 "RV3" V 9043 1200 50  0000 C CNN
-F 1 "100k Lin" V 9134 1200 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 9250 1200 50  0001 C CNN
-F 3 "~" H 9250 1200 50  0001 C CNN
-F 4 "PWM" V 9250 1200 50  0000 C CNN "Test"
-	1    9250 1200
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:AudioJack2 J5
 U 1 1 5D20EA8D
 P 10450 1750
@@ -610,16 +598,8 @@ Wire Wire Line
 Wire Wire Line
 	8150 5100 8050 5100
 Wire Wire Line
-	8150 900  9550 900 
-Wire Wire Line
-	9550 900  9550 1200
-Wire Wire Line
-	9550 1200 9400 1200
+	8150 900  8975 900 
 Connection ~ 8150 900 
-Wire Wire Line
-	9100 1200 8600 1200
-Wire Wire Line
-	8600 1200 8600 1450
 Connection ~ 5350 4400
 Wire Wire Line
 	9250 1350 9250 1850
@@ -662,15 +642,6 @@ Wire Wire Line
 	9800 3150 10450 3150
 Wire Wire Line
 	10450 3150 10450 3200
-Wire Wire Line
-	10100 1200 10250 1200
-Wire Wire Line
-	10250 1200 10250 1750
-Wire Wire Line
-	9800 1200 9800 1450
-Wire Wire Line
-	9800 1450 8600 1450
-Connection ~ 8600 1450
 Wire Wire Line
 	9950 1350 9950 1950
 Wire Wire Line
@@ -944,4 +915,37 @@ F 3 "~" H 4075 3375 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3850 3500 3850 4400
+$Comp
+L Device:R_POT RV3
+U 1 1 5D20E6A1
+P 9250 1200
+F 0 "RV3" V 9043 1200 50  0000 C CNN
+F 1 "100k Lin" V 9134 1200 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 9250 1200 50  0001 C CNN
+F 3 "~" H 9250 1200 50  0001 C CNN
+F 4 "PWM" V 9250 1200 50  0000 C CNN "Test"
+	1    9250 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9100 1200 8975 1200
+Wire Wire Line
+	8975 1200 8975 900 
+Wire Wire Line
+	9400 1200 9525 1200
+Wire Wire Line
+	9525 1200 9525 1450
+Wire Wire Line
+	9525 1450 8600 1450
+Wire Wire Line
+	9525 1450 10100 1450
+Wire Wire Line
+	10100 1450 10100 1200
+Connection ~ 9525 1450
+Wire Wire Line
+	9800 1200 9800 900 
+Wire Wire Line
+	9800 900  10250 900 
+Wire Wire Line
+	10250 900  10250 1750
 $EndSCHEMATC
