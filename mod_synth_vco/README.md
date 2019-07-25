@@ -1,8 +1,10 @@
-Voltage controlled oscillator from:
+Voltage controlled oscillator from Look Mum No Computer
 
-LookMumNoComputer.com
+https://www.youtube.com/watch?v=4Kz8YopLTCQ
 
-and
+https://www.lookmumnocomputer.com/cem-3340-diy-simple
+
+also from
 
 CEM3340 DataSheet
 
