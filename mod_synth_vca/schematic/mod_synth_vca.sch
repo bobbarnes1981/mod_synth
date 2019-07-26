@@ -82,28 +82,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7750 2050 50  0001 C CNN
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 U1
-U 3 1 5D3B02E4
-P 5600 4325
-F 0 "U1" H 5600 4692 50  0000 C CNN
-F 1 "TL074" H 5600 4601 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 5550 4425 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5650 4525 50  0001 C CNN
-	3    5600 4325
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 4 1 5D3B1A55
-P 7650 4725
-F 0 "U1" H 7650 5092 50  0000 C CNN
-F 1 "TL074" H 7650 5001 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 7600 4825 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7700 4925 50  0001 C CNN
-	4    7650 4725
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
 U 5 1 5D3B3326
 P 1325 4450
 F 0 "U1" H 1283 4496 50  0000 L CNN
@@ -442,9 +420,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 2925 3900 2925
 Wire Wire Line
-	4825 2150 5250 2150
-Wire Wire Line
-	5250 2150 5250 2300
+	4825 2150 5000 2150
 Wire Wire Line
 	5250 2300 5325 2300
 Wire Wire Line
@@ -801,17 +777,6 @@ F 3 "" H 5275 6175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0124
-U 1 1 5D3DA57A
-P 7175 4350
-F 0 "#PWR0124" H 7175 4100 50  0001 C CNN
-F 1 "GND" H 7180 4177 50  0000 C CNN
-F 2 "" H 7175 4350 50  0001 C CNN
-F 3 "" H 7175 4350 50  0001 C CNN
-	1    7175 4350
-	-1   0    0    1   
-$EndComp
-$Comp
 L Connector:AudioJack2 J2
 U 1 1 5D3DA584
 P 3250 3925
@@ -891,9 +856,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 5800 3850 5800
 Wire Wire Line
-	4775 5025 5200 5025
-Wire Wire Line
-	5200 5025 5200 5175
+	4775 5025 5000 5025
 Wire Wire Line
 	5200 5175 5275 5175
 Wire Wire Line
@@ -916,47 +879,8 @@ Wire Wire Line
 	5275 5975 5275 6175
 Wire Wire Line
 	5550 6175 5550 5975
-$Comp
-L power:GND #PWR0125
-U 1 1 5D3DA5C9
-P 5125 4025
-F 0 "#PWR0125" H 5125 3775 50  0001 C CNN
-F 1 "GND" H 5130 3852 50  0000 C CNN
-F 2 "" H 5125 4025 50  0001 C CNN
-F 3 "" H 5125 4025 50  0001 C CNN
-	1    5125 4025
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5125 4025 5125 4225
-Wire Wire Line
-	5125 4225 5300 4225
 Wire Wire Line
 	4775 3775 4950 3775
-Wire Wire Line
-	7175 4350 7175 4625
-Wire Wire Line
-	7175 4625 7350 4625
-$Comp
-L Device:D D1
-U 1 1 5D3DA5DC
-P 6200 4475
-F 0 "D1" V 6246 4396 50  0000 R CNN
-F 1 "1N4148" V 6155 4396 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 4475 50  0001 C CNN
-F 3 "~" H 6200 4475 50  0001 C CNN
-	1    6200 4475
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6200 4625 5125 4625
-Wire Wire Line
-	5125 4625 5125 4425
-Wire Wire Line
-	6200 4625 6475 4625
-Wire Wire Line
-	6475 4625 6475 4650
-Connection ~ 6200 4625
 $Comp
 L Device:CP C1
 U 1 1 5D3DA5ED
@@ -989,41 +913,11 @@ Wire Wire Line
 	8125 5725 8125 5275
 Connection ~ 8125 5275
 Wire Wire Line
-	7350 4825 7175 4825
-Wire Wire Line
-	7175 4825 7175 5275
-Wire Wire Line
 	7950 4725 8125 4725
 Wire Wire Line
 	8125 4725 8125 4825
 Wire Wire Line
 	6175 5275 7175 5275
-Wire Wire Line
-	6475 4975 6475 4950
-Wire Wire Line
-	5875 4975 6475 4975
-$Comp
-L Device:D D3
-U 1 1 5D3DA614
-P 6475 4800
-F 0 "D3" V 6521 4721 50  0000 R CNN
-F 1 "1N4148" V 6430 4721 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6475 4800 50  0001 C CNN
-F 3 "~" H 6475 4800 50  0001 C CNN
-	1    6475 4800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+12V #PWR0127
-U 1 1 5D3DA61E
-P 5550 4825
-F 0 "#PWR0127" H 5550 4675 50  0001 C CNN
-F 1 "+12V" H 5565 4998 50  0000 C CNN
-F 2 "" H 5550 4825 50  0001 C CNN
-F 3 "" H 5550 4825 50  0001 C CNN
-	1    5550 4825
-	0    -1   -1   0   
-$EndComp
 $Comp
 L power:GND #PWR0128
 U 1 1 5D3DA628
@@ -1035,30 +929,8 @@ F 3 "" H 5550 6175 50  0001 C CNN
 	1    5550 6175
 	1    0    0    -1  
 $EndComp
-$Comp
-L Amplifier_Operational:CA3080 U2
-U 1 1 5D3DA632
-P 5875 5275
-F 0 "U2" H 6219 5321 50  0000 L CNN
-F 1 "CA3080" H 6219 5230 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 5875 5275 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf" H 5875 5375 50  0001 C CNN
-	1    5875 5275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5775 4825 5775 4975
-Wire Wire Line
-	5900 4325 6200 4325
-Wire Wire Line
-	5550 4825 5775 4825
-Wire Wire Line
-	6200 4325 6875 4325
-Wire Wire Line
-	6875 4325 6875 5575
 Wire Wire Line
 	5775 5575 6875 5575
-Connection ~ 6200 4325
 $Comp
 L power:-12V #PWR0129
 U 1 1 5D3FD83E
@@ -1168,25 +1040,15 @@ Wire Wire Line
 Connection ~ 4900 1550
 Wire Wire Line
 	4900 1550 5175 1550
-Text Label 4950 3775 0    50   ~ 0
-PCB_A_CV_B1
-Connection ~ 5125 4425
-Wire Wire Line
-	5125 4425 5300 4425
 Wire Wire Line
 	4775 4425 4900 4425
-Text Label 4900 4100 0    50   ~ 0
-PCB_B_CV_B1
 Wire Wire Line
 	4900 4100 4900 4425
-Connection ~ 4900 4425
-Wire Wire Line
-	4900 4425 5125 4425
-Text Label 4525 6850 0    50   ~ 0
+Text Label 4525 7450 0    50   ~ 0
 PCB_A_CV_A1
 Text Label 4525 6950 0    50   ~ 0
 PCB_A_CV_B1
-Text Label 3300 6850 2    50   ~ 0
+Text Label 3275 7450 2    50   ~ 0
 PCB_B_CV_A1
 Text Label 3300 6950 2    50   ~ 0
 PCB_B_CV_B1
@@ -1218,13 +1080,13 @@ Wire Wire Line
 	4525 1550 4525 1800
 Wire Wire Line
 	4475 4425 4475 4675
-Text Label 4525 7050 0    50   ~ 0
+Text Label 4525 7350 0    50   ~ 0
 PCB_A_VOL_A
-Text Label 4525 7150 0    50   ~ 0
+Text Label 4525 7050 0    50   ~ 0
 PCB_A_VOL_B
-Text Label 3275 7050 2    50   ~ 0
+Text Label 3275 7350 2    50   ~ 0
 PCB_B_VOL_A
-Text Label 3275 7150 2    50   ~ 0
+Text Label 3275 7050 2    50   ~ 0
 PCB_B_VOL_B
 Wire Wire Line
 	3275 7050 3650 7050
@@ -1256,13 +1118,13 @@ Wire Wire Line
 	8325 2400 8325 2625
 Wire Wire Line
 	8275 5275 8275 5500
-Text Label 4525 7250 0    50   ~ 0
+Text Label 4525 7550 0    50   ~ 0
 PCB_A_OUT_A
-Text Label 4525 7350 0    50   ~ 0
+Text Label 4525 6850 0    50   ~ 0
 PCB_A_OUT_B
-Text Label 3275 7250 2    50   ~ 0
+Text Label 3275 7550 2    50   ~ 0
 PCB_B_OUT_A
-Text Label 3275 7350 2    50   ~ 0
+Text Label 3300 6850 2    50   ~ 0
 PCB_B_OUT_B
 Wire Wire Line
 	3275 7250 3650 7250
@@ -1276,4 +1138,174 @@ Text Label 8850 2725 0    50   ~ 0
 PCB_A_GND
 Text Label 8800 5600 0    50   ~ 0
 PCB_A_GND
+Text Label 5000 2100 0    50   ~ 0
+PCB_A_IN_A
+Wire Wire Line
+	5000 2100 5000 2150
+Wire Wire Line
+	5000 4975 5000 5025
+Text Label 5125 2375 2    50   ~ 0
+PCB_B_IN_A
+Text Label 5125 5275 2    50   ~ 0
+PCB_B_IN_B
+Wire Wire Line
+	5125 2375 5250 2375
+Wire Wire Line
+	5250 2375 5250 2300
+Wire Wire Line
+	5200 5175 5200 5275
+Wire Wire Line
+	5200 5275 5125 5275
+Connection ~ 4900 4425
+Text Label 5000 4975 0    50   ~ 0
+PCB_A_IN_B
+Text Label 4900 4100 0    50   ~ 0
+PCB_B_CV_B1
+Text Label 4950 3775 0    50   ~ 0
+PCB_A_CV_B1
+Wire Wire Line
+	6875 4325 6875 5575
+Wire Wire Line
+	5550 4825 5775 4825
+Wire Wire Line
+	5775 4825 5775 4975
+$Comp
+L Amplifier_Operational:CA3080 U2
+U 1 1 5D3DA632
+P 5875 5275
+F 0 "U2" H 6219 5321 50  0000 L CNN
+F 1 "CA3080" H 6219 5230 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 5875 5275 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf" H 5875 5375 50  0001 C CNN
+	1    5875 5275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0127
+U 1 1 5D3DA61E
+P 5550 4825
+F 0 "#PWR0127" H 5550 4675 50  0001 C CNN
+F 1 "+12V" H 5565 4998 50  0000 C CNN
+F 2 "" H 5550 4825 50  0001 C CNN
+F 3 "" H 5550 4825 50  0001 C CNN
+	1    5550 4825
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 5D3DA614
+P 6475 4800
+F 0 "D3" V 6521 4721 50  0000 R CNN
+F 1 "1N4148" V 6430 4721 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6475 4800 50  0001 C CNN
+F 3 "~" H 6475 4800 50  0001 C CNN
+	1    6475 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5875 4975 6475 4975
+Wire Wire Line
+	6475 4975 6475 4950
+Wire Wire Line
+	7175 4825 7175 5275
+Wire Wire Line
+	7350 4825 7175 4825
+Wire Wire Line
+	6475 4625 6475 4650
+Wire Wire Line
+	4900 4425 5125 4425
+Wire Wire Line
+	5125 4425 5300 4425
+Connection ~ 5125 4425
+Wire Wire Line
+	5125 4625 5125 4425
+Wire Wire Line
+	6200 4325 6875 4325
+Wire Wire Line
+	5900 4325 6200 4325
+Connection ~ 6200 4325
+Wire Wire Line
+	6200 4625 6475 4625
+Wire Wire Line
+	6200 4625 5125 4625
+Connection ~ 6200 4625
+$Comp
+L Device:D D1
+U 1 1 5D3DA5DC
+P 6200 4475
+F 0 "D1" V 6246 4396 50  0000 R CNN
+F 1 "1N4148" V 6155 4396 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 4475 50  0001 C CNN
+F 3 "~" H 6200 4475 50  0001 C CNN
+	1    6200 4475
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7175 4625 7350 4625
+Wire Wire Line
+	7175 4350 7175 4625
+Wire Wire Line
+	5125 4225 5300 4225
+Wire Wire Line
+	5125 4025 5125 4225
+$Comp
+L power:GND #PWR0125
+U 1 1 5D3DA5C9
+P 5125 4025
+F 0 "#PWR0125" H 5125 3775 50  0001 C CNN
+F 1 "GND" H 5130 3852 50  0000 C CNN
+F 2 "" H 5125 4025 50  0001 C CNN
+F 3 "" H 5125 4025 50  0001 C CNN
+	1    5125 4025
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 5D3DA57A
+P 7175 4350
+F 0 "#PWR0124" H 7175 4100 50  0001 C CNN
+F 1 "GND" H 7180 4177 50  0000 C CNN
+F 2 "" H 7175 4350 50  0001 C CNN
+F 3 "" H 7175 4350 50  0001 C CNN
+	1    7175 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 4 1 5D3B1A55
+P 7650 4725
+F 0 "U1" H 7650 5092 50  0000 C CNN
+F 1 "TL074" H 7650 5001 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 7600 4825 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7700 4925 50  0001 C CNN
+	4    7650 4725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 3 1 5D3B02E4
+P 5600 4325
+F 0 "U1" H 5600 4692 50  0000 C CNN
+F 1 "TL074" H 5600 4601 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 5550 4425 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5650 4525 50  0001 C CNN
+	3    5600 4325
+	1    0    0    -1  
+$EndComp
+Text Label 4525 7250 0    50   ~ 0
+PCB_A_IN_A
+Text Label 4525 7150 0    50   ~ 0
+PCB_A_IN_B
+Text Label 3275 7250 2    50   ~ 0
+PCB_B_IN_A
+Text Label 3275 7150 2    50   ~ 0
+PCB_B_IN_B
+Wire Wire Line
+	3275 7450 3650 7450
+Wire Wire Line
+	4100 7450 4525 7450
+Wire Wire Line
+	4525 7550 4100 7550
+Wire Wire Line
+	3650 7550 3275 7550
 $EndSCHEMATC
