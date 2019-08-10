@@ -506,8 +506,6 @@ Connection ~ 5875 4225
 Wire Wire Line
 	5875 4225 5875 4425
 Wire Wire Line
-	6175 5000 6175 5125
-Wire Wire Line
 	6175 5125 5875 5125
 Connection ~ 5875 5125
 Wire Wire Line
@@ -805,4 +803,6 @@ Text Label 6850 1525 0    50   ~ 0
 +12_PCB_B
 Wire Wire Line
 	5975 1525 6850 1525
+Wire Wire Line
+	6175 4975 6175 5125
 $EndSCHEMATC
