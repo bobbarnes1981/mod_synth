@@ -1044,11 +1044,11 @@ Wire Wire Line
 	4775 4425 4900 4425
 Wire Wire Line
 	4900 4100 4900 4425
-Text Label 4525 7350 0    50   ~ 0
+Text Label 4525 7450 0    50   ~ 0
 PCB_A_CV_A1
 Text Label 4525 6950 0    50   ~ 0
 PCB_A_CV_B1
-Text Label 3275 7350 2    50   ~ 0
+Text Label 3275 7450 2    50   ~ 0
 PCB_B_CV_A1
 Text Label 3300 6950 2    50   ~ 0
 PCB_B_CV_B1
@@ -1080,11 +1080,11 @@ Wire Wire Line
 	4525 1550 4525 1800
 Wire Wire Line
 	4475 4425 4475 4675
-Text Label 4525 7450 0    50   ~ 0
+Text Label 4525 7350 0    50   ~ 0
 PCB_A_VOL_A
 Text Label 4525 7050 0    50   ~ 0
 PCB_A_VOL_B
-Text Label 3275 7450 2    50   ~ 0
+Text Label 3275 7350 2    50   ~ 0
 PCB_B_VOL_A
 Text Label 3275 7050 2    50   ~ 0
 PCB_B_VOL_B
@@ -1118,11 +1118,11 @@ Wire Wire Line
 	8325 2400 8325 2625
 Wire Wire Line
 	8275 5275 8275 5500
-Text Label 4525 7250 0    50   ~ 0
+Text Label 4525 7550 0    50   ~ 0
 PCB_A_OUT_A
 Text Label 4525 6850 0    50   ~ 0
 PCB_A_OUT_B
-Text Label 3275 7250 2    50   ~ 0
+Text Label 3275 7550 2    50   ~ 0
 PCB_B_OUT_A
 Text Label 3300 6850 2    50   ~ 0
 PCB_B_OUT_B
@@ -1292,11 +1292,11 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5650 4525 50  0001 C CNN
 	3    5600 4325
 	1    0    0    -1  
 $EndComp
-Text Label 4525 7550 0    50   ~ 0
+Text Label 4525 7250 0    50   ~ 0
 PCB_A_IN_A
 Text Label 4525 7150 0    50   ~ 0
 PCB_A_IN_B
-Text Label 3275 7550 2    50   ~ 0
+Text Label 3275 7250 2    50   ~ 0
 PCB_B_IN_A
 Text Label 3275 7150 2    50   ~ 0
 PCB_B_IN_B
