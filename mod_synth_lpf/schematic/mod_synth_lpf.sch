@@ -119,7 +119,7 @@ U 3 1 5D25776E
 P 7650 4500
 F 0 "U2" H 7650 4867 50  0000 C CNN
 F 1 "LM13700" H 7650 4776 50  0000 C CNN
-F 2 "Package_DIP:DIP-18_W7.62mm_Socket_LongPads" H 7350 4525 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 7350 4525 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 7350 4525 50  0001 C CNN
 	3    7650 4500
 	1    0    0    -1  
@@ -130,7 +130,7 @@ U 5 1 5D25A025
 P 5625 7125
 F 0 "U2" H 5583 7171 50  0000 L CNN
 F 1 "LM13700" H 5583 7080 50  0000 L CNN
-F 2 "Package_DIP:DIP-18_W7.62mm_Socket_LongPads" H 5325 7150 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 5325 7150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5325 7150 50  0001 C CNN
 	5    5625 7125
 	1    0    0    -1  
@@ -819,7 +819,7 @@ U 1 1 5D254C73
 P 7650 3200
 F 0 "U2" H 7650 3567 50  0000 C CNN
 F 1 "LM13700" H 7650 3476 50  0000 C CNN
-F 2 "Package_DIP:DIP-18_W7.62mm_Socket_LongPads" H 7350 3225 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 7350 3225 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 7350 3225 50  0001 C CNN
 	1    7650 3200
 	1    0    0    -1  
