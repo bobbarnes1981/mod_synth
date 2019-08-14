@@ -114,18 +114,14 @@ Wire Wire Line
 	3200 700  3000 700 
 Wire Wire Line
 	8000 4850 8800 4850
-Wire Wire Line
-	9800 4850 9800 3500
 Connection ~ 9800 700 
-Wire Wire Line
-	9800 700  9625 700 
 $Comp
 L Device:R R2
 U 1 1 5D18FCB9
 P 2700 1500
 F 0 "R2" H 2770 1546 50  0000 L CNN
 F 1 "1k" H 2770 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2630 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2630 1500 50  0001 C CNN
 F 3 "~" H 2700 1500 50  0001 C CNN
 	1    2700 1500
 	1    0    0    -1  
@@ -136,7 +132,7 @@ U 1 1 5D190183
 P 3200 1500
 F 0 "R4" H 3270 1546 50  0000 L CNN
 F 1 "1k" H 3270 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3130 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3130 1500 50  0001 C CNN
 F 3 "~" H 3200 1500 50  0001 C CNN
 	1    3200 1500
 	1    0    0    -1  
@@ -147,7 +143,7 @@ U 1 1 5D190559
 P 3700 1500
 F 0 "R6" H 3770 1546 50  0000 L CNN
 F 1 "1k" H 3770 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3630 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3630 1500 50  0001 C CNN
 F 3 "~" H 3700 1500 50  0001 C CNN
 	1    3700 1500
 	1    0    0    -1  
@@ -180,7 +176,7 @@ U 1 1 5D1940E0
 P 4200 1500
 F 0 "R8" H 4270 1546 50  0000 L CNN
 F 1 "1k" H 4270 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4130 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4130 1500 50  0001 C CNN
 F 3 "~" H 4200 1500 50  0001 C CNN
 	1    4200 1500
 	1    0    0    -1  
@@ -267,8 +263,6 @@ F 3 "" H 10250 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10250 2400 8825 2400
-Wire Wire Line
 	8600 2400 8600 2100
 Wire Wire Line
 	8600 2100 8100 2100
@@ -339,29 +333,6 @@ F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 752
 F 3 "~" H 7525 1450 50  0001 C CNN
 	1    7525 1450
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:AudioJack2 J12
-U 1 1 5D1F520B
-P 9150 1425
-F 0 "J12" H 9182 1750 50  0000 C CNN
-F 1 "Gate Out" H 9182 1659 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 9150 1425 50  0001 C CNN
-F 3 "~" H 9150 1425 50  0001 C CNN
-	1    9150 1425
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT RV9
-U 1 1 5D1F55B3
-P 8975 3175
-F 0 "RV9" V 8768 3175 50  0000 C CNN
-F 1 "100k Lin" V 8859 3175 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 8975 3175 50  0001 C CNN
-F 3 "~" H 8975 3175 50  0001 C CNN
-F 4 "Gate" V 8975 3175 50  0000 C CNN "Text"
-	1    8975 3175
-	0    1    1    0   
 $EndComp
 $Comp
 L Connector:AudioJack2 J2
@@ -440,17 +411,6 @@ F 1 "10k" H 7920 980 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7780 1025 50  0001 C CNN
 F 3 "~" H 7850 1025 50  0001 C CNN
 	1    7850 1025
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R20
-U 1 1 5D1835EC
-P 9350 2750
-F 0 "R20" H 9420 2796 50  0000 L CNN
-F 1 "1k" H 9420 2705 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9280 2750 50  0001 C CNN
-F 3 "~" H 9350 2750 50  0001 C CNN
-	1    9350 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -606,25 +566,6 @@ Wire Wire Line
 	7725 1450 7725 1575
 Wire Wire Line
 	6925 1850 6925 2300
-Wire Wire Line
-	8600 2900 8600 3200
-Wire Wire Line
-	8600 3200 8400 3200
-Wire Wire Line
-	9350 1425 9350 1575
-$Comp
-L Diode:1N4148 D27
-U 1 1 5D291621
-P 9350 1725
-F 0 "D27" V 9304 1804 50  0000 L CNN
-F 1 "1N4148" V 9395 1804 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 9350 1550 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 9350 1725 50  0001 C CNN
-	1    9350 1725
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9350 1875 9350 2600
 $Comp
 L Diode:1N4148 D25
 U 1 1 5D2AE689
@@ -655,11 +596,6 @@ Wire Wire Line
 	6925 2600 6925 3800
 Wire Wire Line
 	6925 1850 7725 1850
-Wire Wire Line
-	9350 1325 9350 700 
-Connection ~ 9350 700 
-Wire Wire Line
-	9350 700  7850 700 
 Wire Wire Line
 	7725 1350 7725 700 
 Connection ~ 7725 700 
@@ -692,22 +628,6 @@ Wire Wire Line
 Connection ~ 7725 1575
 Wire Wire Line
 	7725 1575 7725 1850
-Wire Wire Line
-	8975 3325 8600 3325
-Wire Wire Line
-	8600 3325 8600 3300
-Wire Wire Line
-	8600 3300 8400 3300
-Wire Wire Line
-	8825 3175 8825 2400
-Connection ~ 8825 2400
-Wire Wire Line
-	8825 2400 8600 2400
-Wire Wire Line
-	9125 3175 9125 3500
-Wire Wire Line
-	9125 3500 9800 3500
-Connection ~ 9800 3500
 Wire Wire Line
 	1550 2550 1800 2550
 Wire Wire Line
@@ -747,8 +667,6 @@ Wire Wire Line
 Wire Wire Line
 	4250 5775 4250 5625
 Connection ~ 4250 5625
-Wire Wire Line
-	9800 700  9800 3500
 Connection ~ 4275 3500
 Wire Wire Line
 	4200 3500 4275 3500
@@ -779,40 +697,6 @@ Wire Wire Line
 	4000 700  4000 2100
 Wire Wire Line
 	4500 700  4500 2100
-$Comp
-L Device:LED D28
-U 1 1 5D6A7AA8
-P 9625 1375
-F 0 "D28" V 9572 1453 50  0000 L CNN
-F 1 "LED" V 9663 1453 50  0000 L CNN
-F 2 "LED_THT:LED_D5.0mm" H 9625 1375 50  0001 C CNN
-F 3 "~" H 9625 1375 50  0001 C CNN
-	1    9625 1375
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9625 1225 9625 700 
-Connection ~ 9625 700 
-Wire Wire Line
-	9625 700  9350 700 
-$Comp
-L Device:R R21
-U 1 1 5D6B54FD
-P 9625 2750
-F 0 "R21" H 9695 2796 50  0000 L CNN
-F 1 "1k" H 9695 2705 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9555 2750 50  0001 C CNN
-F 3 "~" H 9625 2750 50  0001 C CNN
-	1    9625 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8600 2900 9350 2900
-Connection ~ 9350 2900
-Wire Wire Line
-	9350 2900 9625 2900
-Wire Wire Line
-	9625 2600 9625 1525
 Wire Wire Line
 	4500 700  7150 700 
 Wire Wire Line
@@ -887,10 +771,10 @@ Connection ~ 5775 6750
 Wire Wire Line
 	5775 6750 5775 6775
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0103
 U 1 1 5D58EE85
 P 5325 7525
-F 0 "#PWR?" H 5325 7375 50  0001 C CNN
+F 0 "#PWR0103" H 5325 7375 50  0001 C CNN
 F 1 "+5V" H 5340 7698 50  0000 C CNN
 F 2 "" H 5325 7525 50  0001 C CNN
 F 3 "" H 5325 7525 50  0001 C CNN
@@ -910,4 +794,10 @@ Wire Wire Line
 Wire Wire Line
 	4900 7075 5075 7075
 Connection ~ 5325 7525
+Wire Wire Line
+	7850 700  9800 700 
+Wire Wire Line
+	8600 2400 10250 2400
+Wire Wire Line
+	9800 700  9800 4850
 $EndSCHEMATC
