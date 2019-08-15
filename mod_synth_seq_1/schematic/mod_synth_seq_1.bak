@@ -31,7 +31,7 @@ U 1 1 5D17DBEB
 P 2850 2100
 F 0 "RV1" V 2643 2100 50  0000 C CNN
 F 1 "100k Lin" V 2734 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2850 2100 50  0001 C CNN
+F 2 "00D_Single_Vertical_CircularHoles" H 2850 2100 50  0001 C CNN
 F 3 "~" H 2850 2100 50  0001 C CNN
 	1    2850 2100
 	0    1    1    0   
@@ -121,7 +121,7 @@ U 1 1 5D18FCB9
 P 2700 1500
 F 0 "R2" H 2770 1546 50  0000 L CNN
 F 1 "1k" H 2770 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2630 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2630 1500 50  0001 C CNN
 F 3 "~" H 2700 1500 50  0001 C CNN
 	1    2700 1500
 	1    0    0    -1  
@@ -132,7 +132,7 @@ U 1 1 5D190183
 P 3200 1500
 F 0 "R4" H 3270 1546 50  0000 L CNN
 F 1 "1k" H 3270 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3130 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3130 1500 50  0001 C CNN
 F 3 "~" H 3200 1500 50  0001 C CNN
 	1    3200 1500
 	1    0    0    -1  
@@ -143,7 +143,7 @@ U 1 1 5D190559
 P 3700 1500
 F 0 "R6" H 3770 1546 50  0000 L CNN
 F 1 "1k" H 3770 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3630 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3630 1500 50  0001 C CNN
 F 3 "~" H 3700 1500 50  0001 C CNN
 	1    3700 1500
 	1    0    0    -1  
@@ -176,7 +176,7 @@ U 1 1 5D1940E0
 P 4200 1500
 F 0 "R8" H 4270 1546 50  0000 L CNN
 F 1 "1k" H 4270 1455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4130 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4130 1500 50  0001 C CNN
 F 3 "~" H 4200 1500 50  0001 C CNN
 	1    4200 1500
 	1    0    0    -1  
@@ -195,7 +195,7 @@ U 1 1 5D199A70
 P 3350 2100
 F 0 "RV2" V 3143 2100 50  0000 C CNN
 F 1 "100k Lin" V 3234 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3350 2100 50  0001 C CNN
+F 2 "00D_Single_Vertical_CircularHoles" H 3350 2100 50  0001 C CNN
 F 3 "~" H 3350 2100 50  0001 C CNN
 	1    3350 2100
 	0    1    1    0   
@@ -206,7 +206,7 @@ U 1 1 5D199D0C
 P 3850 2100
 F 0 "RV3" V 3643 2100 50  0000 C CNN
 F 1 "100k Lin" V 3734 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3850 2100 50  0001 C CNN
+F 2 "00D_Single_Vertical_CircularHoles" H 3850 2100 50  0001 C CNN
 F 3 "~" H 3850 2100 50  0001 C CNN
 	1    3850 2100
 	0    1    1    0   
@@ -217,7 +217,7 @@ U 1 1 5D19A19F
 P 4350 2100
 F 0 "RV4" V 4143 2100 50  0000 C CNN
 F 1 "100k Lin" V 4234 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4350 2100 50  0001 C CNN
+F 2 "00D_Single_Vertical_CircularHoles" H 4350 2100 50  0001 C CNN
 F 3 "~" H 4350 2100 50  0001 C CNN
 	1    4350 2100
 	0    1    1    0   
@@ -771,10 +771,10 @@ Connection ~ 5775 6750
 Wire Wire Line
 	5775 6750 5775 6775
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0103
 U 1 1 5D58EE85
 P 5325 7525
-F 0 "#PWR?" H 5325 7375 50  0001 C CNN
+F 0 "#PWR0103" H 5325 7375 50  0001 C CNN
 F 1 "+5V" H 5340 7698 50  0000 C CNN
 F 2 "" H 5325 7525 50  0001 C CNN
 F 3 "" H 5325 7525 50  0001 C CNN

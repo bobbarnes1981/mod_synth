@@ -31,7 +31,7 @@ U 1 1 5D17DBEB
 P 2850 2100
 F 0 "RV1" V 2643 2100 50  0000 C CNN
 F 1 "100k Lin" V 2734 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2850 2100 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 2850 2100 50  0001 C CNN
 F 3 "~" H 2850 2100 50  0001 C CNN
 	1    2850 2100
 	0    1    1    0   
@@ -195,7 +195,7 @@ U 1 1 5D199A70
 P 3350 2100
 F 0 "RV2" V 3143 2100 50  0000 C CNN
 F 1 "100k Lin" V 3234 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3350 2100 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 3350 2100 50  0001 C CNN
 F 3 "~" H 3350 2100 50  0001 C CNN
 	1    3350 2100
 	0    1    1    0   
@@ -206,7 +206,7 @@ U 1 1 5D199D0C
 P 3850 2100
 F 0 "RV3" V 3643 2100 50  0000 C CNN
 F 1 "100k Lin" V 3734 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3850 2100 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 3850 2100 50  0001 C CNN
 F 3 "~" H 3850 2100 50  0001 C CNN
 	1    3850 2100
 	0    1    1    0   
@@ -217,7 +217,7 @@ U 1 1 5D19A19F
 P 4350 2100
 F 0 "RV4" V 4143 2100 50  0000 C CNN
 F 1 "100k Lin" V 4234 2100 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4350 2100 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 4350 2100 50  0001 C CNN
 F 3 "~" H 4350 2100 50  0001 C CNN
 	1    4350 2100
 	0    1    1    0   
