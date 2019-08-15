@@ -496,14 +496,14 @@ Connection ~ 3550 2075
 Wire Wire Line
 	5925 2550 5925 2675
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J1
+L Connector_Generic:Conn_02x05_Odd_Even J1
 U 1 1 5D5445C7
-P 2825 2175
-F 0 "J1" H 2875 2692 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 2875 2601 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 2825 2175 50  0001 C CNN
-F 3 "~" H 2825 2175 50  0001 C CNN
-	1    2825 2175
+P 2825 2075
+F 0 "J1" H 2875 2592 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 2875 2501 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 2825 2075 50  0001 C CNN
+F 3 "~" H 2825 2075 50  0001 C CNN
+	1    2825 2075
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
