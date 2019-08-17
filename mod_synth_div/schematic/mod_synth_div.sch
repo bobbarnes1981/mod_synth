@@ -38,12 +38,12 @@ $EndComp
 $Comp
 L Connector:AudioJack2 J2
 U 1 1 5D581EA8
-P 1200 3875
-F 0 "J2" H 1232 4200 50  0000 C CNN
-F 1 "Rst" H 1232 4109 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1200 3875 50  0001 C CNN
-F 3 "~" H 1200 3875 50  0001 C CNN
-	1    1200 3875
+P 900 3875
+F 0 "J2" H 932 4200 50  0000 C CNN
+F 1 "Rst" H 932 4109 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 900 3875 50  0001 C CNN
+F 3 "~" H 900 3875 50  0001 C CNN
+	1    900  3875
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -137,12 +137,12 @@ $EndComp
 $Comp
 L Diode:1N4148 D1
 U 1 1 5D585776
-P 1650 3875
-F 0 "D1" H 1650 3659 50  0000 C CNN
-F 1 "1N4148" H 1650 3750 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1650 3700 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1650 3875 50  0001 C CNN
-	1    1650 3875
+P 1350 3875
+F 0 "D1" H 1350 3659 50  0000 C CNN
+F 1 "1N4148" H 1350 3750 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1350 3700 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1350 3875 50  0001 C CNN
+	1    1350 3875
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -310,23 +310,10 @@ F 3 "" H 2925 1950 50  0001 C CNN
 	1    2925 1950
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0103
-U 1 1 5D59037F
-P 1450 1275
-F 0 "#PWR0103" H 1450 1025 50  0001 C CNN
-F 1 "GND" H 1455 1102 50  0000 C CNN
-F 2 "" H 1450 1275 50  0001 C CNN
-F 3 "" H 1450 1275 50  0001 C CNN
-	1    1450 1275
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1400 1525 1650 1525
 Wire Wire Line
 	1950 1525 2150 1525
-Wire Wire Line
-	2450 1525 2625 1525
 $Comp
 L Device:R R7
 U 1 1 5D591831
@@ -459,25 +446,14 @@ F 3 "~" H 3500 2175 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0108
-U 1 1 5D5A2E50
-P 1450 3650
-F 0 "#PWR0108" H 1450 3400 50  0001 C CNN
-F 1 "GND" H 1455 3477 50  0000 C CNN
-F 2 "" H 1450 3650 50  0001 C CNN
-F 3 "" H 1450 3650 50  0001 C CNN
-	1    1450 3650
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R3
 U 1 1 5D5A338E
-P 2025 3875
-F 0 "R3" V 2232 3875 50  0000 C CNN
-F 1 "47k" V 2141 3875 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1955 3875 50  0001 C CNN
-F 3 "~" H 2025 3875 50  0001 C CNN
-	1    2025 3875
+P 1725 3875
+F 0 "R3" V 1932 3875 50  0000 C CNN
+F 1 "47k" V 1841 3875 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1655 3875 50  0001 C CNN
+F 3 "~" H 1725 3875 50  0001 C CNN
+	1    1725 3875
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -566,13 +542,13 @@ Wire Wire Line
 Wire Wire Line
 	2225 3875 2200 3875
 Wire Wire Line
-	1875 3875 1800 3875
+	1575 3875 1500 3875
 Wire Wire Line
-	1500 3875 1400 3875
+	1200 3875 1100 3875
 Wire Wire Line
-	1400 3775 1450 3775
+	1100 3775 1150 3775
 Wire Wire Line
-	1450 3775 1450 3650
+	1150 3775 1150 3650
 Wire Wire Line
 	2200 3875 2200 2925
 Wire Wire Line
@@ -586,8 +562,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 2175 3650 2175
 Connection ~ 2200 3875
-Wire Wire Line
-	2200 3875 2175 3875
 Wire Wire Line
 	3350 2175 3250 2175
 Wire Wire Line
@@ -665,83 +639,6 @@ F 3 "" H 4200 4500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4200 4400 4200 4500
-$Comp
-L power:+5V #PWR0115
-U 1 1 5D5BE350
-P 7225 1725
-F 0 "#PWR0115" H 7225 1575 50  0001 C CNN
-F 1 "+5V" H 7240 1898 50  0000 C CNN
-F 2 "" H 7225 1725 50  0001 C CNN
-F 3 "" H 7225 1725 50  0001 C CNN
-	1    7225 1725
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0116
-U 1 1 5D5BEAA8
-P 7775 2175
-F 0 "#PWR0116" H 7775 1925 50  0001 C CNN
-F 1 "GND" H 7780 2002 50  0000 C CNN
-F 2 "" H 7775 2175 50  0001 C CNN
-F 3 "" H 7775 2175 50  0001 C CNN
-	1    7775 2175
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0117
-U 1 1 5D5BF13E
-P 7775 3350
-F 0 "#PWR0117" H 7775 3100 50  0001 C CNN
-F 1 "GND" H 7780 3177 50  0000 C CNN
-F 2 "" H 7775 3350 50  0001 C CNN
-F 3 "" H 7775 3350 50  0001 C CNN
-	1    7775 3350
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0118
-U 1 1 5D5BF940
-P 7775 2800
-F 0 "#PWR0118" H 7775 2550 50  0001 C CNN
-F 1 "GND" H 7780 2627 50  0000 C CNN
-F 2 "" H 7775 2800 50  0001 C CNN
-F 3 "" H 7775 2800 50  0001 C CNN
-	1    7775 2800
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0119
-U 1 1 5D5BFB55
-P 7775 3900
-F 0 "#PWR0119" H 7775 3650 50  0001 C CNN
-F 1 "GND" H 7780 3727 50  0000 C CNN
-F 2 "" H 7775 3900 50  0001 C CNN
-F 3 "" H 7775 3900 50  0001 C CNN
-	1    7775 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0120
-U 1 1 5D5BFE27
-P 7775 4400
-F 0 "#PWR0120" H 7775 4150 50  0001 C CNN
-F 1 "GND" H 7780 4227 50  0000 C CNN
-F 2 "" H 7775 4400 50  0001 C CNN
-F 3 "" H 7775 4400 50  0001 C CNN
-	1    7775 4400
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0121
-U 1 1 5D5C0127
-P 7775 4900
-F 0 "#PWR0121" H 7775 4650 50  0001 C CNN
-F 1 "GND" H 7780 4727 50  0000 C CNN
-F 2 "" H 7775 4900 50  0001 C CNN
-F 3 "" H 7775 4900 50  0001 C CNN
-	1    7775 4900
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:R R18
 U 1 1 5D5C403F
@@ -945,31 +842,21 @@ Wire Wire Line
 Wire Wire Line
 	5525 2850 5525 2150
 Wire Wire Line
-	5525 2150 6325 2150
-Wire Wire Line
 	5150 2950 5575 2950
 Wire Wire Line
 	5575 2950 5575 2725
-Wire Wire Line
-	5575 2725 6325 2725
 Wire Wire Line
 	5150 3050 5625 3050
 Wire Wire Line
 	5625 3050 5625 3300
 Wire Wire Line
-	5625 3300 6325 3300
-Wire Wire Line
 	5150 3150 5575 3150
 Wire Wire Line
 	5575 3150 5575 3825
 Wire Wire Line
-	5575 3825 6325 3825
-Wire Wire Line
 	5150 3250 5525 3250
 Wire Wire Line
 	5525 3250 5525 4325
-Wire Wire Line
-	5525 4325 6325 4325
 NoConn ~ 5150 3350
 NoConn ~ 5150 3450
 $Comp
@@ -1002,8 +889,6 @@ Wire Wire Line
 	4200 3975 5475 3975
 Wire Wire Line
 	5475 3975 5475 4850
-Wire Wire Line
-	5475 4850 6325 4850
 Connection ~ 4200 3975
 Wire Wire Line
 	4200 3975 4200 4000
@@ -1135,72 +1020,6 @@ F 2 "LED_THT:LED_D5.0mm" H 8450 5200 50  0001 C CNN
 F 3 "~" H 8450 5200 50  0001 C CNN
 	1    8450 5200
 	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0124
-U 1 1 5D60B79E
-P 8825 2500
-F 0 "#PWR0124" H 8825 2250 50  0001 C CNN
-F 1 "GND" V 8830 2372 50  0000 R CNN
-F 2 "" H 8825 2500 50  0001 C CNN
-F 3 "" H 8825 2500 50  0001 C CNN
-	1    8825 2500
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0125
-U 1 1 5D60BBAB
-P 8825 3075
-F 0 "#PWR0125" H 8825 2825 50  0001 C CNN
-F 1 "GND" V 8830 2947 50  0000 R CNN
-F 2 "" H 8825 3075 50  0001 C CNN
-F 3 "" H 8825 3075 50  0001 C CNN
-	1    8825 3075
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0126
-U 1 1 5D60BE85
-P 8825 3650
-F 0 "#PWR0126" H 8825 3400 50  0001 C CNN
-F 1 "GND" V 8830 3522 50  0000 R CNN
-F 2 "" H 8825 3650 50  0001 C CNN
-F 3 "" H 8825 3650 50  0001 C CNN
-	1    8825 3650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0127
-U 1 1 5D60C1AE
-P 8825 4175
-F 0 "#PWR0127" H 8825 3925 50  0001 C CNN
-F 1 "GND" V 8830 4047 50  0000 R CNN
-F 2 "" H 8825 4175 50  0001 C CNN
-F 3 "" H 8825 4175 50  0001 C CNN
-	1    8825 4175
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0128
-U 1 1 5D60C41F
-P 8825 4675
-F 0 "#PWR0128" H 8825 4425 50  0001 C CNN
-F 1 "GND" V 8830 4547 50  0000 R CNN
-F 2 "" H 8825 4675 50  0001 C CNN
-F 3 "" H 8825 4675 50  0001 C CNN
-	1    8825 4675
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0129
-U 1 1 5D60C6B2
-P 8825 5200
-F 0 "#PWR0129" H 8825 4950 50  0001 C CNN
-F 1 "GND" V 8830 5072 50  0000 R CNN
-F 2 "" H 8825 5200 50  0001 C CNN
-F 3 "" H 8825 5200 50  0001 C CNN
-	1    8825 5200
-	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	7775 2175 7775 2250
@@ -1507,4 +1326,206 @@ F 3 "~" H 4825 7100 50  0001 C CNN
 	1    4825 7100
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR0138
+U 1 1 5D7AB2FF
+P 2750 7200
+F 0 "#PWR0138" H 2750 6950 50  0001 C CNN
+F 1 "GND" V 2755 7072 50  0000 R CNN
+F 2 "" H 2750 7200 50  0001 C CNN
+F 3 "" H 2750 7200 50  0001 C CNN
+	1    2750 7200
+	0    1    1    0   
+$EndComp
+Text Label 3500 7200 0    50   ~ 0
+GND_PCB_B
+Wire Wire Line
+	3350 6900 3500 6900
+Wire Wire Line
+	2750 6900 2875 6900
+Text Label 8825 2500 0    50   ~ 0
+GND_PCB_B
+Text Label 8825 3075 0    50   ~ 0
+GND_PCB_B
+Text Label 8825 3650 0    50   ~ 0
+GND_PCB_B
+Text Label 8825 4175 0    50   ~ 0
+GND_PCB_B
+Text Label 8825 4675 0    50   ~ 0
+GND_PCB_B
+Text Label 8825 5200 0    50   ~ 0
+GND_PCB_B
+$Comp
+L power:+5V #PWR0115
+U 1 1 5D7C7DDD
+P 2750 7100
+F 0 "#PWR0115" H 2750 6950 50  0001 C CNN
+F 1 "+5V" V 2765 7228 50  0000 L CNN
+F 2 "" H 2750 7100 50  0001 C CNN
+F 3 "" H 2750 7100 50  0001 C CNN
+	1    2750 7100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 7000 2875 7000
+Text Label 3500 7100 0    50   ~ 0
+5V_PCB_B
+Wire Wire Line
+	3500 7000 3350 7000
+Text Label 7225 1725 0    50   ~ 0
+5V_PCB_B
+Text Label 6075 2150 1    50   ~ 0
+0_PCB_B
+Text Label 5775 2150 1    50   ~ 0
+0_PCB_A
+Wire Wire Line
+	5525 2150 5775 2150
+Wire Wire Line
+	6075 2150 6325 2150
+Text Label 5775 2725 1    50   ~ 0
+1_PCB_A
+Text Label 6075 2725 1    50   ~ 0
+1_PCB_B
+Wire Wire Line
+	5575 2725 5775 2725
+Wire Wire Line
+	6075 2725 6325 2725
+Text Label 5175 6900 0    50   ~ 0
+IN_PCB_B
+Wire Wire Line
+	5175 6900 5100 6900
+Text Label 4475 6900 2    50   ~ 0
+IN_PCB_A
+Wire Wire Line
+	4475 6900 4625 6900
+Text Label 2625 1275 1    50   ~ 0
+IN_PCB_A
+Text Label 2525 1275 1    50   ~ 0
+IN_PCB_B
+Wire Wire Line
+	2450 1525 2525 1525
+Wire Wire Line
+	2525 1525 2525 1275
+Wire Wire Line
+	2625 1275 2625 1525
+Text Label 1950 3725 1    50   ~ 0
+RST_PCB_B
+Text Label 2075 3725 1    50   ~ 0
+RST_PCB_A
+Wire Wire Line
+	1875 3875 1950 3875
+Wire Wire Line
+	1950 3875 1950 3725
+Wire Wire Line
+	2075 3725 2075 3875
+Wire Wire Line
+	2075 3875 2200 3875
+Text Label 4475 7000 2    50   ~ 0
+RST_PCB_A
+Text Label 5175 7000 0    50   ~ 0
+RST_PCB_B
+Wire Wire Line
+	5175 7000 5100 7000
+Wire Wire Line
+	4475 7000 4625 7000
+Text Label 5775 4775 1    50   ~ 0
+OUT_PCB_A
+Text Label 6075 4775 1    50   ~ 0
+OUT_PCB_B
+Wire Wire Line
+	5475 4850 5775 4850
+Wire Wire Line
+	5775 4850 5775 4775
+Wire Wire Line
+	6075 4775 6075 4850
+Wire Wire Line
+	6075 4850 6325 4850
+Text Label 5175 7100 0    50   ~ 0
+OUT_PCB_B
+Text Label 4475 7100 2    50   ~ 0
+OUT_PCB_A
+Wire Wire Line
+	4475 7100 4625 7100
+Wire Wire Line
+	5100 7100 5175 7100
+Wire Wire Line
+	2750 7200 2875 7200
+Wire Wire Line
+	2875 7300 2750 7300
+Wire Wire Line
+	3350 7200 3500 7200
+Wire Wire Line
+	3500 7300 3350 7300
+Text Label 4475 7200 2    50   ~ 0
+0_PCB_A
+Text Label 4475 7300 2    50   ~ 0
+1_PCB_A
+Text Label 5175 7200 0    50   ~ 0
+0_PCB_B
+Text Label 5175 7300 0    50   ~ 0
+1_PCB_B
+Wire Wire Line
+	4475 7200 4625 7200
+Wire Wire Line
+	4625 7300 4475 7300
+Wire Wire Line
+	5100 7200 5175 7200
+Wire Wire Line
+	5175 7300 5100 7300
+Text Label 5775 3300 1    50   ~ 0
+2_PCB_A
+Text Label 6075 3300 1    50   ~ 0
+2_PCB_B
+Wire Wire Line
+	5775 3300 5625 3300
+Wire Wire Line
+	6075 3300 6325 3300
+Text Label 3500 6900 0    50   ~ 0
+2_PCB_B
+Text Label 2750 6900 2    50   ~ 0
+2_PCB_A
+Text Label 5775 3825 1    50   ~ 0
+3_PCB_A
+Text Label 6075 3825 1    50   ~ 0
+3_PCB_B
+Text Label 5775 4325 1    50   ~ 0
+4_PCB_A
+Text Label 6075 4325 1    50   ~ 0
+4_PCB_B
+Wire Wire Line
+	5775 3825 5575 3825
+Wire Wire Line
+	5525 4325 5775 4325
+Wire Wire Line
+	6075 4325 6325 4325
+Wire Wire Line
+	6325 3825 6075 3825
+Text Label 3500 7000 0    50   ~ 0
+3_PCB_B
+Text Label 2750 7000 2    50   ~ 0
+3_PCB_A
+Text Label 2750 7300 2    50   ~ 0
+4_PCB_A
+Text Label 3500 7300 0    50   ~ 0
+4_PCB_B
+Wire Wire Line
+	2750 7100 2875 7100
+Wire Wire Line
+	3350 7100 3500 7100
+Text Label 1150 3650 1    50   ~ 0
+GND_PCB_B
+Text Label 1450 1275 1    50   ~ 0
+GND_PCB_B
+Text Label 7775 4900 0    50   ~ 0
+GND_PCB_B
+Text Label 7775 4400 0    50   ~ 0
+GND_PCB_B
+Text Label 7775 3900 0    50   ~ 0
+GND_PCB_B
+Text Label 7775 3350 0    50   ~ 0
+GND_PCB_B
+Text Label 7775 2800 0    50   ~ 0
+GND_PCB_B
+Text Label 7775 2175 0    50   ~ 0
+GND_PCB_B
 $EndSCHEMATC
