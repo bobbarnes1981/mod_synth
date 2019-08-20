@@ -1,0 +1,28 @@
+
+panel/pcb difference
+128.5 - 109 = 19.5
+19.5 / 2 = 9.75
+
+general equation for circle location
+y+offset+panel_size-radius
+x+offset+panel_location-radius
+
+Clock
+
+LED 5mm
+y   102.87+205.021+9.75-2.5
+x   19.933+10-2.5
+
+POTS 6.5mm
+y   92.71+205.21+9.75-3.25
+y   77.35+205.21+9.75-3.25
+x   19.933+10-3.25
+
+KNOBS 12mm
+y   92.71+205.21+9.75-6
+y   77.35+205.21+9.75-6
+x   19.933+10-6
+
+JACK 5mm
+y   6.35+205.021+9.75-3
+x   19.933+10-3
