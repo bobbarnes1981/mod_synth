@@ -1,0 +1,71 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D66D263
+P 9825 1350
+F 0 "J?" H 9645 1425 50  0000 R CNN
+F 1 "Out A" H 9645 1334 50  0000 R CNN
+F 2 "" H 9825 1350 50  0001 C CNN
+F 3 "~" H 9825 1350 50  0001 C CNN
+	1    9825 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D66DA94
+P 9825 1825
+F 0 "J?" H 9645 1900 50  0000 R CNN
+F 1 "Out B" H 9645 1809 50  0000 R CNN
+F 2 "" H 9825 1825 50  0001 C CNN
+F 3 "~" H 9825 1825 50  0001 C CNN
+	1    9825 1825
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D66DDE0
+P 9825 2225
+F 0 "J?" H 9645 2300 50  0000 R CNN
+F 1 "Out C" H 9645 2209 50  0000 R CNN
+F 2 "" H 9825 2225 50  0001 C CNN
+F 3 "~" H 9825 2225 50  0001 C CNN
+	1    9825 2225
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D66E03B
+P 9825 2650
+F 0 "J?" H 9645 2725 50  0000 R CNN
+F 1 "Out D" H 9645 2634 50  0000 R CNN
+F 2 "" H 9825 2650 50  0001 C CNN
+F 3 "~" H 9825 2650 50  0001 C CNN
+	1    9825 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D66E6DB
+P 1250 1350
+F 0 "J?" H 1282 1675 50  0000 C CNN
+F 1 "CLOCK" H 1282 1584 50  0000 C CNN
+F 2 "" H 1250 1350 50  0001 C CNN
+F 3 "~" H 1250 1350 50  0001 C CNN
+	1    1250 1350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
