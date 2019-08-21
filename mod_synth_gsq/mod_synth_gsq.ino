@@ -46,6 +46,8 @@ void loop() {
 }
 
 void setOutput() {
+    // if part is current_part update led?
+    
     for (int c = 0; c < CHANNELS; c++) {
         digitalWrite(channels[c], steps[c][current_step]);
     }
