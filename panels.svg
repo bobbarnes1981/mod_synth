@@ -195,17 +195,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.9190687"
-     inkscape:cx="1413.7394"
-     inkscape:cy="935.78777"
+     inkscape:zoom="0.95953435"
+     inkscape:cx="-25.316794"
+     inkscape:cy="995.82717"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1218"
-     inkscape:window-height="706"
-     inkscape:window-x="118"
-     inkscape:window-y="315"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      inkscape:snap-grids="true" />
   <metadata
      id="metadata5">
@@ -1323,7 +1323,7 @@
       </g>
     </g>
     <g
-       transform="translate(99.257411,-26.590487)"
+       transform="translate(97.580208,-25.400208)"
        id="g4793-0-7-53">
       <circle
          r="3.25"
@@ -1342,7 +1342,7 @@
       </g>
     </g>
     <g
-       transform="translate(111.66578,-26.314746)"
+       transform="translate(112.18021,-25.400208)"
        id="g4793-0-7-53-3">
       <circle
          r="3.25"
@@ -1361,7 +1361,7 @@
       </g>
     </g>
     <g
-       transform="translate(98.981679,-8.2536858)"
+       transform="translate(97.580208,-5.7102083)"
        id="g4793-0-7-53-3-1">
       <circle
          r="3.25"
@@ -1380,7 +1380,7 @@
       </g>
     </g>
     <g
-       transform="translate(112.21726,-8.9430388)"
+       transform="translate(112.18021,-5.7102083)"
        id="g4793-0-7-53-3-1-5">
       <circle
          r="3.25"
@@ -1399,7 +1399,7 @@
       </g>
     </g>
     <g
-       transform="translate(100.63612,7.601444)"
+       transform="translate(97.580208,13.329792)"
        id="g4793-0-7-53-3-1-1">
       <circle
          r="3.25"
@@ -1418,7 +1418,7 @@
       </g>
     </g>
     <g
-       transform="translate(114.69893,10.358858)"
+       transform="translate(112.18021,13.329792)"
        id="g4793-0-7-53-3-1-8">
       <circle
          r="3.25"
@@ -1437,7 +1437,7 @@
       </g>
     </g>
     <g
-       transform="translate(59.55066,-24.936039)"
+       transform="translate(56.950208,-25.400208)"
        id="g4793-0-7-53-9">
       <circle
          r="3.25"
@@ -1456,7 +1456,7 @@
       </g>
     </g>
     <g
-       transform="translate(63.686777,-9.7702632)"
+       transform="translate(64.730208,-9.5302083)"
        id="g4793-0-7-53-9-3">
       <circle
          r="3.25"
@@ -1475,7 +1475,7 @@
       </g>
     </g>
     <g
-       transform="translate(67.271415,20.837031)"
+       transform="translate(64.730208,23.499792)"
        id="g4793-0-7-53-9-3-6">
       <circle
          r="3.25"
@@ -1496,13 +1496,13 @@
     <circle
        id="path4101-5"
        cx="87.622368"
-       cy="57.950634"
+       cy="57.200634"
        style="fill:none;stroke:#000000;stroke-width:0.13872826;stroke-opacity:1"
        r="2.5" />
     <circle
        id="path4101-5-1"
        cx="100.32236"
-       cy="57.950634"
+       cy="57.200634"
        style="fill:none;stroke:#000000;stroke-width:0.13872826;stroke-opacity:1"
        r="2.5" />
     <circle
@@ -1775,23 +1775,23 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="26.771303"
+       x="26.242136"
        y="-1.9552402"
        id="text4951"><tspan
          sodipodi:role="line"
          id="tspan4949"
-         x="26.771303"
+         x="26.242136"
          y="-1.9552402"
          style="font-size:3.17499995px;stroke-width:0.26458332">RATE</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="27.139009"
+       x="25.551508"
        y="13.537878"
        id="text4955"><tspan
          sodipodi:role="line"
          id="tspan4953"
-         x="27.139009"
+         x="25.551508"
          y="13.537878"
          style="font-size:3.17499995px;stroke-width:0.26458332">DUTY</tspan></text>
     <circle
@@ -1875,8 +1875,8 @@
     <circle
        style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="path4947-5-7-0"
-       cx="101.58919"
-       cy="-20.654078"
+       cx="103.05529"
+       cy="-20.842291"
        r="3" />
     <circle
        style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
@@ -2079,23 +2079,23 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="27.533981"
+       x="27.004814"
        y="81.921577"
        id="text4955-2"><tspan
          sodipodi:role="line"
          id="tspan4953-5"
-         x="27.533981"
+         x="27.004814"
          y="81.921577"
          style="font-size:3.17499995px;stroke-width:0.26458332">OUT</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="56.905052"
+       x="56.375885"
        y="78.389862"
        id="text4955-2-0"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3"
-         x="56.905052"
+         x="56.375885"
          y="78.389862"
          style="font-size:3.17499995px;stroke-width:0.26458332">OUT</tspan></text>
     <text
@@ -2123,52 +2123,52 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="54.69912"
+       x="53.111618"
        y="-13.432018"
        id="text4955-2-0-5-4-4"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3-8-9-7"
-         x="54.69912"
+         x="53.111618"
          y="-13.432018"
          style="font-size:3.17499995px;stroke-width:0.26458332">TRIGGER</tspan></text>
     <circle
        style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="path4947-7"
-       cx="64.247742"
-       cy="46.902569"
+       cx="60.065292"
+       cy="45.077709"
        r="3" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="94.601746"
-       y="-13.404114"
+       x="93.014244"
+       y="-12.874948"
        id="text4955-2-0-5-4-8"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3-8-9-8"
-         x="94.601746"
-         y="-13.404114"
+         x="93.014244"
+         y="-12.874948"
          style="font-size:3.17499995px;stroke-width:0.26458332">CV</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="88.949051"
+       x="88.419884"
        y="4.7948184"
        id="text4955-2-0-5-4-8-5"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3-8-9-8-8"
-         x="88.949051"
+         x="88.419884"
          y="4.7948184"
          style="font-size:3.17499995px;stroke-width:0.26458332">CUT OFF</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="88.397568"
-       y="36.229336"
+       x="84.693398"
+       y="37.28767"
        id="text4955-2-0-5-4-8-5-2"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3-8-9-8-8-3"
-         x="88.397568"
-         y="36.229336"
+         x="84.693398"
+         y="37.28767"
          style="font-size:3.17499995px;stroke-width:0.26458332">RESONANCE</tspan></text>
     <text
        xml:space="preserve"
@@ -2195,13 +2195,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="133.28795"
-       y="22.255562"
+       x="131.70047"
+       y="27.547234"
        id="text4955-2-0-5-4-8-5-2-3"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3-8-9-8-8-3-9"
-         x="133.28795"
-         y="22.255562"
+         x="131.70047"
+         y="27.547234"
          style="font-size:3.17499995px;stroke-width:0.26458332">VOL</tspan></text>
     <text
        xml:space="preserve"
@@ -2240,23 +2240,23 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="132.67598"
-       y="-12.742666"
+       y="-11.684334"
        id="text4955-2-0-5-4-8-5-2-3-0"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3-8-9-8-8-3-9-8"
          x="132.67598"
-         y="-12.742666"
+         y="-11.684334"
          style="font-size:3.17499995px;stroke-width:0.26458332">CV</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="133.53069"
-       y="4.353301"
+       x="133.00153"
+       y="8.5866337"
        id="text4955-2-0-5-4-8-5-2-3-0-1"><tspan
          sodipodi:role="line"
          id="tspan4953-5-3-8-9-8-8-3-9-8-6"
-         x="133.53069"
-         y="4.353301"
+         x="133.00153"
+         y="8.5866337"
          style="font-size:3.17499995px;stroke-width:0.26458332">IN</tspan></text>
     <text
        xml:space="preserve"
