@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:mod_synth_kick-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -717,4 +718,26 @@ Wire Wire Line
 	1350 1975 1425 1975
 Wire Wire Line
 	1425 1975 1425 1925
+$Comp
+L Device:C C?
+U 1 1 5D5D6113
+P 9050 3600
+F 0 "C?" H 8935 3554 50  0000 R CNN
+F 1 "100nf" H 8935 3645 50  0000 R CNN
+F 2 "" H 9088 3450 50  0001 C CNN
+F 3 "~" H 9050 3600 50  0001 C CNN
+	1    9050 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D5D6965
+P 9875 3575
+F 0 "C?" H 9760 3529 50  0000 R CNN
+F 1 "100nf" H 9760 3620 50  0000 R CNN
+F 2 "" H 9913 3425 50  0001 C CNN
+F 3 "~" H 9875 3575 50  0001 C CNN
+	1    9875 3575
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
