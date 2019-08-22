@@ -661,8 +661,6 @@ Connection ~ 2750 1600
 Wire Wire Line
 	2750 1600 2750 1475
 Wire Wire Line
-	3275 1775 3650 1775
-Wire Wire Line
 	8600 1700 8600 1775
 Wire Wire Line
 	8600 1775 8725 1775
@@ -1016,4 +1014,53 @@ Wire Wire Line
 	2650 4275 2450 4275
 Wire Wire Line
 	3100 4275 3250 4275
+$Comp
+L Device:LED D3
+U 1 1 5D5ED36A
+P 3600 2725
+F 0 "D3" V 3639 2608 50  0000 R CNN
+F 1 "LED" V 3548 2608 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 3600 2725 50  0001 C CNN
+F 3 "~" H 3600 2725 50  0001 C CNN
+	1    3600 2725
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5D5EE20F
+P 3600 3125
+F 0 "R15" H 3530 3079 50  0000 R CNN
+F 1 "1k" H 3530 3170 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 3125 50  0001 C CNN
+F 3 "~" H 3600 3125 50  0001 C CNN
+	1    3600 3125
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 2975 3600 2875
+Wire Wire Line
+	3600 3275 3600 3375
+Wire Wire Line
+	3275 1775 3600 1775
+Text Label 3600 2025 0    50   ~ 0
+LED_PCB_A
+Text Label 3600 2175 0    50   ~ 0
+LED_PCB_B
+Wire Wire Line
+	3600 2175 3600 2575
+Wire Wire Line
+	3600 2025 3600 1775
+Connection ~ 3600 1775
+Wire Wire Line
+	3600 1775 3650 1775
+Text Label 3250 4375 0    50   ~ 0
+LED_PCB_B
+Text Label 2450 4375 2    50   ~ 0
+LED_PCB_A
+Wire Wire Line
+	2450 4375 2650 4375
+Wire Wire Line
+	3100 4375 3250 4375
+Text Label 3600 3375 0    50   ~ 0
+GND_PCB_B
 $EndSCHEMATC
