@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:mod_synth_qnt-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -283,18 +282,18 @@ Text Label 6225 2925 0    50   ~ 0
 IN_1
 Text Label 6225 3025 0    50   ~ 0
 IN_2
-Text Label 4825 3225 2    50   ~ 0
+Text Label 6225 3125 0    50   ~ 0
 OUT_1
-Text Label 4825 3325 2    50   ~ 0
+Text Label 6225 3225 0    50   ~ 0
 OUT_2
 Wire Wire Line
 	6025 2925 6225 2925
 Wire Wire Line
 	6225 3025 6025 3025
 Wire Wire Line
-	4825 3225 5025 3225
+	6025 3125 6225 3125
 Wire Wire Line
-	4825 3325 5025 3325
+	6225 3225 6025 3225
 Wire Wire Line
 	8975 2300 9075 2300
 Wire Wire Line

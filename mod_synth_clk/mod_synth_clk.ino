@@ -11,7 +11,7 @@ int ANALOG_MIN = 0;
 int ANALOG_MAX = 1023;
 
 int BPM_MIN = 60;
-int BPM_MAX = 720;
+int BPM_MAX = 800;
 
 int DUTY_MIN = 10;
 int DUTY_MAX = 90;
