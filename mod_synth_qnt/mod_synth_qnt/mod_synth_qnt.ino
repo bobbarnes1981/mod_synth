@@ -88,6 +88,9 @@ void loop() {
   fastPWMdac.analogWrite10bit(get_output(input));
 
   delay(100);
+
+  // TODO: selectable scales and ranges of notes instead of just all available notes
+  //       major / minor / etc 
 }
 
 int get_output(int input) {
