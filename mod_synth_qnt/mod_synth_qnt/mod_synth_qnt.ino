@@ -1,10 +1,24 @@
 /*
  * Arduino Quantizer
- * Ideas:Octave button? Scale (c,d,e..) button? transpose?
- *       note selector keyboard
- *       should it restrict to single octave?
- *       gate trigger for changes instead of instant?
+ * Ideas:note selector keyboard
  * TODO: Dynamic scale generation from patterns
+ *       restrict octave enable switch on/off
+ *       restrict octave select 5 (0, 1, 2, 3, 4)
+ *       trigger input enable on/off
+ *       note select 12 (c  c# d  d# e  f  f# g  g# a  a# b)
+
+      o  octave enable switch
+      O  octave select knob
+
+      O  not select knob
+      O  scale select knob
+
+      o  trigger enable switch
+      0  trigger input
+
+      0  cv input
+      0  cv output
+ 
  */
 
 #include "voct.h"
