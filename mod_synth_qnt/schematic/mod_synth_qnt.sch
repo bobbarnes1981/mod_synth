@@ -243,9 +243,9 @@ F 3 "~" H 9975 3325 50  0001 C CNN
 	1    9975 3325
 	-1   0    0    -1  
 $EndComp
-Text Label 3200 2300 0    50   ~ 0
+Text Label 4300 2300 0    50   ~ 0
 IN_1
-Text Label 3200 3100 0    50   ~ 0
+Text Label 4300 3100 0    50   ~ 0
 IN_2
 $Comp
 L power:GND #PWR?
@@ -275,10 +275,6 @@ Wire Wire Line
 	3200 2200 3000 2200
 Wire Wire Line
 	3200 2950 3200 3000
-Wire Wire Line
-	3200 3100 3075 3100
-Wire Wire Line
-	3200 2300 3075 2300
 Text Label 6225 2925 0    50   ~ 0
 IN_1
 Text Label 6225 3025 0    50   ~ 0
@@ -373,29 +369,27 @@ Connection ~ 3075 3100
 $Comp
 L power:GND #PWR?
 U 1 1 5D619ACB
-P 3075 2600
-F 0 "#PWR?" H 3075 2350 50  0001 C CNN
-F 1 "GND" H 3080 2427 50  0000 C CNN
-F 2 "" H 3075 2600 50  0001 C CNN
-F 3 "" H 3075 2600 50  0001 C CNN
-	1    3075 2600
+P 3075 2675
+F 0 "#PWR?" H 3075 2425 50  0001 C CNN
+F 1 "GND" H 3080 2502 50  0000 C CNN
+F 2 "" H 3075 2675 50  0001 C CNN
+F 3 "" H 3075 2675 50  0001 C CNN
+	1    3075 2675
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5D61A0C8
-P 3075 3375
-F 0 "#PWR?" H 3075 3125 50  0001 C CNN
-F 1 "GND" H 3080 3202 50  0000 C CNN
-F 2 "" H 3075 3375 50  0001 C CNN
-F 3 "" H 3075 3375 50  0001 C CNN
-	1    3075 3375
+P 3075 3450
+F 0 "#PWR?" H 3075 3200 50  0001 C CNN
+F 1 "GND" H 3080 3277 50  0000 C CNN
+F 2 "" H 3075 3450 50  0001 C CNN
+F 3 "" H 3075 3450 50  0001 C CNN
+	1    3075 3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3075 2600 3075 2500
-Wire Wire Line
-	3075 3300 3075 3375
 $Comp
 L power:GND #PWR?
 U 1 1 5D61B973
@@ -766,4 +760,136 @@ NoConn ~ 8775 5200
 NoConn ~ 8775 5300
 NoConn ~ 8275 5300
 NoConn ~ 8275 5200
+$Comp
+L Device:R R?
+U 1 1 5D61316C
+P 3550 2450
+F 0 "R?" V 3343 2450 50  0000 C CNN
+F 1 "10k" V 3434 2450 50  0000 C CNN
+F 2 "" V 3480 2450 50  0001 C CNN
+F 3 "~" H 3550 2450 50  0001 C CNN
+	1    3550 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D6143B5
+P 3550 3250
+F 0 "R?" V 3343 3250 50  0000 C CNN
+F 1 "10k" V 3434 3250 50  0000 C CNN
+F 2 "" V 3480 3250 50  0001 C CNN
+F 3 "~" H 3550 3250 50  0001 C CNN
+	1    3550 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3075 2300 3550 2300
+Wire Wire Line
+	3550 2300 3800 2300
+Connection ~ 3550 2300
+Wire Wire Line
+	3075 3100 3550 3100
+Connection ~ 3550 3100
+Wire Wire Line
+	3550 3100 3800 3100
+Wire Wire Line
+	3550 2600 3075 2600
+Wire Wire Line
+	3075 2600 3075 2675
+Connection ~ 3075 2600
+Wire Wire Line
+	3550 3400 3075 3400
+Wire Wire Line
+	3075 3300 3075 3400
+Connection ~ 3075 3400
+Wire Wire Line
+	3075 3400 3075 3450
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5D62A188
+P 2800 1650
+F 0 "J?" H 2832 1975 50  0000 C CNN
+F 1 "Gate" H 2832 1884 50  0000 C CNN
+F 2 "" H 2800 1650 50  0001 C CNN
+F 3 "~" H 2800 1650 50  0001 C CNN
+	1    2800 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D62A425
+P 3200 1225
+F 0 "#PWR?" H 3200 975 50  0001 C CNN
+F 1 "GND" H 3205 1052 50  0000 C CNN
+F 2 "" H 3200 1225 50  0001 C CNN
+F 3 "" H 3200 1225 50  0001 C CNN
+	1    3200 1225
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 1550 3200 1550
+Text Label 4300 1650 0    50   ~ 0
+IN_GATE
+Wire Wire Line
+	3000 1650 3550 1650
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D630B6B
+P 3925 1650
+F 0 "D?" H 3925 1434 50  0000 C CNN
+F 1 "1N4148" H 3925 1525 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3925 1475 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3925 1650 50  0001 C CNN
+	1    3925 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D631B5D
+P 3950 2300
+F 0 "D?" H 3950 2084 50  0000 C CNN
+F 1 "1N4148" H 3950 2175 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3950 2125 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 2300 50  0001 C CNN
+	1    3950 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5D631FDA
+P 3950 3100
+F 0 "D?" H 3950 2884 50  0000 C CNN
+F 1 "1N4148" H 3950 2975 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3950 2925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 3100 50  0001 C CNN
+	1    3950 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D633789
+P 3550 1500
+F 0 "R?" V 3343 1500 50  0000 C CNN
+F 1 "10k" V 3434 1500 50  0000 C CNN
+F 2 "" V 3480 1500 50  0001 C CNN
+F 3 "~" H 3550 1500 50  0001 C CNN
+	1    3550 1500
+	-1   0    0    1   
+$EndComp
+Connection ~ 3550 1650
+Wire Wire Line
+	3550 1650 3775 1650
+Wire Wire Line
+	4075 1650 4300 1650
+Wire Wire Line
+	4300 2300 4100 2300
+Wire Wire Line
+	4100 3100 4300 3100
+Wire Wire Line
+	3200 1225 3200 1350
+Wire Wire Line
+	3550 1350 3200 1350
+Connection ~ 3200 1350
+Wire Wire Line
+	3200 1350 3200 1550
 $EndSCHEMATC
