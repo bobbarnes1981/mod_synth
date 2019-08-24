@@ -141,4 +141,14 @@ int quantize_pwm_8(int input) {
   return pwm_table_8[PWM_NOTES - 1];
 }
 
+int quantize_pwm_24(int input) {
+  for (int i = 0; i < PWM_NOTES; i++) {
+    if (input < pwm_table_24[i]) {
+      return pwm_table_24[i];
+    }
+  }
+
+  return pwm_table_24[PWM_NOTES - 1];
+}
+
 #endif
