@@ -3,17 +3,17 @@
  * Arduino 4 step sequencer for modular synth
  */
 
-int CLOCK_IN = 12;
-int CLOCK_OUT = LED_BUILTIN;
-int RESET_IN = 11;
-int RESET_OUT = 10;
-int STEP_0 = 2;
-int STEP_1 = 3;
-int STEP_2 = 4;
-int STEP_3 = 5;
+#define CLOCK_IN 12
+#define CLOCK_OUT LED_BUILTIN
+#define RESET_IN 11
+#define RESET_OUT 10
+#define STEP_0 2
+#define STEP_1 3
+#define STEP_2 4
+#define STEP_3 5
 
 int current_step = 0;
-int MAX_STEPS = 4;
+#define MAX_STEPS 4
 int steps[] = {
   STEP_0,
   STEP_1,
@@ -21,8 +21,8 @@ int steps[] = {
   STEP_3
 };
 
-int ANALOG_MIN = 0;
-int ANALOG_MAX = 1023;
+#define ANALOG_MIN 0
+#define ANALOG_MAX 1023
 
 int clock_state = LOW;
 bool clock_required = false;
