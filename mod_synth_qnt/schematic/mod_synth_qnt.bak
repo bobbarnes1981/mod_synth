@@ -320,7 +320,7 @@ Wire Wire Line
 Wire Wire Line
 	1025 2350 1025 2450
 Text Label 1650 2600 0    50   ~ 0
-NOTE_SELECT
+NOTE_SELECT_PCB_B
 Wire Wire Line
 	1650 2600 1300 2600
 Connection ~ 1300 2600
@@ -559,7 +559,7 @@ Wire Wire Line
 Wire Wire Line
 	1225 4175 1000 4175
 Text Label 1450 3850 0    50   ~ 0
-SCALE_SELECT
+SCALE_SELECT_PCB_B
 Wire Wire Line
 	1150 3850 1225 3850
 Wire Wire Line
@@ -1032,4 +1032,20 @@ Wire Wire Line
 	9075 5475 9225 5475
 Wire Wire Line
 	9225 5575 9075 5575
+Text Label 8475 5975 2    50   ~ 0
+NOTE_SELECT
+Text Label 8475 5875 2    50   ~ 0
+SCALE_SELECT
+Wire Wire Line
+	8625 5875 8475 5875
+Wire Wire Line
+	8625 5975 8475 5975
+Text Label 9225 5875 0    50   ~ 0
+SCALE_SELECT_PCB_B
+Text Label 9225 5975 0    50   ~ 0
+NOTE_SELECT_PCB_B
+Wire Wire Line
+	9075 5875 9225 5875
+Wire Wire Line
+	9225 5975 9075 5975
 $EndSCHEMATC
