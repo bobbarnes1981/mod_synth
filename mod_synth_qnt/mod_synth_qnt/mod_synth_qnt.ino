@@ -49,8 +49,10 @@ void setup() {
   pinMode(NOTE_SELECT, INPUT);
   pinMode(SCALE_SELECT, INPUT);
 
+#ifdef DEBUG
   Serial.begin(9600);
-  Serial.println("init...");
+  Serial.println("debug...");
+#endif
 
   dac.init(QUANT_OUT, 8);
 }
@@ -72,9 +74,10 @@ void loop() {
     last_knob = millis();
     current_note = note;
     knob_led = note;
-
+#ifdef DEBUG
     Serial.println("chosen note");
     Serial.println(notes[current_note]);
+#endif
   }
 
   // scale select
@@ -84,8 +87,10 @@ void loop() {
     last_knob = millis();
     current_scale = scale;
     knob_led = scale;
+#ifdef DEBUG
     Serial.println("chosen scale");
     Serial.println(scale);
+#endif
   }
 
   // quantize the output
@@ -163,6 +168,7 @@ void loop() {
   int note_led = index % 12;
   // if output has changed
   if (quantized_output !=  last_output) {
+#ifdef DEBUG
     Serial.println(raw_input);
     Serial.println(voltage);
     
@@ -171,6 +177,7 @@ void loop() {
 
     Serial.println("quant note");
     Serial.println(notes[note_led]);
+#endif
 
     // update PWM
     dac.analogWrite8bit(quantized_output);
@@ -188,8 +195,10 @@ void loop() {
   }
 
   if (chosen_led != last_led) {
-    //Serial.println("led");
-    //Serial.println(chosen_led);
+#ifdef DEBUG
+    Serial.println("led");
+    Serial.println(chosen_led);
+#endif
     light_led(chosen_led);
     last_led = chosen_led;
   }

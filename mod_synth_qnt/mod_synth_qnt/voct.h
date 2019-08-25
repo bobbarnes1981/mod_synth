@@ -67,7 +67,7 @@ int quantize_pwm_8_scale(int note, int scale[], int input) {
       continue;
     }
     // pick note from table scaled to stop overflow
-    if (input < pwm_table_8[(i+note) % (PWM_NOTES - 1)]) {
+    if (input < pwm_table_8[(i+note+1) % (PWM_NOTES - 1)]) {
       return i;
     }
   }
