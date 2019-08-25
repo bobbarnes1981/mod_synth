@@ -10,6 +10,8 @@
 
 FastPWMdac dac;
 
+#define MODE_8_BIT
+
 #define QUANT_OUT 9
 #define CV_IN A0
 
@@ -23,25 +25,52 @@ FastPWMdac dac;
 
 #define ANALOG_MIN 0
 #define ANALOG_MAX 1023
-#define BIT_MIN_8 0
-#define BIT_MAX_8 255
+#define BIT_MIN 0
+#ifdef MODE_8_BIT
+#define BIT_MAX 255
+#else
+#define BIT_MAX 1023
+#endif
 #define VOLT_MIN 0
 #define VOLT_MAX 5000
 #define VOLT_MUL 1000
-
-int last_output = -1;
-int current_note = -1;
-int current_scale = -1;
-
 #define NUM_NOTES 12
 #define NUM_SCALES 2
 
-// last knob interaction
-unsigned long last_knob = 0;
 // time for lights to show knob setting
 #define knob_delay 2000
+
+// last quantized output value
+int last_output = -1;
+
+// currently salected note
+int current_note = -1;
+// currently selected scale
+int current_scale = -1;
+
+// last knob interaction millis
+unsigned long last_knob = 0;
+// knob led to display
 int knob_led = -1;
+
+// last led displayed
 int last_led = -1;
+
+// not doing # notes so decode offsets
+int offsets[] = {
+  C_OFFSET,
+  C_OFFSET,
+  D_OFFSET,
+  D_OFFSET,
+  E_OFFSET,
+  F_OFFSET,
+  F_OFFSET,
+  G_OFFSET,
+  G_OFFSET,
+  A_OFFSET,
+  A_OFFSET,
+  B_OFFSET
+};
 
 void setup() {
   pinMode(QUANT_OUT, OUTPUT);
@@ -54,22 +83,35 @@ void setup() {
   Serial.println("debug...");
 #endif
 
+#ifdef MODE_8_BIT
+  // fast dac in 8 bit mode
   dac.init(QUANT_OUT, 8);
+#else
+  // fast dac in 24 bit mode
+  dac.init(QUANT_OUT, 24);
+#endif
 }
 
 void loop() {
   // read input CV
   int raw_input = analogRead(CV_IN);
 
+#ifdef DEBUG
   // map input to voltage
   double voltage = map(raw_input, ANALOG_MIN, ANALOG_MAX, VOLT_MIN, VOLT_MAX) / VOLT_MUL;
+#endif
 
-  // map input to output
-  int raw_output = map(raw_input, ANALOG_MIN, ANALOG_MAX, BIT_MIN_8, BIT_MAX_8);
+#ifdef MODE_8_BIT
+  // map input to output bits
+  int raw_output = map(raw_input, ANALOG_MIN, ANALOG_MAX, BIT_MIN, BIT_MAX);
+#else
+  int raw_output = raw_input;
+#endif
 
   // note select
   int raw_note = analogRead(NOTE_SELECT);
   int note = map(raw_note, ANALOG_MIN, ANALOG_MAX, 0, NUM_NOTES);
+  note = note == NUM_NOTES ? NUM_NOTES - 1 : note;
   if (note != current_note) {
     last_knob = millis();
     current_note = note;
@@ -83,6 +125,7 @@ void loop() {
   // scale select
   int raw_scale = analogRead(SCALE_SELECT);
   int scale = map(raw_scale, ANALOG_MIN, ANALOG_MAX, 0, NUM_SCALES);
+  scale = scale == NUM_SCALES ? NUM_SCALES - 1 : scale;
   if (scale != current_scale) {
     last_knob = millis();
     current_scale = scale;
@@ -94,79 +137,30 @@ void loop() {
   }
 
   // quantize the output
-  // TODO: 'dictionary' of scales/notes
   int index;
+
   switch (current_scale) {
     case 0: // maj
-      switch (current_note) {
-        case 0: // c c#
-        case 1:
-          index = quantize_pwm_8_scale(C_OFFSET, pwm_table_maj, raw_output);
-          break;
-        case 2: // d d#
-        case 3:
-          index = quantize_pwm_8_scale(D_OFFSET, pwm_table_maj, raw_output);
-          break;
-        case 4: // e 
-          index = quantize_pwm_8_scale(E_OFFSET, pwm_table_maj, raw_output);
-          break;
-        case 5: // f f#
-        case 6:
-          index = quantize_pwm_8_scale(F_OFFSET, pwm_table_maj, raw_output);
-          break;
-        case 7: // g g#
-        case 8:
-          index = quantize_pwm_8_scale(G_OFFSET, pwm_table_maj, raw_output);
-          break;
-        case 9: // a a#
-        case 10:
-          index = quantize_pwm_8_scale(A_OFFSET, pwm_table_maj, raw_output);
-          break;
-        case 11: // b
-        case 12:
-          index = quantize_pwm_8_scale(B_OFFSET, pwm_table_maj, raw_output);
-          break;
-      }
+      index = quantize_pwm_8_scale(offsets[current_note], pwm_table_maj, raw_output);
       break;
     case 1: // min
-    case 2:
-      switch (current_note) {
-        case 0: // c c#
-        case 1:
-          index = quantize_pwm_8_scale(C_OFFSET, pwm_table_min, raw_output);
-          break;
-        case 2: // d d#
-        case 3:
-          index = quantize_pwm_8_scale(D_OFFSET, pwm_table_min, raw_output);
-          break;
-        case 4: // e 
-          index = quantize_pwm_8_scale(E_OFFSET, pwm_table_min, raw_output);
-          break;
-        case 5: // f f#
-        case 6:
-          index = quantize_pwm_8_scale(F_OFFSET, pwm_table_min, raw_output);
-          break;
-        case 7: // g g#
-        case 8:
-          index = quantize_pwm_8_scale(G_OFFSET, pwm_table_min, raw_output);
-          break;
-        case 9: // a a#
-        case 10:
-          index = quantize_pwm_8_scale(A_OFFSET, pwm_table_min, raw_output);
-          break;
-        case 11: // b
-        case 12:
-          index = quantize_pwm_8_scale(B_OFFSET, pwm_table_min, raw_output);
-          break;
-      }
+      index = quantize_pwm_8_scale(offsets[current_note], pwm_table_min, raw_output);
       break;
   }
-  // bypass?
-  //int quantized_output = quantize_pwm_8(raw_output);
 
+  // get quantized output
+#ifdef MODE_8_BIT
   int quantized_output = pwm_table_8[index];
+#else
+  int quantized_output = pwm_table_24[index];
+#endif
+
+  // modular arithmetic to get note/led number
   int note_led = index % 12;
-  // if output has changed
+  // modular arithmetic to get octave number
+//  int octave = index % 5;
+  
+  // if required output has changed update
   if (quantized_output !=  last_output) {
 #ifdef DEBUG
     Serial.println(raw_input);
@@ -179,21 +173,27 @@ void loop() {
     Serial.println(notes[note_led]);
 #endif
 
-    // update PWM
+    // update PWM output
+#ifdef MODE_8_BIT
     dac.analogWrite8bit(quantized_output);
+#else
+    dac.analogWrite24bit(quantized_output);
+#endif
 
-    // store current output
+    // store current quantized output
     last_output = quantized_output;
   }
 
   int chosen_led;
   if ((millis() - last_knob) < knob_delay) {
+    // show knob led if a change was made to a setting
     chosen_led = knob_led;
   } else {
     // show note
     chosen_led = note_led;
   }
 
+  // if the led required has changed update
   if (chosen_led != last_led) {
 #ifdef DEBUG
     Serial.println("led");
@@ -204,6 +204,7 @@ void loop() {
   }
 }
 
+// reset pin modes
 void reset_leds() {
   pinMode(LED_A, INPUT);
   pinMode(LED_B, INPUT);
@@ -216,53 +217,37 @@ void reset_leds() {
   digitalWrite(LED_D, LOW);
 }
 
+// led to pin dictionary
+int pins[][2] = {
+  { LED_A, LED_B },
+  { LED_A, LED_C },
+  { LED_A, LED_D },
+  { LED_B, LED_A },
+  { LED_B, LED_C },
+  { LED_B, LED_D },
+  { LED_C, LED_A },
+  { LED_C, LED_B },
+  { LED_C, LED_D },
+  { LED_D, LED_A },
+  { LED_D, LED_B },
+  { LED_D, LED_C },
+};
+
+// turn on specified led
 void light_led(int led) {
-  switch (led) {
-    case 0:
-      set_pins(LED_A, LED_B);
-      break;
-    case 1:
-      set_pins(LED_A, LED_C);
-      break;
-    case 2:
-      set_pins(LED_A, LED_D);
-      break;
-    case 3:
-      set_pins(LED_B, LED_A);
-      break;
-    case 4:
-      set_pins(LED_B, LED_C);
-      break;
-    case 5:
-      set_pins(LED_B, LED_D);
-      break;
-    case 6:
-      set_pins(LED_C, LED_A);
-      break;
-    case 7:
-      set_pins(LED_C, LED_B);
-      break;
-    case 8:
-      set_pins(LED_C, LED_D);
-      break;
-    case 9:
-      set_pins(LED_D, LED_A);
-      break;
-    case 10:
-      set_pins(LED_D, LED_B);
-      break;
-    case 11:
-      set_pins(LED_D, LED_C);
-      break;
-  }
+  set_pins(pins[led][0], pins[led][1]);
 }
 
+// set specified pins to hi/low
 void set_pins(int high_pin, int low_pin) {
+  // reset everything
   reset_leds();
-  
+
+  // set pin modes
   pinMode(high_pin, OUTPUT);
   pinMode(low_pin, OUTPUT);
 
+  // set pin states
   digitalWrite(high_pin, HIGH);
   digitalWrite(low_pin, LOW);  
 }

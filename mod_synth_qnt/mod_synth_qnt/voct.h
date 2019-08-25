@@ -1,9 +1,10 @@
 #ifndef voct_H
 #define voct_H
 
+// number of notes
 int PWM_NOTES = 60;
 
-// capital = #
+// note letter decode
 char notes[] = {
   'c',
   'C',
@@ -38,6 +39,7 @@ int pwm_table_maj[] = { 2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1 };
 // min - 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0
 int pwm_table_min[] = { 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0 };
 
+// 8 bit rounded values
 int pwm_table_8[] = {
 //  c   c#  d  d#   e   f  f#   g  g#   a  a#   b
 	  0,  4,  9, 13, 17, 21, 26, 30, 34, 38, 43, 47,
@@ -48,6 +50,7 @@ int pwm_table_8[] = {
   255
 };
 
+// 24 bit rounded values
 int pwm_table_24[] = {
 //  c   c#  d  d#   e   f   f#  g   g#  a   a#   b
 	  0, 17, 34, 51, 68, 85,102,119,136,153,171, 188,
@@ -60,8 +63,9 @@ int pwm_table_24[] = {
 
 // returns index in pwm_table_8
 int quantize_pwm_8_scale(int note, int scale[], int input) {
+  // use scale tabe to get next step
   for (int i = 0; i < PWM_NOTES; i += scale[i % 12]) {
-    // skip error when we are on wrong note
+    // skip error when we are on wrong note (shouldn't happen)
     if (scale[i % 12] == 0) {
       i++;
       continue;
