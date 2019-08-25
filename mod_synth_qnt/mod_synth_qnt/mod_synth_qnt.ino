@@ -37,6 +37,9 @@ FastPWMdac dac;
 #define NUM_NOTES 12
 #define NUM_SCALES 2
 
+#define LED_PERIOD 120
+#define LED_DUTY 60
+
 // time for lights to show knob setting
 #define knob_delay 2000
 
@@ -187,7 +190,7 @@ void loop() {
   int chosen_led;
   if ((millis() - last_knob) < knob_delay) {
     // show knob led if a change was made to a setting
-    chosen_led = knob_led;
+    chosen_led = (millis() % LED_PERIOD) < LED_DUTY ? knob_led : -1;
   } else {
     // show note
     chosen_led = note_led;
@@ -235,14 +238,17 @@ int pins[][2] = {
 
 // turn on specified led
 void light_led(int led) {
-  set_pins(pins[led][0], pins[led][1]);
+  // reset everything
+  reset_leds();
+
+  if (led != -1) {
+    // set pins
+    set_pins(pins[led][0], pins[led][1]);
+  }
 }
 
 // set specified pins to hi/low
 void set_pins(int high_pin, int low_pin) {
-  // reset everything
-  reset_leds();
-
   // set pin modes
   pinMode(high_pin, OUTPUT);
   pinMode(low_pin, OUTPUT);
