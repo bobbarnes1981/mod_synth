@@ -72,6 +72,9 @@ void loop() {
     last_knob = millis();
     current_note = note;
     knob_led = note;
+
+    Serial.println("chosen note");
+    Serial.println(notes[current_note]);
   }
 
   // scale select
@@ -81,6 +84,8 @@ void loop() {
     last_knob = millis();
     current_scale = scale;
     knob_led = scale;
+    Serial.println("chosen scale");
+    Serial.println(scale);
   }
 
   // quantize the output
@@ -155,12 +160,17 @@ void loop() {
   //int quantized_output = quantize_pwm_8(raw_output);
 
   int quantized_output = pwm_table_8[index];
-  int note_led = index / 12;
+  int note_led = index % 12;
   // if output has changed
   if (quantized_output !=  last_output) {
     Serial.println(raw_input);
     Serial.println(voltage);
+    
+    Serial.println("quant output");
     Serial.println(quantized_output);
+
+    Serial.println("quant note");
+    Serial.println(notes[note_led]);
 
     // update PWM
     dac.analogWrite8bit(quantized_output);
@@ -178,6 +188,8 @@ void loop() {
   }
 
   if (chosen_led != last_led) {
+    //Serial.println("led");
+    //Serial.println(chosen_led);
     light_led(chosen_led);
     last_led = chosen_led;
   }

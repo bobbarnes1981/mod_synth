@@ -61,10 +61,12 @@ int pwm_table_24[] = {
 // returns index in pwm_table_8
 int quantize_pwm_8_scale(int note, int scale[], int input) {
   for (int i = 0; i < PWM_NOTES; i += scale[i % 12]) {
+    // skip error when we are on wrong note
     if (scale[i % 12] == 0) {
       i++;
       continue;
     }
+    // pick note from table scaled to stop overflow
     if (input < pwm_table_8[(i+note) % (PWM_NOTES - 1)]) {
       return i;
     }
