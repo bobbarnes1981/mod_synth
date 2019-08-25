@@ -3,114 +3,40 @@
 
 int PWM_NOTES = 60;
 
-/*
-  00 = c
-  01 = c#
-  02 = d
-  03 = d#
-  04 = e
-  05 = f
-  06 = f#
-  07 = g
-  08 = g#
-  09 = a
-  10 = a#
-  11 = b
-*/
-
-// maj - 2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1,
-
-int pwm_table_8_c_maj[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//c     d     e  f     g     a     b
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1,
+// capital = #
+char notes[] = {
+  'c',
+  'C',
+  'd',
+  'D',
+  'e',
+  'f',
+  'F',
+  'g',
+  'G',
+  'a',
+  'A',
+  'b'
 };
 
-int pwm_table_8_d_maj[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//   c# d     e     f# g     a     b
-  0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0, 2,
-};
+#define C_OFFSET 0
+#define CS_OFFSET 1
+#define D_OFFSET 2 
+#define DS_OFFSET 3
+#define E_OFFSET 4
+#define F_OFFSET 5
+#define FS_OFFSET 6
+#define G_OFFSET 7
+#define GS_OFFSET 8
+#define A_OFFSET 9
+#define AS_OFFSET 10
+#define B_OFFSET 11
 
-int pwm_table_8_e_maj[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//   c#    d# e     f#    g# a     b
-  0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2,
-};
+// maj - 2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1
+int pwm_table_maj[] = { 2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1 };
 
-int pwm_table_8_f_maj[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//c     d     e  f     g     a  a#  
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-};
-
-int pwm_table_8_g_maj[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//c     d     e     f# g     a     b
-  2, 0, 2, 0, 2, 0, 1, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 2, 0, 1, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 2, 0, 1, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 2, 0, 1, 2, 0, 2, 0, 1,
-  2, 0, 2, 0, 2, 0, 1, 2, 0, 2, 0, 1,
-};
-
-int pwm_table_8_a_maj[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//   c# d     e     f#    g# a     b
-  0, 1, 2, 0, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 2, 0, 1, 2, 0, 2,
-  0, 1, 2, 0, 2, 0, 2, 0, 1, 2, 0, 2,
-};
-
-int pwm_table_8_b_maj[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//   c#    d# e     f#    g#    a# b
-  0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1, 2,
-  0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1, 2,
-};
-
-// min - 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0,
-
-int pwm_table_8_c_min[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//c     d  d#    f     g  g#    a#
-  2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0,
-  2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0,
-  2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0,
-  2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0,
-  2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0,
-};
-
-int pwm_table_8_d_min[] = {
-//c  c# d  d# e  f  f# g  g# a  a# b
-//c     d     e  f     g     a  a#  
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-  2, 0, 2, 0, 1, 2, 0, 2, 0, 1, 2, 0,
-};
+// min - 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0
+int pwm_table_min[] = { 2, 0, 1, 2, 0, 2, 0, 1, 2, 0, 2, 0 };
 
 int pwm_table_8[] = {
 //  c   c#  d  d#   e   f  f#   g  g#   a  a#   b
@@ -132,38 +58,19 @@ int pwm_table_24[] = {
 	1023
 };
 
-int quantize_pwm_8(int input) {
-  for (int i = 0; i < PWM_NOTES; i++) {
-    if (input < pwm_table_8[i]) {
-      return pwm_table_8[i];
-    }
-  }
-
-  return pwm_table_8[PWM_NOTES - 1];
-}
-
-int quantize_pwm_24(int input) {
-  for (int i = 0; i < PWM_NOTES; i++) {
-    if (input < pwm_table_24[i]) {
-      return pwm_table_24[i];
-    }
-  }
-
-  return pwm_table_24[PWM_NOTES - 1];
-}
-
-int quantize_pwm_8_scale(int scale[], int input) {
-  for (int i = 0; i < PWM_NOTES; i += scale[i]) {
-    if (scale[i] == 0) {
+// returns index in pwm_table_8
+int quantize_pwm_8_scale(int note, int scale[], int input) {
+  for (int i = 0; i < PWM_NOTES; i += scale[i % 12]) {
+    if (scale[i % 12] == 0) {
       i++;
       continue;
     }
-    if (input < pwm_table_8[i]) {
-      return pwm_table_8[i];
+    if (input < pwm_table_8[(i+note) % (PWM_NOTES - 1)]) {
+      return i;
     }
   }
 
-  return pwm_table_8[PWM_NOTES - 1];
+  return PWM_NOTES - 1;
 }
 
 #endif
