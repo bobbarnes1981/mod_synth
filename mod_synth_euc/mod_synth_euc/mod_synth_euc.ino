@@ -2,6 +2,8 @@
  * Euclidean Rhythm Generator
  */
 
+//#define DEBUG
+
 #include "bjorklund.h"
 
 #define CLOCK_IN 2
@@ -10,7 +12,7 @@
 #define GATE_OUT LED_BUILTIN
 
 #define ANALOG_MIN 0
-#define ANALOG_MAX 255
+#define ANALOG_MAX 1023
 
 int current_step = 0;
 int clock_state = LOW;
@@ -36,6 +38,13 @@ void loop() {
   int raw_steps = analogRead(STEPS_IN);
   int requested_steps = map(raw_steps, ANALOG_MIN, ANALOG_MAX, 0, MAX_STEPS);
   if (requested_steps != selected_steps) {
+    
+#ifdef DEBUG
+  Serial.println("requested_steps");
+  Serial.println(requested_steps);
+  Serial.println(MAX_STEPS);
+#endif
+
     changed = true;
     selected_steps = requested_steps;
   }
@@ -62,6 +71,13 @@ void loop() {
   }
 
   int clock_in = digitalRead(CLOCK_IN);
+  
+#ifdef DEBUG
+  clock_in = HIGH;
+  clock_state = LOW;
+  delay(500);
+#endif
+
   if (clock_in == HIGH && clock_state == LOW) {
     tick(); 
   }
