@@ -59,22 +59,6 @@ int knob_led = -1;
 // last led displayed
 int last_led = -1;
 
-// not doing # notes so decode offsets
-int offsets[] = {
-  C_OFFSET,
-  C_OFFSET,
-  D_OFFSET,
-  D_OFFSET,
-  E_OFFSET,
-  F_OFFSET,
-  F_OFFSET,
-  G_OFFSET,
-  G_OFFSET,
-  A_OFFSET,
-  A_OFFSET,
-  B_OFFSET
-};
-
 void setup() {
   pinMode(QUANT_OUT, OUTPUT);
   pinMode(CV_IN, INPUT);
@@ -90,8 +74,8 @@ void setup() {
   // fast dac in 8 bit mode
   dac.init(QUANT_OUT, 8);
 #else
-  // fast dac in 24 bit mode
-  dac.init(QUANT_OUT, 24);
+  // fast dac in 10 bit mode
+  dac.init(QUANT_OUT, 10);
 #endif
 }
 
@@ -144,10 +128,10 @@ void loop() {
 
   switch (current_scale) {
     case 0: // maj
-      index = quantize_pwm_8_scale(offsets[current_note], pwm_table_maj, raw_output);
+      index = quantize_pwm_8_scale(current_note, pwm_table_maj, raw_output);
       break;
     case 1: // min
-      index = quantize_pwm_8_scale(offsets[current_note], pwm_table_min, raw_output);
+      index = quantize_pwm_8_scale(current_note, pwm_table_min, raw_output);
       break;
   }
 
@@ -155,7 +139,7 @@ void loop() {
 #ifdef MODE_8_BIT
   int quantized_output = pwm_table_8[index];
 #else
-  int quantized_output = pwm_table_24[index];
+  int quantized_output = pwm_table_10[index];
 #endif
 
   // modular arithmetic to get note/led number
@@ -180,7 +164,7 @@ void loop() {
 #ifdef MODE_8_BIT
     dac.analogWrite8bit(quantized_output);
 #else
-    dac.analogWrite24bit(quantized_output);
+    dac.analogWrite10bit(quantized_output);
 #endif
 
     // store current quantized output
