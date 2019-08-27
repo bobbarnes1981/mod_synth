@@ -81,12 +81,12 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6125 1475 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J2
+L Connector_Generic:Conn_02x06_Odd_Even J2
 U 1 1 5D6456BC
 P 8375 4975
 F 0 "J2" H 8425 5492 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 8425 5401 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical" H 8375 4975 50  0001 C CNN
+F 1 "Conn_02x06_Odd_Even" H 8425 5401 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x06_P2.54mm_Vertical" H 8375 4975 50  0001 C CNN
 F 3 "~" H 8375 4975 50  0001 C CNN
 	1    8375 4975
 	1    0    0    -1  
@@ -346,10 +346,6 @@ Wire Wire Line
 	2725 1725 2850 1725
 Text Label 5425 2275 2    50   ~ 0
 led_gate
-Text Label 5425 2375 2    50   ~ 0
-led_steps
-Text Label 5425 2475 2    50   ~ 0
-led_pulses
 Wire Wire Line
 	8175 4775 8175 4875
 Wire Wire Line
@@ -442,131 +438,45 @@ NoConn ~ 5625 3175
 NoConn ~ 6125 3475
 Wire Wire Line
 	5425 2275 5625 2275
-Wire Wire Line
-	5625 2375 5425 2375
-Wire Wire Line
-	5425 2475 5625 2475
 $Comp
-L Device:LED D?
+L Device:LED D3
 U 1 1 5D6695A6
 P 8975 2525
-F 0 "D?" H 8968 2270 50  0000 C CNN
+F 0 "D3" H 8968 2270 50  0000 C CNN
 F 1 "LED" H 8968 2361 50  0000 C CNN
-F 2 "" H 8975 2525 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 8975 2525 50  0001 C CNN
 F 3 "~" H 8975 2525 50  0001 C CNN
 	1    8975 2525
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D?
-U 1 1 5D66A6FF
-P 8975 2775
-F 0 "D?" H 8968 2520 50  0000 C CNN
-F 1 "LED" H 8968 2611 50  0000 C CNN
-F 2 "" H 8975 2775 50  0001 C CNN
-F 3 "~" H 8975 2775 50  0001 C CNN
-	1    8975 2775
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 5D66A9E5
-P 8975 3050
-F 0 "D?" H 8968 2795 50  0000 C CNN
-F 1 "LED" H 8968 2886 50  0000 C CNN
-F 2 "" H 8975 3050 50  0001 C CNN
-F 3 "~" H 8975 3050 50  0001 C CNN
-	1    8975 3050
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR?
+L power:GND #PWR0116
 U 1 1 5D66AFAB
 P 9350 2525
-F 0 "#PWR?" H 9350 2275 50  0001 C CNN
+F 0 "#PWR0116" H 9350 2275 50  0001 C CNN
 F 1 "GND" V 9355 2397 50  0000 R CNN
 F 2 "" H 9350 2525 50  0001 C CNN
 F 3 "" H 9350 2525 50  0001 C CNN
 	1    9350 2525
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5D66B8E9
-P 9350 2775
-F 0 "#PWR?" H 9350 2525 50  0001 C CNN
-F 1 "GND" V 9355 2647 50  0000 R CNN
-F 2 "" H 9350 2775 50  0001 C CNN
-F 3 "" H 9350 2775 50  0001 C CNN
-	1    9350 2775
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5D66BC0D
-P 9350 3050
-F 0 "#PWR?" H 9350 2800 50  0001 C CNN
-F 1 "GND" V 9355 2922 50  0000 R CNN
-F 2 "" H 9350 3050 50  0001 C CNN
-F 3 "" H 9350 3050 50  0001 C CNN
-	1    9350 3050
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9125 2525 9350 2525
-Wire Wire Line
-	9350 2775 9125 2775
-Wire Wire Line
-	9125 3050 9350 3050
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5D66DD61
 P 8475 2525
-F 0 "R?" V 8268 2525 50  0000 C CNN
+F 0 "R3" V 8268 2525 50  0000 C CNN
 F 1 "220" V 8359 2525 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8405 2525 50  0001 C CNN
 F 3 "~" H 8475 2525 50  0001 C CNN
 	1    8475 2525
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R?
-U 1 1 5D66E15D
-P 8475 2775
-F 0 "R?" V 8268 2775 50  0000 C CNN
-F 1 "220" V 8359 2775 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8405 2775 50  0001 C CNN
-F 3 "~" H 8475 2775 50  0001 C CNN
-	1    8475 2775
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5D66E426
-P 8475 3050
-F 0 "R?" V 8268 3050 50  0000 C CNN
-F 1 "220" V 8359 3050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8405 3050 50  0001 C CNN
-F 3 "~" H 8475 3050 50  0001 C CNN
-	1    8475 3050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8625 2525 8825 2525
-Wire Wire Line
-	8825 2775 8625 2775
-Wire Wire Line
-	8625 3050 8825 3050
 Text Label 8125 2525 2    50   ~ 0
 led_gate
-Text Label 8125 2775 2    50   ~ 0
-led_steps
-Text Label 8125 3050 2    50   ~ 0
-led_pulses
 Wire Wire Line
 	8125 2525 8325 2525
-Wire Wire Line
-	8325 2775 8125 2775
-Wire Wire Line
-	8125 3050 8325 3050
 $EndSCHEMATC

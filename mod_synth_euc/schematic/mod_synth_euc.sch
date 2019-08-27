@@ -81,17 +81,6 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6125 1475 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J2
-U 1 1 5D6456BC
-P 8375 4975
-F 0 "J2" H 8425 5492 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 8425 5401 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical" H 8375 4975 50  0001 C CNN
-F 3 "~" H 8375 4975 50  0001 C CNN
-	1    8375 4975
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0101
 U 1 1 5D646FD5
 P 2450 2500
@@ -275,17 +264,6 @@ F 3 "~" H 2725 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP_Small C1
-U 1 1 5D650349
-P 8875 5025
-F 0 "C1" H 8963 5071 50  0000 L CNN
-F 1 "CP_Small" H 8963 4980 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 8875 5025 50  0001 C CNN
-F 3 "~" H 8875 5025 50  0001 C CNN
-	1    8875 5025
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:+5V #PWR0110
 U 1 1 5D6519BB
 P 6325 1250
@@ -346,10 +324,6 @@ Wire Wire Line
 	2725 1725 2850 1725
 Text Label 5425 2275 2    50   ~ 0
 led_gate
-Text Label 5425 2375 2    50   ~ 0
-led_steps
-Text Label 5425 2475 2    50   ~ 0
-led_pulses
 Wire Wire Line
 	8175 4775 8175 4875
 Wire Wire Line
@@ -371,19 +345,6 @@ F 3 "" H 7900 4875 50  0001 C CNN
 	1    7900 4875
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #PWR0113
-U 1 1 5D653C19
-P 8950 4875
-F 0 "#PWR0113" H 8950 4625 50  0001 C CNN
-F 1 "GND" V 8955 4747 50  0000 R CNN
-F 2 "" H 8950 4875 50  0001 C CNN
-F 3 "" H 8950 4875 50  0001 C CNN
-	1    8950 4875
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8950 4875 8875 4875
 Wire Wire Line
 	8175 4875 7900 4875
 $Comp
@@ -397,31 +358,8 @@ F 3 "" H 7900 5175 50  0001 C CNN
 	1    7900 5175
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:+5V #PWR0115
-U 1 1 5D655317
-P 8950 5175
-F 0 "#PWR0115" H 8950 5025 50  0001 C CNN
-F 1 "+5V" V 8965 5303 50  0000 L CNN
-F 2 "" H 8950 5175 50  0001 C CNN
-F 3 "" H 8950 5175 50  0001 C CNN
-	1    8950 5175
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7900 5175 8175 5175
-Wire Wire Line
-	8950 5175 8875 5175
-Wire Wire Line
-	8875 4925 8875 4875
-Connection ~ 8875 4875
-Wire Wire Line
-	8875 4875 8675 4875
-Wire Wire Line
-	8875 5125 8875 5175
-Connection ~ 8875 5175
-Wire Wire Line
-	8875 5175 8675 5175
 NoConn ~ 6625 3175
 NoConn ~ 6625 3075
 NoConn ~ 6625 2975
@@ -442,10 +380,6 @@ NoConn ~ 5625 3175
 NoConn ~ 6125 3475
 Wire Wire Line
 	5425 2275 5625 2275
-Wire Wire Line
-	5625 2375 5425 2375
-Wire Wire Line
-	5425 2475 5625 2475
 $Comp
 L Device:LED D3
 U 1 1 5D6695A6
@@ -455,28 +389,6 @@ F 1 "LED" H 8968 2361 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 8975 2525 50  0001 C CNN
 F 3 "~" H 8975 2525 50  0001 C CNN
 	1    8975 2525
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED D4
-U 1 1 5D66A6FF
-P 8975 2775
-F 0 "D4" H 8968 2520 50  0000 C CNN
-F 1 "LED" H 8968 2611 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 8975 2775 50  0001 C CNN
-F 3 "~" H 8975 2775 50  0001 C CNN
-	1    8975 2775
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED D5
-U 1 1 5D66A9E5
-P 8975 3050
-F 0 "D5" H 8968 2795 50  0000 C CNN
-F 1 "LED" H 8968 2886 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 8975 3050 50  0001 C CNN
-F 3 "~" H 8975 3050 50  0001 C CNN
-	1    8975 3050
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -490,34 +402,8 @@ F 3 "" H 9350 2525 50  0001 C CNN
 	1    9350 2525
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR0117
-U 1 1 5D66B8E9
-P 9350 2775
-F 0 "#PWR0117" H 9350 2525 50  0001 C CNN
-F 1 "GND" V 9355 2647 50  0000 R CNN
-F 2 "" H 9350 2775 50  0001 C CNN
-F 3 "" H 9350 2775 50  0001 C CNN
-	1    9350 2775
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0118
-U 1 1 5D66BC0D
-P 9350 3050
-F 0 "#PWR0118" H 9350 2800 50  0001 C CNN
-F 1 "GND" V 9355 2922 50  0000 R CNN
-F 2 "" H 9350 3050 50  0001 C CNN
-F 3 "" H 9350 3050 50  0001 C CNN
-	1    9350 3050
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9125 2525 9350 2525
-Wire Wire Line
-	9350 2775 9125 2775
-Wire Wire Line
-	9125 3050 9350 3050
 $Comp
 L Device:R R3
 U 1 1 5D66DD61
@@ -529,44 +415,68 @@ F 3 "~" H 8475 2525 50  0001 C CNN
 	1    8475 2525
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R4
-U 1 1 5D66E15D
-P 8475 2775
-F 0 "R4" V 8268 2775 50  0000 C CNN
-F 1 "220" V 8359 2775 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8405 2775 50  0001 C CNN
-F 3 "~" H 8475 2775 50  0001 C CNN
-	1    8475 2775
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5D66E426
-P 8475 3050
-F 0 "R5" V 8268 3050 50  0000 C CNN
-F 1 "220" V 8359 3050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8405 3050 50  0001 C CNN
-F 3 "~" H 8475 3050 50  0001 C CNN
-	1    8475 3050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8625 2525 8825 2525
-Wire Wire Line
-	8825 2775 8625 2775
-Wire Wire Line
-	8625 3050 8825 3050
 Text Label 8125 2525 2    50   ~ 0
 led_gate
-Text Label 8125 2775 2    50   ~ 0
-led_steps
-Text Label 8125 3050 2    50   ~ 0
-led_pulses
 Wire Wire Line
 	8125 2525 8325 2525
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J2
+U 1 1 5D6456BC
+P 8375 4875
+F 0 "J2" H 8425 5392 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 8425 5301 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x06_P2.54mm_Vertical" H 8375 4875 50  0001 C CNN
+F 3 "~" H 8375 4875 50  0001 C CNN
+	1    8375 4875
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	8325 2775 8125 2775
+	8875 5175 8675 5175
+Connection ~ 8875 5175
 Wire Wire Line
-	8125 3050 8325 3050
+	8875 5125 8875 5175
+Wire Wire Line
+	8875 4875 8675 4875
+Connection ~ 8875 4875
+Wire Wire Line
+	8875 4925 8875 4875
+Wire Wire Line
+	8950 5175 8875 5175
+$Comp
+L power:+5V #PWR0115
+U 1 1 5D655317
+P 8950 5175
+F 0 "#PWR0115" H 8950 5025 50  0001 C CNN
+F 1 "+5V" V 8965 5303 50  0000 L CNN
+F 2 "" H 8950 5175 50  0001 C CNN
+F 3 "" H 8950 5175 50  0001 C CNN
+	1    8950 5175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8950 4875 8875 4875
+$Comp
+L power:GND #PWR0113
+U 1 1 5D653C19
+P 8950 4875
+F 0 "#PWR0113" H 8950 4625 50  0001 C CNN
+F 1 "GND" V 8955 4747 50  0000 R CNN
+F 2 "" H 8950 4875 50  0001 C CNN
+F 3 "" H 8950 4875 50  0001 C CNN
+	1    8950 4875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP_Small C1
+U 1 1 5D650349
+P 8875 5025
+F 0 "C1" H 8963 5071 50  0000 L CNN
+F 1 "CP_Small" H 8963 4980 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 8875 5025 50  0001 C CNN
+F 3 "~" H 8875 5025 50  0001 C CNN
+	1    8875 5025
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
