@@ -8,10 +8,6 @@ int p[] = {
   LOW, LOW, LOW, LOW,
   LOW, LOW, LOW, LOW,
   LOW, LOW, LOW, LOW,
-  LOW, LOW, LOW, LOW,
-  LOW, LOW, LOW, LOW,
-  LOW, LOW, LOW, LOW,
-  LOW, LOW, LOW, LOW,
 };
 void p_append(int value) {
   p[p_len] = value;
@@ -24,10 +20,6 @@ int c[] = {
   0, 0, 0, 0,
   0, 0, 0, 0,
   0, 0, 0, 0,
-  0, 0, 0, 0,
-  0, 0, 0, 0,
-  0, 0, 0, 0,
-  0, 0, 0, 0,
 };
 void c_append(int value) {
   c[c_len] = value;
@@ -36,10 +28,6 @@ void c_append(int value) {
 
 int r_len = 0;
 int r[] = {
-  0, 0, 0, 0,
-  0, 0, 0, 0,
-  0, 0, 0, 0,
-  0, 0, 0, 0,
   0, 0, 0, 0,
   0, 0, 0, 0,
   0, 0, 0, 0,

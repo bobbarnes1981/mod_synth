@@ -2,7 +2,7 @@
 #ifndef bjorklund_h
 #define bjorklund_h
 
-#define MAX_STEPS 32
+#define MAX_STEPS 16
 
 extern int p_len;
 extern int p[];

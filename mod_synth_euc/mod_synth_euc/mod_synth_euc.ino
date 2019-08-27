@@ -12,8 +12,6 @@
 #define OFFSET_IN A2
 #define GATE_OUT 3
 #define LED_GATE 4
-#define LED_STEPS 5
-#define LED_PULSES 6
 
 #define ANALOG_MIN 0
 #define ANALOG_MAX 1023
@@ -34,15 +32,10 @@ void setup() {
   pinMode(PULSES_IN, INPUT);
   pinMode(OFFSET_IN, INPUT);
   pinMode(GATE_OUT, OUTPUT);
-
   pinMode(LED_GATE, OUTPUT);
-  pinMode(LED_STEPS, OUTPUT);
-  pinMode(LED_PULSES, OUTPUT);
 
   digitalWrite(GATE_OUT, LOW);
   digitalWrite(LED_GATE, LOW);
-  digitalWrite(LED_STEPS, LOW);
-  digitalWrite(LED_PULSES, LOW);
   
 #ifdef DEBUG
   Serial.begin(9600);
@@ -53,7 +46,6 @@ void setup() {
 void loop() {
   // read steps input
   int requested_steps = map(analogRead(STEPS_IN), ANALOG_MIN, ANALOG_MAX, 2, MAX_STEPS);
-  flash(LED_STEPS, requested_steps);
   if (requested_steps != selected_steps) {
     changed = true;
     selected_steps = requested_steps;
@@ -61,7 +53,6 @@ void loop() {
 
   // read pulses input
   int requested_pulses = map(analogRead(PULSES_IN), ANALOG_MIN, ANALOG_MAX, 1, selected_steps - 1);
-  flash(LED_PULSES, requested_pulses);
   if (requested_pulses != selected_pulses) {
     changed = true;
     selected_pulses = requested_pulses;
@@ -69,7 +60,6 @@ void loop() {
 
   // read offset input
   int requested_offset = map(analogRead(OFFSET_IN), ANALOG_MIN, ANALOG_MAX, 1, selected_steps - 1);
-  //flash(LED_OFFSET, requested_offset);
   if (requested_offset != selected_offset) {
     selected_offset = requested_offset;
   }
@@ -117,10 +107,4 @@ void tick() {
   if (current_step >= selected_steps) {
     current_step = 0;
   }
-}
-
-void flash(int pin, int value) {
-  int period = 1000 / value;
-  int duty = period / 2;
-  digitalWrite(pin, millis() % period > duty ? HIGH : LOW );
 }
