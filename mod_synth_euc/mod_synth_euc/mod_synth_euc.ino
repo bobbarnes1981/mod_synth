@@ -9,6 +9,7 @@
 #define CLOCK_IN 2
 #define STEPS_IN A0
 #define PULSES_IN A1
+#define OFFSET_IN A2
 #define GATE_OUT 3
 #define LED_GATE 4
 #define LED_STEPS 5
@@ -17,23 +18,32 @@
 #define ANALOG_MIN 0
 #define ANALOG_MAX 1023
 
+#define PULSE_WIDTH 6
+
 int current_step = 0;
 int clock_state = LOW;
 
 int selected_steps = -1;
 int selected_pulses = -1;
+int selected_offset = -1;
 bool changed = false;
 
 void setup() {
   pinMode(CLOCK_IN, INPUT);
   pinMode(STEPS_IN, INPUT);
   pinMode(PULSES_IN, INPUT);
+  pinMode(OFFSET_IN, INPUT);
   pinMode(GATE_OUT, OUTPUT);
 
   pinMode(LED_GATE, OUTPUT);
   pinMode(LED_STEPS, OUTPUT);
   pinMode(LED_PULSES, OUTPUT);
 
+  digitalWrite(GATE_OUT, LOW);
+  digitalWrite(LED_GATE, LOW);
+  digitalWrite(LED_STEPS, LOW);
+  digitalWrite(LED_PULSES, LOW);
+  
 #ifdef DEBUG
   Serial.begin(9600);
   Serial.println("debug...");
@@ -42,33 +52,32 @@ void setup() {
 
 void loop() {
   // read steps input
-  int raw_steps = analogRead(STEPS_IN);
-  int requested_steps = map(raw_steps, ANALOG_MIN, ANALOG_MAX, 0, MAX_STEPS);
-  flash(LED_STEPS, requested_steps, 0, MAX_STEPS);
+  int requested_steps = map(analogRead(STEPS_IN), ANALOG_MIN, ANALOG_MAX, 2, MAX_STEPS);
+  flash(LED_STEPS, requested_steps);
   if (requested_steps != selected_steps) {
-    
-#ifdef DEBUG
-  Serial.println("requested_steps");
-  Serial.println(requested_steps);
-  Serial.println(MAX_STEPS);
-#endif
-
     changed = true;
     selected_steps = requested_steps;
   }
 
   // read pulses input
-  int raw_pulses = analogRead(PULSES_IN);
-  int requested_pulses = map(raw_pulses, ANALOG_MIN, ANALOG_MAX, 0, selected_steps - 1);
-  flash(LED_PULSES, requested_pulses, 0, MAX_STEPS);
+  int requested_pulses = map(analogRead(PULSES_IN), ANALOG_MIN, ANALOG_MAX, 1, selected_steps - 1);
+  flash(LED_PULSES, requested_pulses);
   if (requested_pulses != selected_pulses) {
     changed = true;
     selected_pulses = requested_pulses;
   }
 
+  // read offset input
+  int requested_offset = map(analogRead(OFFSET_IN), ANALOG_MIN, ANALOG_MAX, 1, selected_steps - 1);
+  //flash(LED_OFFSET, requested_offset);
+  if (requested_offset != selected_offset) {
+    selected_offset = requested_offset;
+  }
+
   if (changed) {
     bjorklund(selected_steps, selected_pulses);
-
+    current_step = 0;
+    
 #ifdef DEBUG
     for (int i = 0; i < selected_steps; i++) {
       Serial.print(p[i]);
@@ -88,21 +97,30 @@ void loop() {
 }
 
 void tick() {
-  digitalWrite(GATE_OUT, p[current_step]);
-  digitalWrite(LED_GATE, p[current_step]);
+  int output = p[(current_step + selected_offset) % selected_steps];
 
 #ifdef DEBUG
-  Serial.println(p[current_step]);
+  Serial.println(output);
 #endif
 
+  if (output == HIGH) {
+    digitalWrite(GATE_OUT, HIGH);
+    digitalWrite(LED_GATE, HIGH);
+
+    delay(PULSE_WIDTH);
+    
+    digitalWrite(GATE_OUT, LOW);
+    digitalWrite(LED_GATE, LOW);
+  }
+  
   current_step++;
   if (current_step >= selected_steps) {
     current_step = 0;
   }
 }
 
-void flash(int pin, int value, int minimum, int maximum) {
-  int period = map(value, minimum, maximum, 500, 0);
+void flash(int pin, int value) {
+  int period = 1000 / value;
   int duty = period / 2;
-  digitalWrite(pin, millis() % period > duty && period != 500 ? HIGH : LOW );
+  digitalWrite(pin, millis() % period > duty ? HIGH : LOW );
 }
