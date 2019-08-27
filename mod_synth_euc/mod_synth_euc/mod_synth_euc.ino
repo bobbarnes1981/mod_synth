@@ -104,5 +104,5 @@ void tick() {
 void flash(int pin, int value, int minimum, int maximum) {
   int period = map(value, minimum, maximum, 500, 0);
   int duty = period / 2;
-  digitalWrite(pin, millis() % period > duty ? HIGH : LOW );
+  digitalWrite(pin, millis() % period > duty && period != 500 ? HIGH : LOW );
 }
