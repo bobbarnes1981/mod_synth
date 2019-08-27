@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:mod_synth_euc-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -343,4 +344,10 @@ Wire Wire Line
 Connection ~ 2725 1725
 Wire Wire Line
 	2725 1725 2850 1725
+Text Label 5425 2275 2    50   ~ 0
+led_gate
+Text Label 5425 2375 2    50   ~ 0
+led_steps
+Text Label 5425 2475 2    50   ~ 0
+led_pulses
 $EndSCHEMATC
