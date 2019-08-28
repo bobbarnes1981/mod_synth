@@ -17,6 +17,8 @@
 #define AS_OFFSET 10
 #define B_OFFSET 11
 
+extern char notes[];
+
 // maj - 2, 0, 2, 0, 1, 2, 0, 2, 0, 2, 0, 1
 extern int pwm_table_maj[];
 

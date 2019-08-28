@@ -10,6 +10,8 @@
 
 FastPWMdac dac;
 
+//#define DEBUG
+
 #define MODE_8_BIT
 
 #define QUANT_OUT 9
@@ -40,7 +42,7 @@ FastPWMdac dac;
 #define LED_PERIOD 120
 #define LED_DUTY 60
 
-#define ANALOG_IGNORE 2
+#define ANALOG_IGNORE 10
 
 // time for lights to show knob setting
 #define knob_delay 2000
@@ -48,8 +50,8 @@ FastPWMdac dac;
 // last quantized output value
 int last_output = -1;
 
-int prev_raw_scale = 0;
-int prev_raw_note = 0;
+int prev_raw_scale = -ANALOG_IGNORE;
+int prev_raw_note = -ANALOG_IGNORE;
 
 // currently salected note
 int current_note = -1;
@@ -102,7 +104,7 @@ void loop() {
 
   // note select
   int raw_note = analogRead(NOTE_SELECT);
-  if (abs(prev_raw_note - raw_note) > ANALOG_IGNORE) {
+  if (abs(prev_raw_note - raw_note) >= ANALOG_IGNORE) {
     prev_raw_note = raw_note;
     int note = map(raw_note, ANALOG_MIN, ANALOG_MAX, 0, NUM_NOTES);
     note = note == NUM_NOTES ? NUM_NOTES - 1 : note;
@@ -119,7 +121,7 @@ void loop() {
 
   // scale select
   int raw_scale = analogRead(SCALE_SELECT);
-  if (abs(prev_raw_scale - raw_scale) > ANALOG_IGNORE) {
+  if (abs(prev_raw_scale - raw_scale) >= ANALOG_IGNORE) {
     prev_raw_scale = raw_scale;
     int scale = map(raw_scale, ANALOG_MIN, ANALOG_MAX, 0, NUM_SCALES);
     scale = scale == NUM_SCALES ? NUM_SCALES - 1 : scale;

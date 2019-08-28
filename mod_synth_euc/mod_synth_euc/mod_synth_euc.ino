@@ -17,14 +17,14 @@
 #define ANALOG_MAX 1023
 
 #define PULSE_WIDTH 6
-#define IGNORE_ANALOG 2
+#define ANALOG_IGNORE 10
 
 int current_step = 0;
 int clock_state = LOW;
 
-int prev_raw_steps = 0;
-int prev_raw_pulses = 0;
-int prev_raw_offset = 0;
+int prev_raw_steps = -ANALOG_IGNORE;
+int prev_raw_pulses = -ANALOG_IGNORE;
+int prev_raw_offset = -ANALOG_IGNORE;
 
 int selected_steps = -1;
 int selected_pulses = -1;
@@ -63,7 +63,7 @@ void loop() {
   
   // read steps input
   int raw_steps = analogRead(STEPS_IN);
-  if (abs(raw_steps - prev_raw_steps) > IGNORE_ANALOG) {
+  if (abs(raw_steps - prev_raw_steps) >= ANALOG_IGNORE) {
     prev_raw_steps = raw_steps;
     int requested_steps = map(raw_steps, ANALOG_MIN, ANALOG_MAX, 2, MAX_STEPS);
     if (requested_steps != selected_steps) {
@@ -74,7 +74,7 @@ void loop() {
 
   // read pulses input
   int raw_pulses = analogRead(PULSES_IN);
-  if (abs(raw_pulses - prev_raw_pulses) > IGNORE_ANALOG) {
+  if (abs(raw_pulses - prev_raw_pulses) >= ANALOG_IGNORE) {
     prev_raw_pulses = raw_pulses;
     int requested_pulses = map(raw_pulses, ANALOG_MIN, ANALOG_MAX, 1, selected_steps - 1);
     if (requested_pulses != selected_pulses) {
@@ -85,7 +85,7 @@ void loop() {
 
   // read offset input
   int raw_offset = analogRead(OFFSET_IN);
-  if (abs(raw_offset - prev_raw_offset) > IGNORE_ANALOG) {
+  if (abs(raw_offset - prev_raw_offset) >= ANALOG_IGNORE) {
     prev_raw_offset = raw_offset;
     int requested_offset = map(raw_offset, ANALOG_MIN, ANALOG_MAX, 1, selected_steps - 1);
     if (requested_offset != selected_offset) {
