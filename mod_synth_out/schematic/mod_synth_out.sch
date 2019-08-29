@@ -94,12 +94,12 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 3 1 5D684EE5
-P 850 6875
-F 0 "U1" H 808 6921 50  0000 L CNN
-F 1 "TL072" H 808 6830 50  0000 L CNN
-F 2 "" H 850 6875 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 850 6875 50  0001 C CNN
-	3    850  6875
+P 2550 6125
+F 0 "U1" H 2508 6171 50  0000 L CNN
+F 1 "TL072" H 2508 6080 50  0000 L CNN
+F 2 "" H 2550 6125 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2550 6125 50  0001 C CNN
+	3    2550 6125
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -268,28 +268,6 @@ F 3 "~" H 2050 2250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0101
-U 1 1 5D6B283C
-P 1125 1225
-F 0 "#PWR0101" H 1125 975 50  0001 C CNN
-F 1 "GND" H 1130 1052 50  0000 C CNN
-F 2 "" H 1125 1225 50  0001 C CNN
-F 3 "" H 1125 1225 50  0001 C CNN
-	1    1125 1225
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0102
-U 1 1 5D6B39EE
-P 1125 2300
-F 0 "#PWR0102" H 1125 2050 50  0001 C CNN
-F 1 "GND" H 1130 2127 50  0000 C CNN
-F 2 "" H 1125 2300 50  0001 C CNN
-F 3 "" H 1125 2300 50  0001 C CNN
-	1    1125 2300
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:CP_Small C9
 U 1 1 5D6B42E0
 P 2625 2625
@@ -308,7 +286,7 @@ F 0 "RV1" H 3131 1654 50  0000 R CNN
 F 1 "100k" H 3131 1745 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles" H 3200 1700 50  0001 C CNN
 F 3 "~" H 3200 1700 50  0001 C CNN
-F 4 "Volume" H 3200 1700 50  0001 C CNN "Text"
+F 4 "Volume" H 3200 1700 50  0000 C CNN "Text"
 	1    3200 1700
 	1    0    0    1   
 $EndComp
@@ -322,28 +300,6 @@ F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularH
 F 3 "~" H 3200 2775 50  0001 C CNN
 	2    3200 2775
 	1    0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0103
-U 1 1 5D6B8530
-P 3200 3050
-F 0 "#PWR0103" H 3200 2800 50  0001 C CNN
-F 1 "GND" H 3205 2877 50  0000 C CNN
-F 2 "" H 3200 3050 50  0001 C CNN
-F 3 "" H 3200 3050 50  0001 C CNN
-	1    3200 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 5D6B8CEF
-P 3200 1975
-F 0 "#PWR0104" H 3200 1725 50  0001 C CNN
-F 1 "GND" H 3205 1802 50  0000 C CNN
-F 2 "" H 3200 1975 50  0001 C CNN
-F 3 "" H 3200 1975 50  0001 C CNN
-	1    3200 1975
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1025 1350 1125 1350
@@ -380,28 +336,6 @@ Wire Wire Line
 	3200 1975 3200 1850
 Wire Wire Line
 	3200 3050 3200 2925
-$Comp
-L power:GND #PWR0105
-U 1 1 5D6CA285
-P 1675 2875
-F 0 "#PWR0105" H 1675 2625 50  0001 C CNN
-F 1 "GND" H 1680 2702 50  0000 C CNN
-F 2 "" H 1675 2875 50  0001 C CNN
-F 3 "" H 1675 2875 50  0001 C CNN
-	1    1675 2875
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 5D6CA648
-P 1675 1775
-F 0 "#PWR0106" H 1675 1525 50  0001 C CNN
-F 1 "GND" H 1680 1602 50  0000 C CNN
-F 2 "" H 1675 1775 50  0001 C CNN
-F 3 "" H 1675 1775 50  0001 C CNN
-	1    1675 1775
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1750 1650 1675 1650
 Wire Wire Line
@@ -422,7 +356,7 @@ F 0 "RV2" H 3131 3854 50  0000 R CNN
 F 1 "100k" H 3131 3945 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles" H 3200 3900 50  0001 C CNN
 F 3 "~" H 3200 3900 50  0001 C CNN
-F 4 "Phones" H 3200 3900 50  0001 C CNN "Text"
+F 4 "Phones" H 3200 3900 50  0000 C CNN "Text"
 	1    3200 3900
 	1    0    0    1   
 $EndComp
@@ -451,28 +385,6 @@ Wire Wire Line
 Connection ~ 2850 2625
 Wire Wire Line
 	2850 2625 3200 2625
-$Comp
-L power:GND #PWR0107
-U 1 1 5D6D25F8
-P 3200 4125
-F 0 "#PWR0107" H 3200 3875 50  0001 C CNN
-F 1 "GND" H 3205 3952 50  0000 C CNN
-F 2 "" H 3200 4125 50  0001 C CNN
-F 3 "" H 3200 4125 50  0001 C CNN
-	1    3200 4125
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0108
-U 1 1 5D6D29E1
-P 3200 4825
-F 0 "#PWR0108" H 3200 4575 50  0001 C CNN
-F 1 "GND" H 3205 4652 50  0000 C CNN
-F 2 "" H 3200 4825 50  0001 C CNN
-F 3 "" H 3200 4825 50  0001 C CNN
-	1    3200 4825
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3200 4050 3200 4125
 Wire Wire Line
@@ -522,28 +434,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 10500 4250 50  00
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0109
-U 1 1 5D6DD0D3
-P 10600 4600
-F 0 "#PWR0109" H 10600 4350 50  0001 C CNN
-F 1 "GND" H 10605 4427 50  0000 C CNN
-F 2 "" H 10600 4600 50  0001 C CNN
-F 3 "" H 10600 4600 50  0001 C CNN
-	1    10600 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR0110
-U 1 1 5D6DE097
-P 10600 3075
-F 0 "#PWR0110" H 10600 2925 50  0001 C CNN
-F 1 "+12V" H 10615 3248 50  0000 C CNN
-F 2 "" H 10600 3075 50  0001 C CNN
-F 3 "" H 10600 3075 50  0001 C CNN
-	1    10600 3075
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R21
 U 1 1 5D6DEA91
 P 10025 2250
@@ -563,17 +453,6 @@ F 1 "2N3904" H 10690 2205 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10700 2175 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 10500 2250 50  0001 L CNN
 	1    10500 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 5D6DF45C
-P 10600 2600
-F 0 "#PWR0111" H 10600 2350 50  0001 C CNN
-F 1 "GND" H 10605 2427 50  0000 C CNN
-F 2 "" H 10600 2600 50  0001 C CNN
-F 3 "" H 10600 2600 50  0001 C CNN
-	1    10600 2600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -597,17 +476,6 @@ F 2 "LED_THT:LED_D5.0mm" H 10600 1375 50  0001 C CNN
 F 3 "~" H 10600 1375 50  0001 C CNN
 	1    10600 1375
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+12V #PWR0112
-U 1 1 5D6E38DF
-P 10600 1075
-F 0 "#PWR0112" H 10600 925 50  0001 C CNN
-F 1 "+12V" H 10615 1248 50  0000 C CNN
-F 2 "" H 10600 1075 50  0001 C CNN
-F 3 "" H 10600 1075 50  0001 C CNN
-	1    10600 1075
-	1    0    0    -1  
 $EndComp
 Text Label 9825 4250 2    50   ~ 0
 IN_L
@@ -1339,12 +1207,12 @@ $EndComp
 $Comp
 L Device:C_Small C7
 U 1 1 5D87BEFE
-P 2575 7075
-F 0 "C7" V 2346 7075 50  0000 C CNN
-F 1 "100nf" V 2437 7075 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2575 7075 50  0001 C CNN
-F 3 "~" H 2575 7075 50  0001 C CNN
-	1    2575 7075
+P 2825 6300
+F 0 "C7" V 2596 6300 50  0000 C CNN
+F 1 "100nf" V 2687 6300 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2825 6300 50  0001 C CNN
+F 3 "~" H 2825 6300 50  0001 C CNN
+	1    2825 6300
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1527,12 +1395,12 @@ $EndComp
 $Comp
 L Device:C_Small C10
 U 1 1 5D87BC69
-P 2575 6675
-F 0 "C10" V 2346 6675 50  0000 C CNN
-F 1 "100nf" V 2437 6675 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2575 6675 50  0001 C CNN
-F 3 "~" H 2575 6675 50  0001 C CNN
-	1    2575 6675
+P 2825 5975
+F 0 "C10" V 2596 5975 50  0000 C CNN
+F 1 "100nf" V 2687 5975 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2825 5975 50  0001 C CNN
+F 3 "~" H 2825 5975 50  0001 C CNN
+	1    2825 5975
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1569,10 +1437,7 @@ F 3 "" H 1100 7325 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	750  6575 975  6575
-Wire Wire Line
 	975  6575 1100 6575
-Connection ~ 975  6575
 Wire Wire Line
 	1200 6575 1425 6575
 Connection ~ 1200 6575
@@ -1582,10 +1447,7 @@ Connection ~ 1100 6575
 Wire Wire Line
 	1100 6575 1200 6575
 Wire Wire Line
-	750  7175 975  7175
-Wire Wire Line
 	975  7175 1100 7175
-Connection ~ 975  7175
 Wire Wire Line
 	1200 7175 1425 7175
 Connection ~ 1200 7175
@@ -1621,11 +1483,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 7075 4075 7075
 Wire Wire Line
-	2825 6575 2575 6575
-Wire Wire Line
-	2575 6575 2300 6575
-Connection ~ 2575 6575
-Wire Wire Line
 	2300 6575 2050 6575
 Connection ~ 2300 6575
 Wire Wire Line
@@ -1644,9 +1501,6 @@ Connection ~ 1725 7175
 Wire Wire Line
 	2050 7175 2300 7175
 Connection ~ 2050 7175
-Wire Wire Line
-	2575 7175 2825 7175
-Connection ~ 2575 7175
 $Comp
 L power:GND #PWR0130
 U 1 1 5D85C432
@@ -1681,8 +1535,6 @@ Connection ~ 2300 7175
 Wire Wire Line
 	2300 6975 2300 6875
 Wire Wire Line
-	2300 7175 2575 7175
-Wire Wire Line
 	2575 6975 2575 6875
 Connection ~ 2575 6875
 Wire Wire Line
@@ -1696,4 +1548,168 @@ Wire Wire Line
 	2825 6875 2575 6875
 Wire Wire Line
 	2825 6875 2825 6975
+$Comp
+L Connector:Conn_01x07_Male J8
+U 1 1 5D7FBC29
+P 10225 5375
+F 0 "J8" H 10333 5756 50  0000 C CNN
+F 1 "Conn_01x07_Male" H 10333 5665 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 10225 5375 50  0001 C CNN
+F 3 "~" H 10225 5375 50  0001 C CNN
+	1    10225 5375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x07_Female J7
+U 1 1 5D7FC7D1
+P 10175 5375
+F 0 "J7" H 10203 5351 50  0000 L CNN
+F 1 "Conn_01x07_Female" H 10203 5260 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 10175 5375 50  0001 C CNN
+F 3 "~" H 10175 5375 50  0001 C CNN
+	1    10175 5375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5D7FDD70
+P 9775 5075
+F 0 "#PWR0109" H 9775 4825 50  0001 C CNN
+F 1 "GND" V 9780 4947 50  0000 R CNN
+F 2 "" H 9775 5075 50  0001 C CNN
+F 3 "" H 9775 5075 50  0001 C CNN
+	1    9775 5075
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR0110
+U 1 1 5D7FED57
+P 9775 5675
+F 0 "#PWR0110" H 9775 5525 50  0001 C CNN
+F 1 "+12V" V 9790 5803 50  0000 L CNN
+F 2 "" H 9775 5675 50  0001 C CNN
+F 3 "" H 9775 5675 50  0001 C CNN
+	1    9775 5675
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-12V #PWR0111
+U 1 1 5D82F969
+P 9775 5575
+F 0 "#PWR0111" H 9775 5675 50  0001 C CNN
+F 1 "-12V" V 9790 5703 50  0000 L CNN
+F 2 "" H 9775 5575 50  0001 C CNN
+F 3 "" H 9775 5575 50  0001 C CNN
+	1    9775 5575
+	0    -1   -1   0   
+$EndComp
+Text Label 10575 5075 0    50   ~ 0
+GND_PCB_B
+Text Label 10575 5575 0    50   ~ 0
+-12_PCB_B
+Text Label 10575 5675 0    50   ~ 0
++12_PCB_B
+Wire Wire Line
+	9775 5075 9975 5075
+Wire Wire Line
+	9975 5575 9775 5575
+Wire Wire Line
+	9775 5675 9975 5675
+Wire Wire Line
+	10575 5675 10425 5675
+Wire Wire Line
+	10575 5575 10425 5575
+Wire Wire Line
+	10575 5075 10425 5075
+Text Label 10600 3075 0    50   ~ 0
++12_PCB_B
+Text Label 10600 1075 0    50   ~ 0
++12_PCB_B
+Text Label 10600 2600 0    50   ~ 0
+GND_PCB_B
+Text Label 10600 4600 0    50   ~ 0
+GND_PCB_B
+Text Label 10575 5175 0    50   ~ 0
+A_POT_ML
+Text Label 10575 5275 0    50   ~ 0
+A_POT_MR
+Text Label 10575 5375 0    50   ~ 0
+A_POT_PH_L
+Text Label 10575 5475 0    50   ~ 0
+A_POT_PH_R
+Text Label 9775 5175 2    50   ~ 0
+B_POT_ML
+Text Label 9775 5275 2    50   ~ 0
+B_POT_MR
+Text Label 9775 5375 2    50   ~ 0
+B_POT_PH_L
+Text Label 9775 5475 2    50   ~ 0
+B_POT_PH_R
+Wire Wire Line
+	10575 5175 10425 5175
+Wire Wire Line
+	10425 5275 10575 5275
+Wire Wire Line
+	10575 5375 10425 5375
+Wire Wire Line
+	10425 5475 10575 5475
+Wire Wire Line
+	9975 5475 9775 5475
+Wire Wire Line
+	9775 5375 9975 5375
+Wire Wire Line
+	9975 5275 9775 5275
+Wire Wire Line
+	9975 5175 9775 5175
+Text Label 3200 3050 0    50   ~ 0
+GND_PCB_B
+Text Label 3200 1975 0    50   ~ 0
+GND_PCB_B
+Text Label 3200 4125 0    50   ~ 0
+GND_PCB_B
+Text Label 3200 4825 0    50   ~ 0
+GND_PCB_B
+Text Label 1125 1225 0    50   ~ 0
+GND_PCB_B
+Text Label 1125 2300 0    50   ~ 0
+GND_PCB_B
+Text Label 1675 1775 2    50   ~ 0
+GND_PCB_B
+Text Label 1675 2875 2    50   ~ 0
+GND_PCB_B
+Text Label 3050 6150 0    50   ~ 0
+GND_PCB_B
+Text Label 3050 5800 0    50   ~ 0
++12_PCB_B
+Text Label 3050 6475 0    50   ~ 0
+-12_PCB_B
+Wire Wire Line
+	3050 6475 2825 6475
+Wire Wire Line
+	2825 6475 2825 6400
+Wire Wire Line
+	2300 6575 2825 6575
+Wire Wire Line
+	2300 7175 2825 7175
+Wire Wire Line
+	2825 6200 2825 6150
+Wire Wire Line
+	3050 6150 2825 6150
+Connection ~ 2825 6150
+Wire Wire Line
+	2825 6150 2825 6075
+Wire Wire Line
+	3050 5800 2825 5800
+Wire Wire Line
+	2825 5800 2825 5875
+Wire Wire Line
+	2825 5800 2450 5800
+Wire Wire Line
+	2450 5800 2450 5825
+Connection ~ 2825 5800
+Wire Wire Line
+	2825 6475 2450 6475
+Wire Wire Line
+	2450 6475 2450 6425
+Connection ~ 2825 6475
 $EndSCHEMATC
