@@ -342,7 +342,7 @@
   )
 
   (module Package_DIP:DIP-8_W7.62mm_Socket_LongPads (layer F.Cu) (tedit 5A02E8C5) (tstamp 5D695D13)
-    (at 75.565 46.99)
+    (at 79.375 50.165)
     (descr "8-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket, LongPads")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket LongPads")
     (path /5D687D06)
