@@ -424,12 +424,12 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_02x07_Odd_Even J2
 U 1 1 5D6456BC
-P 8375 4875
-F 0 "J2" H 8425 5392 50  0000 C CNN
-F 1 "Conn_02x07_Odd_Even" H 8425 5301 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x07_P2.54mm_Vertical" H 8375 4875 50  0001 C CNN
-F 3 "~" H 8375 4875 50  0001 C CNN
-	1    8375 4875
+P 8375 4975
+F 0 "J2" H 8425 5492 50  0000 C CNN
+F 1 "Conn_02x07_Odd_Even" H 8425 5401 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x07_P2.54mm_Vertical" H 8375 4975 50  0001 C CNN
+F 3 "~" H 8375 4975 50  0001 C CNN
+	1    8375 4975
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
