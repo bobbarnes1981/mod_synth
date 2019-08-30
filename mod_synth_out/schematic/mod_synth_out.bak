@@ -1437,10 +1437,7 @@ F 3 "" H 1100 7325 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	750  6575 975  6575
-Wire Wire Line
 	975  6575 1100 6575
-Connection ~ 975  6575
 Wire Wire Line
 	1200 6575 1425 6575
 Connection ~ 1200 6575
@@ -1450,10 +1447,7 @@ Connection ~ 1100 6575
 Wire Wire Line
 	1100 6575 1200 6575
 Wire Wire Line
-	750  7175 975  7175
-Wire Wire Line
 	975  7175 1100 7175
-Connection ~ 975  7175
 Wire Wire Line
 	1200 7175 1425 7175
 Connection ~ 1200 7175
