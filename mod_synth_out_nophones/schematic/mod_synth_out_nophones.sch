@@ -61,34 +61,34 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 1 1 5D67EFD9
-P 2050 1550
-F 0 "U1" H 2050 1183 50  0000 C CNN
-F 1 "TL072" H 2050 1274 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 2050 1550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2050 1550 50  0001 C CNN
-	1    2050 1550
+P 2375 1550
+F 0 "U1" H 2375 1183 50  0000 C CNN
+F 1 "TL072" H 2375 1274 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 2375 1550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2375 1550 50  0001 C CNN
+	1    2375 1550
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 2 1 5D6827A0
-P 2050 2625
-F 0 "U1" H 2050 2258 50  0000 C CNN
-F 1 "TL072" H 2050 2349 50  0000 C CNN
-F 2 "" H 2050 2625 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2050 2625 50  0001 C CNN
-	2    2050 2625
+P 2375 2625
+F 0 "U1" H 2375 2258 50  0000 C CNN
+F 1 "TL072" H 2375 2349 50  0000 C CNN
+F 2 "" H 2375 2625 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2375 2625 50  0001 C CNN
+	2    2375 2625
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 3 1 5D684EE5
-P 1825 5775
-F 0 "U1" H 1783 5821 50  0000 L CNN
-F 1 "TL072" H 1783 5730 50  0000 L CNN
-F 2 "" H 1825 5775 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1825 5775 50  0001 C CNN
-	3    1825 5775
+P 1325 6875
+F 0 "U1" H 1283 6921 50  0000 L CNN
+F 1 "TL072" H 1283 6830 50  0000 L CNN
+F 2 "" H 1325 6875 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1325 6875 50  0001 C CNN
+	3    1325 6875
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -127,12 +127,12 @@ $EndComp
 $Comp
 L Device:CP_Small C8
 U 1 1 5D6A4F17
-P 2625 1550
-F 0 "C8" V 2850 1550 50  0000 C CNN
-F 1 "10uf" V 2759 1550 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2625 1550 50  0001 C CNN
-F 3 "~" H 2625 1550 50  0001 C CNN
-	1    2625 1550
+P 2950 1550
+F 0 "C8" V 3175 1550 50  0000 C CNN
+F 1 "10uf" V 3084 1550 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2950 1550 50  0001 C CNN
+F 3 "~" H 2950 1550 50  0001 C CNN
+	1    2950 1550
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -149,12 +149,12 @@ $EndComp
 $Comp
 L Device:C_Small C5
 U 1 1 5D6A8033
-P 2050 950
-F 0 "C5" V 1821 950 50  0000 C CNN
-F 1 "10pf" V 1912 950 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2050 950 50  0001 C CNN
-F 3 "~" H 2050 950 50  0001 C CNN
-	1    2050 950 
+P 2375 950
+F 0 "C5" V 2146 950 50  0000 C CNN
+F 1 "10pf" V 2237 950 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2375 950 50  0001 C CNN
+F 3 "~" H 2375 950 50  0001 C CNN
+	1    2375 950 
 	0    1    1    0   
 $EndComp
 $Comp
@@ -171,68 +171,68 @@ $EndComp
 $Comp
 L Device:R R3
 U 1 1 5D6B0EDC
-P 2050 1175
-F 0 "R3" V 1843 1175 50  0000 C CNN
-F 1 "39k" V 1934 1175 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 1175 50  0001 C CNN
-F 3 "~" H 2050 1175 50  0001 C CNN
-	1    2050 1175
+P 2375 1175
+F 0 "R3" V 2168 1175 50  0000 C CNN
+F 1 "39k" V 2259 1175 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2305 1175 50  0001 C CNN
+F 3 "~" H 2375 1175 50  0001 C CNN
+	1    2375 1175
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C6
 U 1 1 5D6B11E1
-P 2050 2025
-F 0 "C6" V 1821 2025 50  0000 C CNN
-F 1 "10pf" V 1912 2025 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2050 2025 50  0001 C CNN
-F 3 "~" H 2050 2025 50  0001 C CNN
-	1    2050 2025
+P 2375 2025
+F 0 "C6" V 2146 2025 50  0000 C CNN
+F 1 "10pf" V 2237 2025 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2375 2025 50  0001 C CNN
+F 3 "~" H 2375 2025 50  0001 C CNN
+	1    2375 2025
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 5D6B16A7
-P 2050 2250
-F 0 "R4" V 1843 2250 50  0000 C CNN
-F 1 "39k" V 1934 2250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 2250 50  0001 C CNN
-F 3 "~" H 2050 2250 50  0001 C CNN
-	1    2050 2250
+P 2375 2250
+F 0 "R4" V 2168 2250 50  0000 C CNN
+F 1 "39k" V 2259 2250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2305 2250 50  0001 C CNN
+F 3 "~" H 2375 2250 50  0001 C CNN
+	1    2375 2250
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:CP_Small C9
 U 1 1 5D6B42E0
-P 2625 2625
-F 0 "C9" V 2850 2625 50  0000 C CNN
-F 1 "10uf" V 2759 2625 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2625 2625 50  0001 C CNN
-F 3 "~" H 2625 2625 50  0001 C CNN
-	1    2625 2625
+P 2950 2625
+F 0 "C9" V 3175 2625 50  0000 C CNN
+F 1 "10uf" V 3084 2625 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2950 2625 50  0001 C CNN
+F 3 "~" H 2950 2625 50  0001 C CNN
+	1    2950 2625
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R_POT_Dual_Separate RV1
 U 1 1 5D6B4A1E
-P 3200 1700
-F 0 "RV1" H 3131 1654 50  0000 R CNN
-F 1 "100k" H 3131 1745 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles" H 3200 1700 50  0001 C CNN
-F 3 "~" H 3200 1700 50  0001 C CNN
-F 4 "Volume" H 3200 1700 50  0000 C CNN "Text"
-	1    3200 1700
+P 4075 1700
+F 0 "RV1" H 4006 1654 50  0000 R CNN
+F 1 "100k" H 4006 1745 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles" H 4075 1700 50  0001 C CNN
+F 3 "~" H 4075 1700 50  0001 C CNN
+F 4 "Volume" H 4075 1700 50  0000 C CNN "Text"
+	1    4075 1700
 	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT_Dual_Separate RV1
 U 2 1 5D6B6E57
-P 3200 2775
-F 0 "RV1" H 3130 2729 50  0000 R CNN
-F 1 "100k" H 3130 2820 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles" H 3200 2775 50  0001 C CNN
-F 3 "~" H 3200 2775 50  0001 C CNN
-	2    3200 2775
+P 4075 2775
+F 0 "RV1" H 4005 2729 50  0000 R CNN
+F 1 "100k" H 4005 2820 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles" H 4075 2775 50  0001 C CNN
+F 3 "~" H 4075 2775 50  0001 C CNN
+	2    4075 2775
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -255,25 +255,23 @@ Connection ~ 1175 1450
 Wire Wire Line
 	1175 1450 1225 1450
 Wire Wire Line
-	1525 2525 1675 2525
+	2075 1450 2000 1450
 Wire Wire Line
-	1750 1450 1675 1450
+	2675 1550 2775 1550
 Wire Wire Line
-	2350 1550 2450 1550
+	2850 2625 2775 2625
 Wire Wire Line
-	2525 2625 2450 2625
+	4075 1975 4075 1850
 Wire Wire Line
-	3200 1975 3200 1850
+	4075 3050 4075 2925
 Wire Wire Line
-	3200 3050 3200 2925
+	2075 1650 2000 1650
 Wire Wire Line
-	1750 1650 1675 1650
+	2000 1650 2000 1775
 Wire Wire Line
-	1675 1650 1675 1775
+	2075 2725 2000 2725
 Wire Wire Line
-	1750 2725 1675 2725
-Wire Wire Line
-	1675 2725 1675 2875
+	2000 2725 2000 2875
 Text Label 1100 2525 3    50   ~ 0
 IN_R
 Text Label 1100 1450 3    50   ~ 0
@@ -587,53 +585,51 @@ Wire Wire Line
 Wire Wire Line
 	7725 2825 8475 2825
 Wire Wire Line
-	1675 1450 1675 1175
+	2000 1450 2000 1175
 Wire Wire Line
-	1675 950  1950 950 
-Connection ~ 1675 1450
+	2000 950  2275 950 
+Connection ~ 2000 1450
 Wire Wire Line
-	1675 1450 1525 1450
+	2475 950  2775 950 
 Wire Wire Line
-	2150 950  2450 950 
+	2775 950  2775 1175
+Connection ~ 2775 1550
 Wire Wire Line
-	2450 950  2450 1175
-Connection ~ 2450 1550
+	2775 1550 2850 1550
 Wire Wire Line
-	2450 1550 2525 1550
+	2775 2625 2775 2250
 Wire Wire Line
-	2450 2625 2450 2250
+	2775 2025 2475 2025
+Connection ~ 2775 2625
 Wire Wire Line
-	2450 2025 2150 2025
-Connection ~ 2450 2625
+	2775 2625 2675 2625
 Wire Wire Line
-	2450 2625 2350 2625
+	2275 2025 2000 2025
 Wire Wire Line
-	1950 2025 1675 2025
+	2000 2025 2000 2250
+Connection ~ 2000 2525
 Wire Wire Line
-	1675 2025 1675 2250
-Connection ~ 1675 2525
+	2000 2525 2075 2525
 Wire Wire Line
-	1675 2525 1750 2525
+	2000 2250 2225 2250
+Connection ~ 2000 2250
 Wire Wire Line
-	1675 2250 1900 2250
-Connection ~ 1675 2250
+	2000 2250 2000 2525
 Wire Wire Line
-	1675 2250 1675 2525
+	2525 2250 2775 2250
+Connection ~ 2775 2250
 Wire Wire Line
-	2200 2250 2450 2250
-Connection ~ 2450 2250
+	2775 2250 2775 2025
 Wire Wire Line
-	2450 2250 2450 2025
+	2775 1175 2525 1175
+Connection ~ 2775 1175
 Wire Wire Line
-	2450 1175 2200 1175
-Connection ~ 2450 1175
+	2775 1175 2775 1550
 Wire Wire Line
-	2450 1175 2450 1550
+	2225 1175 2000 1175
+Connection ~ 2000 1175
 Wire Wire Line
-	1900 1175 1675 1175
-Connection ~ 1675 1175
-Wire Wire Line
-	1675 1175 1675 950 
+	2000 1175 2000 950 
 $Comp
 L Device:R R12
 U 1 1 5D730D80
@@ -786,22 +782,22 @@ Wire Wire Line
 	5175 1700 6100 1700
 Wire Wire Line
 	5700 2725 5175 2725
-Text Label 3550 1700 0    50   ~ 0
+Text Label 4425 1700 1    50   ~ 0
 A_POT_ML
-Text Label 3550 2775 0    50   ~ 0
+Text Label 4425 2775 1    50   ~ 0
 A_POT_MR
-Text Label 4675 1700 2    50   ~ 0
+Text Label 4675 1700 1    50   ~ 0
 B_POT_ML
-Text Label 4675 2725 2    50   ~ 0
+Text Label 4675 2725 1    50   ~ 0
 B_POT_MR
 Wire Wire Line
 	4675 1700 4875 1700
 Wire Wire Line
 	4875 2725 4675 2725
 Wire Wire Line
-	3550 2775 3350 2775
+	4425 2775 4225 2775
 Wire Wire Line
-	3550 1700 3350 1700
+	4425 1700 4225 1700
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J3
 U 1 1 5D775A26
@@ -838,12 +834,12 @@ $EndComp
 $Comp
 L Device:C_Small C7
 U 1 1 5D87BEFE
-P 2100 5950
-F 0 "C7" V 1871 5950 50  0000 C CNN
-F 1 "100nf" V 1962 5950 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2100 5950 50  0001 C CNN
-F 3 "~" H 2100 5950 50  0001 C CNN
-	1    2100 5950
+P 2025 7075
+F 0 "C7" V 1796 7075 50  0000 C CNN
+F 1 "100nf" V 1887 7075 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2025 7075 50  0001 C CNN
+F 3 "~" H 2025 7075 50  0001 C CNN
+	1    2025 7075
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -993,12 +989,12 @@ $EndComp
 $Comp
 L Device:C_Small C10
 U 1 1 5D87BC69
-P 2100 5625
-F 0 "C10" V 1871 5625 50  0000 C CNN
-F 1 "100nf" V 1962 5625 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2100 5625 50  0001 C CNN
-F 3 "~" H 2100 5625 50  0001 C CNN
-	1    2100 5625
+P 2025 6675
+F 0 "C10" V 1796 6675 50  0000 C CNN
+F 1 "100nf" V 1887 6675 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm" H 2025 6675 50  0001 C CNN
+F 3 "~" H 2025 6675 50  0001 C CNN
+	1    2025 6675
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1078,23 +1074,23 @@ Connection ~ 2300 6875
 Wire Wire Line
 	2300 6975 2300 6875
 $Comp
-L Connector:Conn_01x07_Male J8
+L Connector:Conn_01x11_Male J8
 U 1 1 5D7FBC29
 P 10225 5375
 F 0 "J8" H 10333 5756 50  0000 C CNN
-F 1 "Conn_01x07_Male" H 10333 5665 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 10225 5375 50  0001 C CNN
+F 1 "Conn_01x011_Male" H 10333 5665 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical" H 10225 5375 50  0001 C CNN
 F 3 "~" H 10225 5375 50  0001 C CNN
 	1    10225 5375
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x07_Female J7
+L Connector:Conn_01x11_Female J7
 U 1 1 5D7FC7D1
 P 10175 5375
 F 0 "J7" H 10203 5351 50  0000 L CNN
-F 1 "Conn_01x07_Female" H 10203 5260 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 10175 5375 50  0001 C CNN
+F 1 "Conn_01x11_Female" H 10203 5260 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 10175 5375 50  0001 C CNN
 F 3 "~" H 10175 5375 50  0001 C CNN
 	1    10175 5375
 	1    0    0    -1  
@@ -1102,54 +1098,54 @@ $EndComp
 $Comp
 L power:GND #PWR0109
 U 1 1 5D7FDD70
-P 9775 5075
-F 0 "#PWR0109" H 9775 4825 50  0001 C CNN
-F 1 "GND" V 9780 4947 50  0000 R CNN
-F 2 "" H 9775 5075 50  0001 C CNN
-F 3 "" H 9775 5075 50  0001 C CNN
-	1    9775 5075
+P 9775 4875
+F 0 "#PWR0109" H 9775 4625 50  0001 C CNN
+F 1 "GND" V 9780 4747 50  0000 R CNN
+F 2 "" H 9775 4875 50  0001 C CNN
+F 3 "" H 9775 4875 50  0001 C CNN
+	1    9775 4875
 	0    1    1    0   
 $EndComp
 $Comp
 L power:+12V #PWR0110
 U 1 1 5D7FED57
-P 9775 5675
-F 0 "#PWR0110" H 9775 5525 50  0001 C CNN
-F 1 "+12V" V 9790 5803 50  0000 L CNN
-F 2 "" H 9775 5675 50  0001 C CNN
-F 3 "" H 9775 5675 50  0001 C CNN
-	1    9775 5675
+P 9775 5475
+F 0 "#PWR0110" H 9775 5325 50  0001 C CNN
+F 1 "+12V" V 9790 5603 50  0000 L CNN
+F 2 "" H 9775 5475 50  0001 C CNN
+F 3 "" H 9775 5475 50  0001 C CNN
+	1    9775 5475
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:-12V #PWR0111
 U 1 1 5D82F969
-P 9775 5575
-F 0 "#PWR0111" H 9775 5675 50  0001 C CNN
-F 1 "-12V" V 9790 5703 50  0000 L CNN
-F 2 "" H 9775 5575 50  0001 C CNN
-F 3 "" H 9775 5575 50  0001 C CNN
-	1    9775 5575
+P 9775 5375
+F 0 "#PWR0111" H 9775 5475 50  0001 C CNN
+F 1 "-12V" V 9790 5503 50  0000 L CNN
+F 2 "" H 9775 5375 50  0001 C CNN
+F 3 "" H 9775 5375 50  0001 C CNN
+	1    9775 5375
 	0    -1   -1   0   
 $EndComp
-Text Label 10575 5075 0    50   ~ 0
+Text Label 10575 4875 0    50   ~ 0
 GND_PCB_B
-Text Label 10575 5575 0    50   ~ 0
+Text Label 10575 5375 0    50   ~ 0
 -12_PCB_B
-Text Label 10575 5675 0    50   ~ 0
+Text Label 10575 5475 0    50   ~ 0
 +12_PCB_B
 Wire Wire Line
-	9775 5075 9975 5075
+	9775 4875 9975 4875
 Wire Wire Line
-	9975 5575 9775 5575
+	9975 5375 9775 5375
 Wire Wire Line
-	9775 5675 9975 5675
+	9775 5475 9975 5475
 Wire Wire Line
-	10575 5675 10425 5675
+	10575 5475 10425 5475
 Wire Wire Line
-	10575 5575 10425 5575
+	10575 5375 10425 5375
 Wire Wire Line
-	10575 5075 10425 5075
+	10575 4875 10425 4875
 Text Label 10600 3075 0    50   ~ 0
 +12_PCB_B
 Text Label 10600 1075 0    50   ~ 0
@@ -1158,65 +1154,34 @@ Text Label 10600 2600 0    50   ~ 0
 GND_PCB_B
 Text Label 10600 4600 0    50   ~ 0
 GND_PCB_B
-Text Label 10575 5175 0    50   ~ 0
+Text Label 10575 4975 0    50   ~ 0
 A_POT_ML
-Text Label 10575 5275 0    50   ~ 0
+Text Label 10575 5075 0    50   ~ 0
 A_POT_MR
-Text Label 9775 5175 2    50   ~ 0
+Text Label 9775 4975 2    50   ~ 0
 B_POT_ML
-Text Label 9775 5275 2    50   ~ 0
+Text Label 9775 5075 2    50   ~ 0
 B_POT_MR
 Wire Wire Line
-	10575 5175 10425 5175
+	10575 4975 10425 4975
 Wire Wire Line
-	10425 5275 10575 5275
+	10425 5075 10575 5075
 Wire Wire Line
-	9975 5275 9775 5275
+	9975 5075 9775 5075
 Wire Wire Line
-	9975 5175 9775 5175
-Text Label 3200 3050 0    50   ~ 0
+	9975 4975 9775 4975
+Text Label 4075 3050 0    50   ~ 0
 GND_PCB_B
-Text Label 3200 1975 0    50   ~ 0
+Text Label 4075 1975 0    50   ~ 0
 GND_PCB_B
 Text Label 1125 1225 0    50   ~ 0
 GND_PCB_B
 Text Label 1125 2300 0    50   ~ 0
 GND_PCB_B
-Text Label 1675 1775 2    50   ~ 0
+Text Label 2000 1775 2    50   ~ 0
 GND_PCB_B
-Text Label 1675 2875 2    50   ~ 0
+Text Label 2000 2875 2    50   ~ 0
 GND_PCB_B
-Text Label 2325 5800 0    50   ~ 0
-GND_PCB_B
-Text Label 2325 5450 0    50   ~ 0
-+12_PCB_B
-Text Label 2325 6125 0    50   ~ 0
--12_PCB_B
-Wire Wire Line
-	2325 6125 2100 6125
-Wire Wire Line
-	2100 6125 2100 6050
-Wire Wire Line
-	2100 5850 2100 5800
-Wire Wire Line
-	2325 5800 2100 5800
-Connection ~ 2100 5800
-Wire Wire Line
-	2100 5800 2100 5725
-Wire Wire Line
-	2325 5450 2100 5450
-Wire Wire Line
-	2100 5450 2100 5525
-Wire Wire Line
-	2100 5450 1725 5450
-Wire Wire Line
-	1725 5450 1725 5475
-Connection ~ 2100 5450
-Wire Wire Line
-	2100 6125 1725 6125
-Wire Wire Line
-	1725 6125 1725 6075
-Connection ~ 2100 6125
 NoConn ~ 8475 1700
 NoConn ~ 8475 1900
 $Comp
@@ -1250,26 +1215,105 @@ Wire Wire Line
 Wire Wire Line
 	8400 2525 8400 2475
 Wire Wire Line
-	2725 1550 3200 1550
+	1100 7175 1225 7175
 Wire Wire Line
-	2725 2625 3200 2625
+	1100 6575 1225 6575
 Wire Wire Line
-	1100 7175 1725 7175
+	1725 6575 2025 6575
 Wire Wire Line
-	1100 6575 1725 6575
-Wire Wire Line
-	1725 6575 2300 6575
-Wire Wire Line
-	1725 7175 2300 7175
+	1725 7175 2025 7175
 Wire Wire Line
 	1725 6875 1725 6975
 Wire Wire Line
 	1725 6875 1725 6775
 Connection ~ 1725 6875
 Wire Wire Line
-	1725 6875 2300 6875
+	1725 6875 2025 6875
 Wire Wire Line
 	2300 6875 3050 6875
 NoConn ~ 8475 2725
 NoConn ~ 8475 2925
+Connection ~ 1225 7175
+Wire Wire Line
+	1225 7175 1725 7175
+Connection ~ 1225 6575
+Wire Wire Line
+	1225 6575 1725 6575
+Connection ~ 2025 6575
+Wire Wire Line
+	2025 6575 2300 6575
+Connection ~ 2025 7175
+Wire Wire Line
+	2025 7175 2300 7175
+Wire Wire Line
+	2025 6775 2025 6875
+Connection ~ 2025 6875
+Wire Wire Line
+	2025 6875 2300 6875
+Wire Wire Line
+	2025 6875 2025 6975
+Text Label 1625 1450 1    50   ~ 0
+A_IN_L
+Text Label 1775 1450 1    50   ~ 0
+B_IN_L
+Text Label 1625 2525 1    50   ~ 0
+A_IN_R
+Text Label 1775 2525 1    50   ~ 0
+B_IN_R
+Wire Wire Line
+	1525 1450 1625 1450
+Wire Wire Line
+	1775 1450 2000 1450
+Wire Wire Line
+	1775 2525 2000 2525
+Wire Wire Line
+	1625 2525 1525 2525
+Text Label 10575 5275 0    50   ~ 0
+A_IN_R
+Text Label 10575 5175 0    50   ~ 0
+A_IN_L
+Text Label 9775 5175 2    50   ~ 0
+B_IN_L
+Text Label 9775 5275 2    50   ~ 0
+B_IN_R
+Wire Wire Line
+	9775 5175 9975 5175
+Wire Wire Line
+	9975 5275 9775 5275
+Wire Wire Line
+	10425 5175 10575 5175
+Wire Wire Line
+	10575 5275 10425 5275
+Text Label 3175 1550 1    50   ~ 0
+B_RAW_ML
+Text Label 3325 1550 1    50   ~ 0
+A_RAW_ML
+Text Label 3175 2625 1    50   ~ 0
+B_RAW_MR
+Text Label 3325 2625 1    50   ~ 0
+A_RAW_MR
+Wire Wire Line
+	3050 1550 3175 1550
+Wire Wire Line
+	3325 1550 4075 1550
+Wire Wire Line
+	3325 2625 4075 2625
+Wire Wire Line
+	3175 2625 3050 2625
+Text Label 10575 5575 0    50   ~ 0
+A_RAW_ML
+Text Label 10575 5675 0    50   ~ 0
+A_RAW_MR
+Text Label 9775 5575 2    50   ~ 0
+B_RAW_ML
+Text Label 9775 5675 2    50   ~ 0
+B_RAW_MR
+Wire Wire Line
+	9775 5575 9975 5575
+Wire Wire Line
+	9975 5675 9775 5675
+Wire Wire Line
+	10575 5675 10425 5675
+Wire Wire Line
+	10575 5575 10425 5575
 $EndSCHEMATC
