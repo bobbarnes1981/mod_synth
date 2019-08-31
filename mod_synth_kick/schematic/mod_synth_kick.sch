@@ -694,7 +694,7 @@ F 1 "10uf" V 10639 3850 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10513 3700 50  0001 C CNN
 F 3 "~" H 10475 3850 50  0001 C CNN
 	1    10475 3850
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Connection ~ 8150 3700
 Wire Wire Line
