@@ -1,0 +1,6 @@
+[submodule "mod_synth_eco"]
+	path = mod_synth_eco
+	url = git@github.com:bobbarnes1981/mod_synth_eco.git
+[submodule "mod_synth_sw"]
+	path = mod_synth_sw
+	url = git@github.com:bobbarnes1981/mod_synth_sw.git
