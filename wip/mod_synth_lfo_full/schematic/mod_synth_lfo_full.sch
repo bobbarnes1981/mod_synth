@@ -397,7 +397,7 @@ F 1 "SPEED" H 1031 3405 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 1100 3450 50  0001 C CNN
 F 3 "~" H 1100 3450 50  0001 C CNN
 	1    1100 3450
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV2
@@ -408,7 +408,7 @@ F 1 "CV AMOUNT" V 1119 4025 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 1325 4025 50  0001 C CNN
 F 3 "~" H 1325 4025 50  0001 C CNN
 	1    1325 4025
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0101
