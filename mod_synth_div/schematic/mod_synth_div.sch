@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:mod_synth_div-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -118,7 +119,7 @@ U 1 1 5D583BED
 P 4600 3200
 F 0 "U1" H 4600 3816 50  0000 C CNN
 F 1 "4024" H 4600 3725 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 4600 3200 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 4600 3200 50  0001 C CNN
 F 3 "" H 4600 3200 50  0001 C CNN
 	1    4600 3200
 	1    0    0    -1  
