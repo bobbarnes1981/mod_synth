@@ -86,9 +86,17 @@ void setup() {
 #endif
 }
 
+int analogReadTwice(int pin) {
+  // horrible hack because the analog inputs are
+  // getting crosstalk
+  analogRead(pin);
+  delay(10);
+  return analogRead(pin);
+}
+
 void loop() {
   // read input CV
-  int raw_input = analogRead(CV_IN);
+  int raw_input = analogReadTwice(CV_IN);
 
 #ifdef DEBUG
   // map input to voltage
@@ -103,10 +111,11 @@ void loop() {
 #endif
 
   // note select
-  int raw_note = analogRead(NOTE_SELECT);
+  int raw_note = analogReadTwice(NOTE_SELECT);
   if (abs(prev_raw_note - raw_note) >= ANALOG_IGNORE) {
     prev_raw_note = raw_note;
-    int note = map(raw_note, ANALOG_MIN, ANALOG_MAX, 0, NUM_NOTES);
+    // PCB potentiometer is wired backwards, fix in code
+    int note = map(raw_note, ANALOG_MAX, ANALOG_MIN, 0, NUM_NOTES);
     note = note == NUM_NOTES ? NUM_NOTES - 1 : note;
     if (note != current_note) {
       last_knob = millis();
@@ -120,10 +129,11 @@ void loop() {
   }
 
   // scale select
-  int raw_scale = analogRead(SCALE_SELECT);
+  int raw_scale = analogReadTwice(SCALE_SELECT);
   if (abs(prev_raw_scale - raw_scale) >= ANALOG_IGNORE) {
     prev_raw_scale = raw_scale;
-    int scale = map(raw_scale, ANALOG_MIN, ANALOG_MAX, 0, NUM_SCALES);
+    // PCB potentiometer is wired backwards, fix in code
+    int scale = map(raw_scale, ANALOG_MAX, ANALOG_MIN, 0, NUM_SCALES);
     scale = scale == NUM_SCALES ? NUM_SCALES - 1 : scale;
     if (scale != current_scale) {
       last_knob = millis();
